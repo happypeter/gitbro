@@ -2,11 +2,11 @@
 
 apple::apple()
 {
-int setColor();
+setColor();
 }
 apple::~apple()
 {
-cout<<"I am the destructor<<endl";
+cout<<"I am the destructor"<<endl;
 }
 
 int apple::showColor()
@@ -18,6 +18,7 @@ int apple::setColor()
 {
 color = "red";
 cout<<"set color to red"<<endl;
+return 0;
 }
 
 
