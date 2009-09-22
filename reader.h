@@ -2,11 +2,11 @@
 #define APPLE_H
 #include <iostream>
 using namespace std;
-class apple
+class reader
 {
 public:
-apple();
-~apple();
+reader();
+~reader();
 string color;
 int showColor();
 int setColor();

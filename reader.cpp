@@ -1,20 +1,20 @@
-#include "apple.h"
+#include "reader.h"
 
-apple::apple()
+reader::reader()
 {
 setColor();
 }
-apple::~apple()
+reader::~reader()
 {
 cout<<"I am the destructor"<<endl;
 }
 
-int apple::showColor()
+int reader::showColor()
 {
 cout<<"the apple color is:"<<color<<endl;
 return 0;
 }
-int apple::setColor()
+int reader::setColor()
 {
 color = "red";
 cout<<"set color to red"<<endl;
