@@ -1,8 +1,11 @@
 #include <iostream>
-
+#include "apple.h"
 using namespace std;
 
 int main()
 {
-cout<<"peter"<<endl;
+apple ap;
+ap.showColor();
+cout<<"exit main"<<endl;
+return 0;
 }
