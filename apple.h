@@ -7,7 +7,7 @@ class apple
 public:
 apple();
 ~apple();
-char * color;
+string color;
 int showColor();
 int setColor();
 };
