@@ -1,3 +1,4 @@
+#include <QApplication>
 #include <iostream>
 #include "apple.h"
 using namespace std;
