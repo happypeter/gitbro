@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
-	QWidget *widget = new QWidget;
+	QDialog *widget = new QDialog;
 	Ui_Dialog ui;
 	ui.setupUi(widget);
 	widget->show();
