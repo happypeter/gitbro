@@ -87,5 +87,21 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>lcdNumber</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
 </ui>
