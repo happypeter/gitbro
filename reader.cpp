@@ -1,24 +1,29 @@
 #include "reader.h"
-
+#include <QtGui>
 reader::reader()
 {
-setColor();
+	setColor();
 }
 reader::~reader()
 {
-cout<<"I am the destructor"<<endl;
+	cout<<"I am the destructor"<<endl;
 }
 
 int reader::showColor()
 {
-cout<<"the apple color is:"<<color<<endl;
-return 0;
+	cout<<"the apple color is:"<<color<<endl;
+	return 0;
 }
 int reader::setColor()
 {
-color = "red";
-cout<<"set color to red"<<endl;
-return 0;
+    if (!newImage.load(":img/peter.png"))
+    {
+           cout<<"img not found"<<endl;
+            return 0;
+    }
+	color = "red";
+	cout<<"set color to red"<<endl;
+	return 0;
 }
 
 
