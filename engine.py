@@ -1,17 +1,24 @@
 #!/usr/bin/python
 import os
 repo_path = "/home/peter/test-repo/"
-if os.path.exists(repo_path): #output files go here
+output_path = "/home/peter/output_gitbro/"
+tmp_path = output_path
+if os.path.exists(repo_path): #repo  go here
     print "we are going to check "+repo_path 
 else:
-    print "can not find the repo"    
+    print "can not find the repo"   
+if os.path.exists(output_path): #output files go here
+    print "patches will be saved in "+output_path 
+else:
+    os.system("mkdir "+output_path)
+ 
 
 cwd = os.getcwd()
 print cwd
 os.chdir(repo_path)
 cwd = os.getcwd()
 print cwd
-git_info_file = "/home/peter/git-info.txt"
+git_info_file = tmp_path + "git-info.txt"
 file_name = "out"
 git_cmd = "git log --follow "+file_name
 cmd = git_cmd+">"+git_info_file
@@ -40,5 +47,22 @@ print commit_list
 commit_list.reverse()
 #we reverse the list since we want the oldest commit first
 #so that we can generate the first patch first, look shown below
+n = 0
+list_size = len(commit_list)
 for commit in commit_list:
+    n = n+1
+    if n == list_size:
+        break
+ 
     print commit
+    old_commit = commit
+    print "old_commit:"
+    print old_commit
+    new_commit = commit_list[n]
+    print "new_commit:"
+    print new_commit
+    git_cmd = "git diff -u "+old_commit+" "+new_commit
+    patch_file_name = output_path + file_name + "-" + str(n) + ".diff"
+    cmd = git_cmd + ">" + patch_file_name
+    os.system(cmd)
+
