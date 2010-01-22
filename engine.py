@@ -2,6 +2,10 @@
 import os
 repo_path = "/home/peter/test-repo/"
 output_path = "/home/peter/output_gitbro/"
+#output_path is the dir we store all the output files
+#including tmp files like git-info.txt and useful final output
+#like all the patches, of course in the future we will make this
+#patch configurable
 tmp_path = output_path
 if os.path.exists(repo_path): #repo  go here
     print "we are going to check "+repo_path 
@@ -49,6 +53,10 @@ commit_list.reverse()
 #so that we can generate the first patch first, look shown below
 n = 0
 list_size = len(commit_list)
+# the code in the following for loop is a little cumbersome 
+# but it actually does sth really easy, just get all the diffs 
+# of all the versions of the file named out and save these diffs 
+# into patch files
 for commit in commit_list:
     n = n+1
     if n == list_size:
