@@ -21,10 +21,20 @@ os.system(cmd)
 #and I think I need a function to do this for me
 
 def get_commit_hashes(file_name):
-    print "I am working on "+file_name
-    list = [1,2,3]
-    return list
+    f=open(file_name,"r");
+    done = 0
+    commit_hash_list = []
+    while not done:
+        line = f.readline()
+        if not line.find("commit"):
+            print line
+            line = line.replace("commit","")
+            commit_hash_list.append(line.strip())
+        if not line:
+            done = 1 #stop
+    return commit_hash_list
 
 commit_list = get_commit_hashes(git_info_file)
-
 print commit_list
+for commit in commit_list:
+    print commit
