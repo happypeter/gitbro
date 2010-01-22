@@ -11,3 +11,5 @@ print cwd
 os.chdir(repo_path)
 cwd = os.getcwd()
 print cwd
+
+os.system("git log")
