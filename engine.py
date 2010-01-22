@@ -11,5 +11,8 @@ print cwd
 os.chdir(repo_path)
 cwd = os.getcwd()
 print cwd
+git_info_file = "/home/peter/git-info.txt"
+git_cmd = "git log"
+cmd = git_cmd+">"+git_info_file
+os.system(cmd)
 
-os.system("git log")
