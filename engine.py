@@ -30,11 +30,15 @@ def get_commit_hashes(file_name):
             print line
             line = line.replace("commit","")
             commit_hash_list.append(line.strip())
+            #strip() to remove trailing '\n'
         if not line:
             done = 1 #stop
     return commit_hash_list
 
 commit_list = get_commit_hashes(git_info_file)
 print commit_list
+commit_list.reverse()
+#we reverse the list since we want the oldest commit first
+#so that we can generate the first patch first, look shown below
 for commit in commit_list:
     print commit
