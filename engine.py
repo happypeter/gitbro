@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import os
+file_name = "out" # this is the file we are working on
 repo_path = "/home/peter/test-repo/"
 output_path = "/home/peter/output_gitbro/"
 patch_stage1_dir = "patch_stage1/" 
@@ -33,7 +34,6 @@ os.chdir(repo_path)
 cwd = os.getcwd()
 print cwd
 git_info_file = tmp_path + "git-info.txt"
-file_name = "out"
 git_cmd = "git log --follow "+file_name
 cmd = git_cmd+">"+git_info_file
 os.system(cmd)
