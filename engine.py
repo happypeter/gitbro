@@ -107,15 +107,11 @@ def remove_other_file(patch_name):
     line_list = lines.split(split_word)
     for line in line_list:
         if not line.find(search_keyword):
-             print "the line:----"
-             print line
-             useful_data = ''
              useful_data = split_word + line 
-             print "useful_data*****************"
+             print "*******useful_data********"
              print useful_data
-             print "**************"
+             print "*******useful_data end*******"
              short_patch_name = os.path.basename(patch_name)
-             print "short_patch_name:  "+ short_patch_name
              stage2_full_patch_name = output_path+patch_stage2_dir+short_patch_name 
              f2 = open(stage2_full_patch_name, "w")
              f2.write(useful_data)
