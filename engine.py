@@ -2,6 +2,8 @@
 import os
 repo_path = "/home/peter/test-repo/"
 output_path = "/home/peter/output_gitbro/"
+patch_stage1_dir = "patch_stage1/" 
+patch_stage2_dir = "patch_stage2/"
 #output_path is the dir we store all the output files
 #including tmp files like git-info.txt and useful final output
 #like all the patches, of course in the future we will make this
@@ -12,9 +14,17 @@ if os.path.exists(repo_path): #repo  go here
 else:
     print "can not find the repo"   
 if os.path.exists(output_path): #output files go here
-    print "patches will be saved in "+output_path 
+    os.system("rm -rf "+output_path)
+    print "old output_path removed"
+    os.system("mkdir "+output_path)
 else:
     os.system("mkdir "+output_path)
+
+os.chdir(output_path)
+print "now cwd: "+os.getcwd()
+os.system("mkdir "+patch_stage1_dir)
+os.system("mkdir "+patch_stage2_dir)
+
  
 
 cwd = os.getcwd()
@@ -70,7 +80,15 @@ for commit in commit_list:
     print "new_commit:"
     print new_commit
     git_cmd = "git diff -u "+old_commit+" "+new_commit
-    patch_file_name = output_path + file_name + "-" + str(n) + ".diff"
+    patch_file_name = output_path + patch_stage1_dir +  file_name + "-" + str(n) + ".diff"
     cmd = git_cmd + ">" + patch_file_name
     os.system(cmd)
+
+# now the problem is many of the patches obtained contain diffs for not 
+# only out, but also some other files, so we need to get rid of the junk info
+# the flow is aimple the patch file may contain many parts separated by a line
+#
+#   diff --git a/out b/out
+# so we just search "diff --git a/", if this is followed by "out", then this
+# part is what we want, anything else just remove
 
