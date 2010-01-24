@@ -94,8 +94,15 @@ for commit in commit_list:
 
 def remove_other_file(patch_name):
     print patch_name
+    f1 = open(patch_name, "r")
+    lines = f1.read()
+    print  lines
+
 patch_file_list = os.listdir(output_path+patch_stage1_dir) 
 # print patch_file_list
 
 for patch_file in  patch_file_list:
+    patch_file = output_path+patch_stage1_dir+patch_file
+    # we are currently using absolute path for everthing
     remove_other_file(patch_file)
+
