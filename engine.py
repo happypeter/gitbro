@@ -56,12 +56,26 @@ def get_commit_hashes(file_name):
             done = 1 #stop
     return commit_hash_list
 
+
 commit_list = get_commit_hashes(git_info_file)
 commit_list.reverse()
 #we reverse the list since we want the first commit first
 #so that we can generate the first patch first, look shown below
-first_commit = commit_list[1]
-#we need this to get v1(original version) of the file_name
+first_commit = commit_list[0]
+#we need this to get v0(original version) of the file_name
+
+#####get v0 begin####
+os.chdir(repo_path)
+cmd="git checkout -b "+file_name+' '+first_commit
+os.system(cmd)
+cmd="cp -rf "+file_name+' '+output_path#FIXME what is the file is in a subdir
+os.system(cmd)
+cmd="git checkout master"
+os.system(cmd)
+cmd="git branch -D "+file_name
+os.system(cmd)
+####get vo end####
+
 n = 0
 list_size = len(commit_list)
 # the code in the following for loop is a little cumbersome 
