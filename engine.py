@@ -92,11 +92,34 @@ for commit in commit_list:
 # so we just search "diff --git a/", if this is followed by "out", then this
 # part is what we want, anything else just remove
 
+split_word = "diff -"
+search_word = "-git a/"
+#note:
+# split_word + search_word = "diff --git a/"
+search_keyword = search_word + file_name
+
+# FIXME: so it works, but what if there is a patch file(as a <example> maybe) 
+# inside a patch?
+# then we will have problem
 def remove_other_file(patch_name):
-    print patch_name
     f1 = open(patch_name, "r")
     lines = f1.read()
-    print  lines
+    line_list = lines.split(split_word)
+    for line in line_list:
+        if not line.find(search_keyword):
+             print "the line:----"
+             print line
+             useful_data = ''
+             useful_data = split_word + line 
+             print "useful_data*****************"
+             print useful_data
+             print "**************"
+             short_patch_name = os.path.basename(patch_name)
+             print "short_patch_name:  "+ short_patch_name
+             stage2_full_patch_name = output_path+patch_stage2_dir+short_patch_name 
+             f2 = open(stage2_full_patch_name, "w")
+             f2.write(useful_data)
+
 
 patch_file_list = os.listdir(output_path+patch_stage1_dir) 
 # print patch_file_list
