@@ -92,3 +92,8 @@ for commit in commit_list:
 # so we just search "diff --git a/", if this is followed by "out", then this
 # part is what we want, anything else just remove
 
+patch_file_list = os.listdir(output_path+patch_stage1_dir) 
+print patch_file_list
+
+for patch_file in  patch_file_list:
+    print  patch_file
