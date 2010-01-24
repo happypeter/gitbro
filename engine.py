@@ -57,10 +57,11 @@ def get_commit_hashes(file_name):
     return commit_hash_list
 
 commit_list = get_commit_hashes(git_info_file)
-print commit_list
 commit_list.reverse()
-#we reverse the list since we want the oldest commit first
+#we reverse the list since we want the first commit first
 #so that we can generate the first patch first, look shown below
+first_commit = commit_list[1]
+#we need this to get v1(original version) of the file_name
 n = 0
 list_size = len(commit_list)
 # the code in the following for loop is a little cumbersome 
