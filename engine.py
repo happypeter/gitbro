@@ -1,7 +1,18 @@
 #!/usr/bin/python
-import os
-file_name = "out" # this is the file we are working on
-repo_path = "/home/peter/test-repo/"
+import os,sys
+file_name = sys.argv[1] # this is the file we are working on
+
+### check if in a git repo --begin
+cmd="git log>/dev/null"
+if not os.system(cmd):
+    print "OK, we are in a repo, Let's get to work..."
+else:
+    print "sorry gitbro only handles files in git, so Bye!"
+    sys.exit(1)
+
+print "continued...."
+### check if in a git repo --end
+
 output_path = "/home/peter/output_gitbro/"
 patch_stage1_dir = "patch_stage1/" 
 patch_stage2_dir = "patch_stage2/"
@@ -9,11 +20,7 @@ patch_stage2_dir = "patch_stage2/"
 #including tmp files like git-info.txt and useful final output
 #like all the patches, of course in the future we will make this
 #patch configurable
-tmp_path = output_path
-if os.path.exists(repo_path): #repo  go here
-    print "we are going to check "+repo_path 
-else:
-    print "can not find the repo"   
+
 if os.path.exists(output_path): #output files go here
     os.system("rm -rf "+output_path)
     print "old output_path removed"
@@ -21,19 +28,12 @@ if os.path.exists(output_path): #output files go here
 else:
     os.system("mkdir "+output_path)
 
-os.chdir(output_path)
-print "now cwd: "+os.getcwd()
-os.system("mkdir "+patch_stage1_dir)
-os.system("mkdir "+patch_stage2_dir)
+
+os.system("mkdir -p "+output_path+patch_stage1_dir)
+os.system("mkdir -p "+output_path+patch_stage2_dir)
 
  
-
-cwd = os.getcwd()
-print cwd
-os.chdir(repo_path)
-cwd = os.getcwd()
-print cwd
-git_info_file = tmp_path + "git-info.txt"
+git_info_file = output_path + "git-info.txt"
 git_cmd = "git log --follow "+file_name
 cmd = git_cmd+">"+git_info_file
 os.system(cmd)
@@ -65,10 +65,10 @@ first_commit = commit_list[0]
 #we need this to get v0(original version) of the file_name
 
 #####get v0 begin####
-os.chdir(repo_path)
 cmd="git checkout -b "+file_name+' '+first_commit
 os.system(cmd)
-cmd="cp -rf "+file_name+' '+output_path#FIXME what is the file is in a subdir
+cmd="cp -rf "+file_name+' '+output_path
+#This Problem Fixed
 os.system(cmd)
 cmd="git checkout master"
 os.system(cmd)
