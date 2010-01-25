@@ -10,7 +10,6 @@ else:
     print "sorry gitbro only handles files in git, so Bye!"
     sys.exit(1)
 
-print "continued...."
 ### check if in a git repo --end
 
 output_path = "/home/peter/output_gitbro/"
@@ -23,7 +22,6 @@ patch_stage2_dir = "patch_stage2/"
 
 if os.path.exists(output_path): #output files go here
     os.system("rm -rf "+output_path)
-    print "old output_path removed"
     os.system("mkdir "+output_path)
 else:
     os.system("mkdir "+output_path)
@@ -86,14 +84,8 @@ for commit in commit_list:
     n = n+1
     if n == list_size:
         break
- 
-    print commit
     old_commit = commit
-    print "old_commit:"
-    print old_commit
     new_commit = commit_list[n]
-    print "new_commit:"
-    print new_commit
     git_cmd = "git diff -u "+old_commit+" "+new_commit
     patch_file_name = output_path + patch_stage1_dir +  file_name + "-" + str(n) + ".diff"
     cmd = git_cmd + ">" + patch_file_name
@@ -120,8 +112,11 @@ def remove_other_file(patch_name):
     f1 = open(patch_name, "r")
     lines = f1.read()
     line_list = lines.split(split_word)
+    print line_list
     for line in line_list:
         if not line.find(search_keyword):
+        #since '-git a/ff/f1 b/ff/f1\nindex f0'
+        #so for file like f1 that is in a subdir, you can not get it
              useful_data = split_word + line 
              print "*******useful_data********"
              print useful_data
