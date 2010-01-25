@@ -45,7 +45,7 @@ def get_commit_hashes(file_name):
     commit_hash_list = []
     while not done:
         line = f.readline()
-        if not line.find("commit"):
+        if not line.find("commit"): #'commit' at the beginning of the str
             print line
             line = line.replace("commit","")
             commit_hash_list.append(line.strip())
@@ -103,29 +103,26 @@ split_word = "diff -"
 search_word = "-git a/"
 #note:
 # split_word + search_word = "diff --git a/"
-search_keyword = search_word + file_name
 
-# FIXME: so it works, but what if there is a patch file(as a <example> maybe) 
-# inside a patch?
-# then we will have problem
+# FIXME: Now we only search in the first line of each patch,like 
+# "diff --git a/dir/filename"
+# this is much safer
+# PROBLEM: if some 'dir' name is the same as filename
+# however this is a rare case 
 def remove_other_file(patch_name):
     f1 = open(patch_name, "r")
     lines = f1.read()
     line_list = lines.split(split_word)
     print line_list
     for line in line_list:
-        if not line.find(search_keyword):
-        #since '-git a/ff/f1 b/ff/f1\nindex f0'
-        #so for file like f1 that is in a subdir, you can not get it
-             useful_data = split_word + line 
-             print "*******useful_data********"
-             print useful_data
-             print "*******useful_data end*******"
-             short_patch_name = os.path.basename(patch_name)
-             stage2_full_patch_name = output_path+patch_stage2_dir+short_patch_name 
-             f2 = open(stage2_full_patch_name, "w")
-             f2.write(useful_data)
-
+        list = line.split('\n')
+        if list[0].find(file_name)>0:
+            print "we find it:"
+            useful_data = split_word + line 
+            short_patch_name = os.path.basename(patch_name)
+            stage2_full_patch_name = output_path+patch_stage2_dir+short_patch_name 
+            f2 = open(stage2_full_patch_name, "w")
+            f2.write(useful_data)
 
 patch_file_list = os.listdir(output_path+patch_stage1_dir) 
 # print patch_file_list
