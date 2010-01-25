@@ -1,7 +1,13 @@
 #!/usr/bin/python
 import os,sys
+if len(sys.argv)!=2:
+   print """
+gitbro: missing operand
+Usage:
+      $gitbro filename
+          """
+   sys.exit(1)
 file_name = sys.argv[1] # this is the file we are working on
-
 ### check if in a git repo --begin
 cmd="git log>/dev/null"
 if not os.system(cmd):
