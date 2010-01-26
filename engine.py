@@ -8,6 +8,9 @@ Usage:
           """
    sys.exit(1)
 file_name = sys.argv[1] # this is the file we are working on
+
+#FIXME, the following code has hole.
+#what if $gitbro my-git-repo/file
 ### check if in a git repo --begin
 cmd="git log>/dev/null"
 if not os.system(cmd):
@@ -15,10 +18,9 @@ if not os.system(cmd):
 else:
     print "sorry gitbro only handles files in git, so Bye!"
     sys.exit(1)
-
 ### check if in a git repo --end
 
-output_path = "/home/peter/output_gitbro/"
+output_path = "/home/peter/output-gitbro/"
 patch_dir = "patch/" 
 #output_path is the dir we store all the output files
 #including tmp files like git-info.txt and useful final output
@@ -61,42 +63,17 @@ get all the commit number and save them in a list
             done = 1 #stop
     return commit_hash_list
 
-print get_commit_hashes.__doc__
 commit_list = get_commit_hashes(git_info_file)
 commit_list.reverse()
 #we reverse the list since we want the first commit first
 #so that we can generate the first patch first, look shown below
-first_commit = commit_list[0]
-#we need this to get v0(original version) of the file_name
-
-#####get v0 begin####
-cmd="git checkout -b "+file_name+' '+first_commit
-os.system(cmd)
-cmd="cp -rf "+file_name+' '+output_path
-#This Problem Fixed
-os.system(cmd)
-cmd="git checkout master"
-os.system(cmd)
-cmd="git branch -D "+file_name
-os.system(cmd)
-####get vo end####
-
-n = 0
-list_size = len(commit_list)
-# the code in the following for loop is a little cumbersome 
-# but it actually does sth really easy, just get all the diffs 
-# of all the versions of the file named out and save these diffs 
-# into patch files
+n=0
 for commit in commit_list:
-    n = n+1
-    if n == list_size:
-        break
-    old_commit = commit
-    new_commit = commit_list[n]
-    git_cmd = "git diff -u "+old_commit+" "+new_commit
+    git_cmd = "git show "+commit+' '+file_name
     patch_file_name = output_path + patch_dir +  file_name + "-" + str(n) + ".diff"
     cmd = git_cmd + ">" + patch_file_name
     os.system(cmd)
+    n=n+1
 
 
 
