@@ -4,7 +4,7 @@ if len(sys.argv)!=2:
    print """
 gitbro: missing operand
 Usage:
-      $gitbro filename
+      $gitbro filename(no parent dir is allowed within the filename)
           """
    sys.exit(1)
 file_name = sys.argv[1] # this is the file we are working on
@@ -35,7 +35,8 @@ os.system("mkdir -p "+output_path+patch_dir)
 
  
 git_info_file = output_path + "git-info.txt"
-git_cmd = "git log --follow "+file_name
+git_cmd = "git log --follow "+file_name+"|grep commit"
+print git_cmd
 cmd = git_cmd+">"+git_info_file
 os.system(cmd)
 
