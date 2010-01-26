@@ -100,45 +100,11 @@ for commit in commit_list:
     cmd = git_cmd + ">" + patch_file_name
     os.system(cmd)
 
-# now the problem is many of the patches obtained contain diffs for not 
-# only out, but also some other files, so we need to get rid of the junk info
-# the flow is aimple the patch file may contain many parts separated by a line
-#
-#   diff --git a/out b/out
-# so we just search "diff --git a/", if this is followed by "out", then this
-# part is what we want, anything else just remove
 
-split_word = "diff -"
-search_word = "-git a/"
-#note:
-# split_word + search_word = "diff --git a/"
-def remove_other_file(patch_name):
-    """
-# FIXME: Now we only search in the first line of each patch,like 
-# "diff --git a/dir/filename"
-# this is much safer
-# PROBLEM: if some 'dir' name is the same as filename
-# however this is a rare case 
-    """
-    f1 = open(patch_name, "r")
-    lines = f1.read()
-    line_list = lines.split(split_word)
-    print line_list
-    for line in line_list:
-        list = line.split('\n')
-        if list[0].find(file_name)>0:
-            print "we find it:"
-            useful_data = split_word + line 
-            short_patch_name = os.path.basename(patch_name)
-            stage2_full_patch_name = output_path+patch_stage2_dir+short_patch_name 
-            f2 = open(stage2_full_patch_name, "w")
-            f2.write(useful_data)
 
 patch_file_list = os.listdir(output_path+patch_stage1_dir) 
 # print patch_file_list
 
 for patch_file in  patch_file_list:
-    patch_file = output_path+patch_stage1_dir+patch_file
-    # we are currently using absolute path for everthing
-    remove_other_file(patch_file)
 
+    print patch_file
