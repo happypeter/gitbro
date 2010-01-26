@@ -19,8 +19,7 @@ else:
 ### check if in a git repo --end
 
 output_path = "/home/peter/output_gitbro/"
-patch_stage1_dir = "patch_stage1/" 
-patch_stage2_dir = "patch_stage2/"
+patch_dir = "patch/" 
 #output_path is the dir we store all the output files
 #including tmp files like git-info.txt and useful final output
 #like all the patches, of course in the future we will make this
@@ -33,8 +32,7 @@ else:
     os.system("mkdir "+output_path)
 
 
-os.system("mkdir -p "+output_path+patch_stage1_dir)
-os.system("mkdir -p "+output_path+patch_stage2_dir)
+os.system("mkdir -p "+output_path+patch_dir)
 
  
 git_info_file = output_path + "git-info.txt"
@@ -96,13 +94,13 @@ for commit in commit_list:
     old_commit = commit
     new_commit = commit_list[n]
     git_cmd = "git diff -u "+old_commit+" "+new_commit
-    patch_file_name = output_path + patch_stage1_dir +  file_name + "-" + str(n) + ".diff"
+    patch_file_name = output_path + patch_dir +  file_name + "-" + str(n) + ".diff"
     cmd = git_cmd + ">" + patch_file_name
     os.system(cmd)
 
 
 
-patch_file_list = os.listdir(output_path+patch_stage1_dir) 
+patch_file_list = os.listdir(output_path+patch_dir) 
 # print patch_file_list
 
 for patch_file in  patch_file_list:
