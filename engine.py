@@ -19,8 +19,8 @@ else:
     print "sorry gitbro only handles files in git, so Bye!"
     sys.exit(1)
 ### check if in a git repo --end
-
-output_path = "/home/peter/output-gitbro/"
+home_dir = os.path.expanduser("~")#"/home/peter" in my case
+output_path = home_dir +"/"+ file_name + "-patch/"
 patch_dir = "patch/" 
 #output_path is the dir we store all the output files
 #including tmp files like git-info.txt and useful final output
@@ -29,11 +29,8 @@ patch_dir = "patch/"
 
 if os.path.exists(output_path): #output files go here
     os.system("rm -rf "+output_path)
-    os.system("mkdir "+output_path)
-else:
-    os.system("mkdir "+output_path)
 
-
+print "make dir..."
 os.system("mkdir -p "+output_path+patch_dir)
 
  
