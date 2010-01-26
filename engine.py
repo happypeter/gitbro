@@ -41,11 +41,14 @@ git_info_file = output_path + "git-info.txt"
 git_cmd = "git log --follow "+file_name
 cmd = git_cmd+">"+git_info_file
 os.system(cmd)
-#actually we only need all the commit hash num
-#so now we will read git-info.txt, get all the commit number and save them in a list
-#and I think I need a function to do this for me
 
 def get_commit_hashes(file_name):
+    """
+actually we only need all the commit hash num
+so now we will read git-info.txt
+get all the commit number and save them in a list
+
+    """
     f=open(file_name,"r");
     done = 0
     commit_hash_list = []
@@ -60,7 +63,7 @@ def get_commit_hashes(file_name):
             done = 1 #stop
     return commit_hash_list
 
-
+print get_commit_hashes.__doc__
 commit_list = get_commit_hashes(git_info_file)
 commit_list.reverse()
 #we reverse the list since we want the first commit first
@@ -109,13 +112,14 @@ split_word = "diff -"
 search_word = "-git a/"
 #note:
 # split_word + search_word = "diff --git a/"
-
+def remove_other_file(patch_name):
+    """
 # FIXME: Now we only search in the first line of each patch,like 
 # "diff --git a/dir/filename"
 # this is much safer
 # PROBLEM: if some 'dir' name is the same as filename
 # however this is a rare case 
-def remove_other_file(patch_name):
+    """
     f1 = open(patch_name, "r")
     lines = f1.read()
     line_list = lines.split(split_word)
