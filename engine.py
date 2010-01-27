@@ -20,7 +20,7 @@ else:
     sys.exit(1)
 ### check if in a git repo --end
 home_dir = os.path.expanduser("~")#"/home/peter" in my case
-output_path = home_dir +"/"+ file_name + "-patch/"
+output_path = home_dir +"/"+".gitbro/"
 patch_dir = "patch/" 
 #output_path is the dir we store all the output files
 #including tmp files like git-info.txt and useful final output
