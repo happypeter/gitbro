@@ -1,0 +1,18 @@
+#!/usr/bin/python
+import os
+import sys
+cwd = os.getcwd()
+name=sys.argv[1]
+basename=os.path.basename(name)
+dir=os.path.dirname(name)
+print "dir is:"
+print dir
+os.chdir(dir)
+print "chdir().."
+cwd=os.getcwd()
+print "cwd:"
+print cwd
+cmd="/home/peter/gitbro/engine.py "+basename
+os.system(cmd)
+
+print "done"
