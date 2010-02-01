@@ -1,1 +1,74 @@
-gitbro is a gui tool for git repos
+Just now some random ideas comes to me, I think some of them might be
+useful:
+
+1. I do not want a separate repository for project website any more. I
+want a branch named "website" for it, the reason:
+ 1.1 I do not need to maintain another stupidly named repository
+ "webpage-gitbro". 
+ 1.2 I will in the future make gitbro to generate some output "what
+ happened on Jun 1st 2009", that kind of thing, if the website is in
+ the same repo with the source code, the output will be more in detail.
+
+2. I always have new ideas, some of which I will find really stupid
+the next day, so I think it is stupid to write all  them done with all
+these cumbersome muse tags, so I think I can simply write it into a
+tmp file in the source tree, as plain text, and I do not need to worry
+about the format a lot.
+
+so the next morning when I wake up, if I think sth is not so useful, I
+will delete it, anyway, it actually won't be lost, since it is already
+part of git history. and if I find some really good ideas, I will
+reorganize it a little bit. and if a few days later it turn out to be
+really useful, then I will port it to my muse repo, and let it be part
+of the website. This is I think the right way to do this, this is as
+natural as EVOLUTION: good things got a better and better positions,
+while bad ones, will be deleted but won't be lost, since one day they
+might turn out to be of some use.
+
+3. so I decide not to write everything into the muse files, then what
+to do with all these stuff?
+ 3.1 about bugs, I think it is really nice to report them where the
+ problems are, that is, to write them in the source file, marked as FIXME,
+ or BUG, or whatever. Then I will let gitbro generate what happens to
+ that file form day to day, then we can see in the everyday patches:
+ when and who touched the related source code, what progress she made
+ to the bug comment or the source code, when the FIXME tag is deleted,
+ that is when the bug is fixed. This way, we do not need to give bug a
+ number we do not need to set the category for each bug, since all the
+ info will be nice backed up in the git history. I also like some bug
+ trackers like bugzillia, but the cost on maintaining them are huge. 
+ 3.2 about events, it is stupid to maintain a Events page, who cares
+ about some project events? nobody! so I won't publish releases
+ unless it is really some stable. But I do like the git tag v-x.x.x
+ and I can let gitbro tell everybody, what happened to the source
+ code(maybe even to the website) between v-0.0.1 to v-0.0.2, that is
+ also sth very meaning I guess.
+ 3.3 about Mailing list. Now we've already abandoned bugzillia, and
+ Events page. and the webpage-gitbro repo, so now naturally we need to
+ turn our ax to mailing list. today, billie sent me a email attached a
+ py code file. inside this mail she mentioned 3 improvements and one
+ bug, and and I sent her back a patch for the bug. We worked hard, but
+ this is really stupid, since in the future it will be hard to find
+ out, what we are talking about now and what version of source code
+ should my patch be applied to. I mean, every thing shall rightly go
+ into the source code tree. all the improvements shall be comments by
+ the side of the piece of source code that implemented them. And the
+ bug shall go after of a FIXME tag on top of where the problem
+ is. However it is obvious that not all bug reports can be exactly
+ located, that case, I think we'd better create a file named debug.log
+ inside the subdir where the source file residents. Since it is easy
+ to track what happened to a subdir, so nothing can be messed up,
+ developers can create a file inside their own subdir named my_cat or
+ love or whatever. 
+
+
+I will generated all kinds of reports out of git repo, based on:
+
+ 1. what happens to everything in one day or  one week
+
+ 2. what happens to one file or subdir between v0.0.1~v0.0.2
+ 
+ 3. what each developer did ?
+
+I will try to get all these diffs published in html file, (maybe use
+vim ":Tohtml") 
