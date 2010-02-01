@@ -1,0 +1,17 @@
+Billie, 
+   I think next time when you want to talk about source code related
+   stuff, you can write your Email here inside the source tree, then
+   we will know what version of source we are talking about when we
+   look back in the future.
+
+   and when things are no longer needed, like a comment then dated, or
+   a bug that alreay fixed, you can just deleted all the related info,
+   if you want to check them in the future, we can use gitbro to
+   generate report out of the githistory.
+
+   so My suggestion is: do not use mailing list any more, write
+   anything in side the repo, and delete it whenever it is no longer
+   needed. 
+
+Regards
+Peter
