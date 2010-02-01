@@ -15,3 +15,37 @@ Billie,
 
 Regards
 Peter
+
+
+On Mon, Feb 1, 2010 at 5:32 PM, guosong zhang <billie.jean.zhang@gmail.com> wrote:
+
+    Now, I add a new text widget with a vertical scrollbar and fix a few bugs last time, for example,
+    1. the GUI can display full screen
+
+yes, I tested, and verified this.
+
+    2. use pack geometry management instead of grid.  Maybe grid method is better than pack, but I can
+     not operate it well to make GUI full-screen display.
+    3. a little trick with entry widget, when click 'search' button, then the entry widget will appear in the
+     right side of the 'search' button. It is also stupid, if click 'search' again, the entry will appear again.
+     So, I need to fix the bug. Though this feature is not necessary, but I think it is interesting so I do not
+     want to cancel it. But those are all decorations now.
+
+See my attached patch, I think it fixed this bug.
+
+    4. the file button can work now. If click it, a file named '11.txt' in the current directory will be displayed
+     in the right side text widget. This also can be rewritten to be more general. It is just a test in order to
+     know how to read a file in  text widget.
+
+nice progress.
+
+    5. There is no necessary to add a horizontal scrollbar in text widget, because a option wrap with default
+     value WORD forbids the functionality of the horizontal scrollbar, with the default value a line can be split
+     by word when it reach the boundary of the text widget. Only configure wrap with NONE, the horizontal scrollbar
+     will take effect.
+
+good hacking, this is useful, thx.
+
+P.S:
+I've added you as a  collaborator of our github:gitbro repository. This means you can clone the repo, and commit the current source code into
+the our upstream repo when you feel like. Plz commit the source and add as many comments as you can,  maybe in the future you think part of the comments are out of date, you can simply delete them. we have git, all your write now will be in git history even they are deleted one day, but whenever we want to go back and check where we were started form, the comments will surely be of some help.  
