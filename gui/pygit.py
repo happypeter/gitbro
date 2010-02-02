@@ -12,7 +12,7 @@ class application:
         self.topframe.pack(side=TOP,fill=X)
 
         search = Button(self.topframe, text='search', width=10,
-                        height=1, command=self.search)
+                        height=1, command=self.search_text)
         search.pack(side=LEFT, fill=X)
 
         self.midframe = Frame(master)
@@ -52,7 +52,11 @@ class application:
         exit = Button(self.botframe, text='exit', fg='red',
                       width=8, height=1, command=master.quit)
         exit.pack(side=RIGHT)
-   
+        self.entry = Entry(self.topframe)
+        self.entry.pack(side=LEFT, fill=X, expand=True)
+        self.string=self.entry.get()
+        self.entry.bind('<Return>', self.search_text)
+
 
     def open_file(self):
         
@@ -63,16 +67,7 @@ class application:
                 break
             self.filetext.insert(END, text)
         
-
-    def search(self):
-        '''Each time click search button, then display a entry widget, which is stupid'''
-        
-        self.entry = Entry(self.topframe)
-        self.entry.pack(side=LEFT, fill=X, expand=True) 
-        self.string=self.entry.get()
-        self.entry.bind('<Return>', self.search_text)
-        
-   
+      
     def search_text(self, event):
         
         self.filetext.search(self.string, END, nocase=1)
