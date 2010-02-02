@@ -72,3 +72,5 @@ I will generated all kinds of reports out of git repo, based on:
 
 I will try to get all these diffs published in html file, (maybe use
 vim ":Tohtml") 
+
+github.com actually has some nice feathers that meet some of what I want.
