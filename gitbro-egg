@@ -26,6 +26,7 @@ cd $dirname
 #now we are in the repo
 git branch
 git symbolic-ref HEAD refs/heads/new
+git rm --cached  -r  *
 rm -rf *
 git commit --allow-empty -m "init on new branch, empty"
 git branch
