@@ -1,7 +1,14 @@
-Hi quandyfactory ,
+I want to have
+engine.py   gitbro-patch
+in one file, and name this file gitbro-onefile, it just generate all
+the  patches for a single file, just as what gitbro-patch already can
+do.  
 
-I've added you as a collaborator. If you have some suggestion, you can
-write here in this file, or you can leave comment directly into the
-source code. Thanks!
+And I want a argument --moin to get moinmoin meta data style
+data.
 
-Peter
+If possible, I think I will port code into plain bash script.
+
+When this is mature, I can use this to generate a repository with more
+than one file(randomly selected by user who think these files are
+related in some way)
