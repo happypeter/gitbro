@@ -15,7 +15,7 @@ class application:
         self.topframe.pack(side=TOP,fill=X)
 
         search = Button(self.topframe, text='search', width=10, height=1)              
-        search['command']=self.search           
+        search['command'] = self.search_text  #format change according to PEP8           
         search.pack(side=LEFT, fill=X)
         
         self.midframe = Frame(master)
@@ -55,7 +55,10 @@ class application:
         exit = Button(self.botframe, text='exit', fg='red',
                       width=8, height=1, command=master.quit)
         exit.pack(side=RIGHT)
-   
+        self.entry = Entry(self.topframe)
+        self.entry.pack(side=LEFT, fill=X, expand=True)
+        self.entry.bind('<Return>', self.search_text)
+
 
     def open_file(self):
             
@@ -71,14 +74,6 @@ class application:
             self.filetext.insert(END, text)
 
         
-    def search(self):
-        ''' Now entry only appear once, when click search button'''
-        global counter
-        if counter == 0:
-            self.entry = Entry(self.topframe)
-            self.entry.pack(side=LEFT, fill=X, expand=True) 
-            self.entry.bind('<Return>', self.search_text)
-        counter = counter+1
    
     def search_text(self, event):
        
