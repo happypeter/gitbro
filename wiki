@@ -13,3 +13,8 @@ libQtCore.so.4.6.1
 peter@cow:~/qtsdk-2010.01/lib$ sudo cp libQtCore.so.4* /usr/lib/
 
 all works:-) ./reader runs.
+try to build reader, but qmake is not installed,
+
+peter@cow:~/qtsdk-2010.01/qt/bin$ sudo cp -rf qmake /usr/bin/
+
+done perfectly

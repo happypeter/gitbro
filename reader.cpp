@@ -6,7 +6,7 @@ reader::reader()
 }
 reader::~reader()
 {
-	cout<<"I am the destructor"<<endl;
+	cout<<"I am the destructor, bye"<<endl;
 }
 
 int reader::showColor()
