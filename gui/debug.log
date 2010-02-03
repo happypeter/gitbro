@@ -1,6 +1,21 @@
+guosong zhang
+ to gitbro-develop
+ 
+show details 11:24 AM (3 hours ago)
+     
+I want the entry widget to appear when you click the search button. It
+is not a bug. I like the effect which is fun. If not like the idea,
+you can modify it, but you can not think it as a bug.
+
 Hi, Billie
 
-   I made a patch for your search button problem.
+You are the designer of that part, you make decision, I only give help
+and suggestion:-) 
+
+BTW. Plz do not use mailing list in the future, I find it will be more
+clear, if we just talk about things here. 
+
+Peter
 
 Billie, 
    I think next time when you want to talk about source code related
