@@ -1,0 +1,1 @@
+I want a text area with syntax highlighting. for gitbro  
