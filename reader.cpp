@@ -11,7 +11,7 @@ reader::~reader()
 
 int reader::showColor()
 {
-	cout<<"the apple color is:"<<color<<endl;
+	cout<<"hi,peter..the apple color is:"<<color<<endl;
 	return 0;
 }
 int reader::setColor()
