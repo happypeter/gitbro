@@ -12,3 +12,11 @@ If possible, I think I will port code into plain bash script.
 When this is mature, I can use this to generate a repository with more
 than one file(randomly selected by user who think these files are
 related in some way)
+
+first cp -rf gitbro/ xx/
+peter@cow:~/xx$ git filter-branch  --subdirectory-filter gui
+Cannot rewrite branch(es) with a dirty working directory.
+peter@cow:~/xx$ git  clean -f
+peter@cow:~/xx$ git filter-branch  --subdirectory-filter gui
+Rewrite 9acfde2c1c16adec05715e5be99d39aa54918f5b (9/9)
+Ref 'refs/heads/master' was rewritten
