@@ -1,0 +1,31 @@
+#!/bin/bash
+
+usage()
+{
+cat<<sss
+Usage:
+sh  s.sh  -c
+sh s.sh -t cc -p dd
+sss
+ 
+}
+
+while getopts "et:p:" option
+do
+        case $option in
+        e)
+                echo sleeping...
+                sleep 5
+                echo "gitbro-egg ..."
+        ;;
+        t)
+                echo hello
+        ;;
+        p)
+                echo "gitbro-patch at work..."
+        ;;
+        *)
+                usage
+        ;;
+        esac
+done

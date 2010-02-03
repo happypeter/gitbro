@@ -4,6 +4,10 @@ in one file, and name this file gitbro-onefile, it just generate all
 the  patches for a single file, just as what gitbro-patch already can
 do.  
 
+finally, there will be only one exe file, that must be gitbro, so all
+functions shall be spicified by passing corresponding argument to
+gitbro to invoke.
+
 And I want a argument --moin to get moinmoin meta data style
 data.
 
@@ -20,3 +24,12 @@ peter@cow:~/xx$ git  clean -f
 peter@cow:~/xx$ git filter-branch  --subdirectory-filter gui
 Rewrite 9acfde2c1c16adec05715e5be99d39aa54918f5b (9/9)
 Ref 'refs/heads/master' was rewritten
+
+--
+Big idea,
+
+When I think about how to display the output of gitbro, I first want a
+simply html brower for the job. 
+
+But when I open Qt creator, I start to realize this is really
+wonderful thing to have(it has a embedded browser as well)
