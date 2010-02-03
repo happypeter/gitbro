@@ -1,1 +1,15 @@
 I want a text area with syntax highlighting. for gitbro  
+
+** go without Qtcreator
+run ldd reader then I see qt libs are not found, so I
+
+peter@cow:~/qtsdk-2010.01/lib$ sudo cp libQtGui.so.4* /usr/lib/
+Display all 1444 possibilities? (y or n)
+peter@cow:~/qtsdk-2010.01/lib$ sudo cp libQtGui.so.4* /usr/lib/
+[sudo] password for peter: 
+peter@cow:~/qtsdk-2010.01/lib$ sudo cp libQtC /usr/lib/
+libQtCLucene.so.4      libQtCLucene.so.4.6.1  libQtCore.so.4
+libQtCore.so.4.6.1
+peter@cow:~/qtsdk-2010.01/lib$ sudo cp libQtCore.so.4* /usr/lib/
+
+all works:-) ./reader runs.
