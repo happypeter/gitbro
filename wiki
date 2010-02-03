@@ -1,3 +1,7 @@
+** inorder to compile qgit, I do:
+peter@cow:~/Desktop/qgit$ sudo apt-get install x11proto-xext-dev
+then it is done! Miracle, all the header files uic moc ... are all in
+the creator dir, but the Makefile found them all. GOod.
 I want a text area with syntax highlighting. for gitbro  
 
 ** go without Qtcreator
