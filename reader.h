@@ -1,18 +1,22 @@
-#ifndef APPLE_H
-#define APPLE_H
+#ifndef READER_H
+#define READER_H
 #include <iostream>
 #include <QPixmap>
 #include <QTextEdit>
+#include <QMainWindow>
 using namespace std;
-class reader
+
+class Reader:public QMainWindow
 {
+    Q_OBJECT
+
 public:
-reader();
-~reader();
-string color;
-QPixmap newImage;
-QTextEdit textEdit;
-int showColor();
-int setColor();
+    Reader();
+    ~Reader();
+private:
+    int showColor();
+    int setColor();
+
+
 };
-#endif //APPLE_H
+#endif //READER_H
