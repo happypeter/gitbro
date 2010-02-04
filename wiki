@@ -1,9 +1,11 @@
+
+[Qtcreator]
 ** inorder to compile qgit, I do:
 peter@cow:~/Desktop/qgit$ sudo apt-get install x11proto-xext-dev
 then it is done! Miracle, all the header files uic moc ... are all in
 the creator dir, but the Makefile found them all. GOod.
-I want a text area with syntax highlighting. for gitbro  
-
+** syntax highlighting example:
+/home/peter/qtsdk-2010.01/qt/examples/richtext/syntaxhighlighter
 ** go without Qtcreator
 run ldd reader then I see qt libs are not found, so I
 
@@ -59,3 +61,9 @@ commit5:  none   none   file3  file4
 when we have 200 or 500 files, the picture will grow very big, but
 that is not a problem, since we only disply those file who have a
 Event(revision, rename, delete..) at that commit
+
+Now we have the graph, and we can click on the node(or, some time you
+maybe want to open several neighbor nodes, since they are very likely
+connected in some way), then you will get a pop up window, will the
+current version of this file, with the diff with his parent displayed
+as well in the same page, it is just the github style.
