@@ -2,7 +2,8 @@
 #include <QtGui>
 Reader::Reader()
 {
-	setColor();
+  setCentralWidget(editor);
+
 }
 Reader::~Reader()
 {
