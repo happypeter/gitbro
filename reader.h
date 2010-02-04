@@ -15,7 +15,7 @@ public:
     ~Reader();
 private:
     int showColor();
-    int setColor();
+    void setupEditor();
     QTextEdit *editor;
 
 };

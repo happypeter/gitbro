@@ -6,3 +6,8 @@ reader
 #editor
 *#*
 *~
+
+#qt
+moc_*
+qrc_*
+*.o

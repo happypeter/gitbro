@@ -2,6 +2,7 @@
 #include <QtGui>
 Reader::Reader()
 {
+  setupEditor();
   setCentralWidget(editor);
 
 }
@@ -15,11 +16,12 @@ int Reader::showColor()
 	cout<<"hi,peter..the apple color"<<endl;
 	return 0;
 }
-int Reader::setColor()
+
+void Reader::setupEditor()
 {
 
-	cout<<"set color to red"<<endl;
-	return 0;
+	cout<<"setup editor"<<endl;
+	editor = new QTextEdit;
 }
 
 
