@@ -14,6 +14,12 @@ void Reader::setupEditor()
 {
     cout<<"setup editor"<<endl;
     editor = new QTextEdit;
+    QFont font;
+    font.setFamily("Times");
+    font.setFixedPitch(true);
+    font.setPointSize(10);
+    editor->setFont(font);
+
 }
 
 //cp form /home/peter/qtsdk-2010.01/qt/examples/richtext/syntaxhighlighter
