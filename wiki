@@ -1,7 +1,7 @@
 .git/config
 
 [alias]
-	ci = commit
+	ci = commit -a -m 
  	co = checkout
 	st = status
 	br = branchpeter@cow:~/git-reader$ 
