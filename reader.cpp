@@ -4,6 +4,8 @@ Reader::Reader()
 {
   setupEditor();
   setCentralWidget(editor);
+  QString content = "hello";
+  editor->setPlainText(content);
 
 }
 Reader::~Reader()

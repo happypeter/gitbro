@@ -3,6 +3,7 @@
 #include <iostream>
 #include <QTextEdit>
 #include <QMainWindow>
+#include <QString>
 using namespace std;
 
 class Reader:public QMainWindow
