@@ -2,4 +2,4 @@
 qmake -project
 qmake 
 make
-./reader
+./git-reader
