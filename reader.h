@@ -1,7 +1,6 @@
 #ifndef READER_H
 #define READER_H
 #include <iostream>
-#include <QPixmap>
 #include <QTextEdit>
 #include <QMainWindow>
 using namespace std;
@@ -14,7 +13,6 @@ public:
     Reader();
     ~Reader();
 private:
-    int showColor();
     void setupEditor();
     QTextEdit *editor;
 

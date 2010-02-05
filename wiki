@@ -1,3 +1,13 @@
+.git/config
+
+[alias]
+	ci = commit
+ 	co = checkout
+	st = status
+	br = branchpeter@cow:~/git-reader$ 
+
+
+
 github is now down, so this warn me to have a mirror of my repo
 so I 
 peter@cow:~/reader$ git push
