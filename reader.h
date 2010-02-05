@@ -18,5 +18,6 @@ public:
 private:
     void setupEditor();
     QTextEdit *editor;
+    Highlighter *highlighter;
 };
 #endif //READER_H

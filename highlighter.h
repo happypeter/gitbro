@@ -3,7 +3,7 @@
 
 #include <QSyntaxHighlighter>
 #include <QTextCharFormat>
-
+#include <iostream>
 class Highlighter : public QSyntaxHighlighter
 {
     Q_OBJECT

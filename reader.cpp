@@ -1,5 +1,6 @@
 #include "reader.h"
 #include <QtGui>
+
 Reader::Reader()
 {
     setupEditor();
@@ -13,11 +14,14 @@ Reader::~Reader()
 void Reader::setupEditor()
 {
     cout<<"setup editor"<<endl;
+
+    highlighter = new Highlighter(editor->document());
+
     editor = new QTextEdit;
     QFont font;
     font.setFamily("Times");
     font.setFixedPitch(true);
-    font.setPointSize(10);
+    font.setPointSize(15);
     editor->setFont(font);
 
 }
