@@ -1,3 +1,7 @@
+V0.0.1 
+./git-reader filename
+and git-reader will open it for you, no highlighting yet
+
 .git/config
 
 [alias]
