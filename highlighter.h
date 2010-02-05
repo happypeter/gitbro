@@ -13,7 +13,18 @@ public:
 
 protected:
     void highlightBlock(const QString &text);
+    //oid QSyntaxHighlighter::highlightBlock ( const QString & text )
+    // [pure virtual protected]
 
+    //Highlights the given text block. This function is called when
+    //necessary by the rich text engine, i.e. on text blocks which
+    // have changed.
 private:
 };
 #endif
+//QTextEdit *editor = new QTextEdit;
+//MyHighlighter *highlighter = new MyHighlighter(editor->document());
+
+//After this your highlightBlock() function will be called automatically
+//whenever necessary. 
+//http://doc.trolltech.com/4.6/qsyntaxhighlighter.html#highlightBlock

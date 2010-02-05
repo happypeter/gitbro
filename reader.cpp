@@ -16,9 +16,23 @@ void Reader::setupEditor()
     cout<<"setup editor"<<endl;
     editor = new QTextEdit;
     highlighter = new Highlighter(editor->document());
-    cout<<"2222222222"<<endl;
+    //highlighter is not used hereafter, strange to me.
+    //how it works?
+    //if setCentralWidget(highlighter)
+    //then I will feel it is natrual.
+    //I will try to believe by newing the highlighter,
+    //its constructor (which is just a series of functions) got
+    //executed, and these functions modified editor->document()in some
+    //way, like tagging the text, so that the next time you want to
+    //use the document, it has been tagged, and thus highlighting is
+    //done, that's how I understand as a C coder, really need to learn
+    //C++ more:-)
+    //the below makes sense
+    /* QSyntaxHighlighter::QSyntaxHighlighter ( QTextDocument * parent
+       )
 
-    cout<<"333333333"<<endl;
+       Constructs a QSyntaxHighlighter and installs it on parent. The
+       specified QTextDocument also becomes the owner of the QSyntaxHighlighter.*/ 
     QFont font;
     font.setFamily("Times");
     font.setFixedPitch(true);
