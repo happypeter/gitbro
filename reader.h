@@ -9,7 +9,6 @@ using namespace std;
 class Reader:public QMainWindow
 {
     Q_OBJECT
-
 public:
     Reader();
     ~Reader();
@@ -17,6 +16,5 @@ public:
 private:
     void setupEditor();
     QTextEdit *editor;
-
 };
 #endif //READER_H
