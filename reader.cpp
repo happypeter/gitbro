@@ -14,10 +14,11 @@ Reader::~Reader()
 void Reader::setupEditor()
 {
     cout<<"setup editor"<<endl;
-
-    highlighter = new Highlighter(editor->document());
-
     editor = new QTextEdit;
+    highlighter = new Highlighter(editor->document());
+    cout<<"2222222222"<<endl;
+
+    cout<<"333333333"<<endl;
     QFont font;
     font.setFamily("Times");
     font.setFixedPitch(true);
