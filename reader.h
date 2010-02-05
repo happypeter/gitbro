@@ -4,6 +4,8 @@
 #include <QTextEdit>
 #include <QMainWindow>
 #include <QString>
+#include "highlighter.h"
+
 using namespace std;
 
 class Reader:public QMainWindow

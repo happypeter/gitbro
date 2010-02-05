@@ -1,3 +1,11 @@
+[highlighting]
+http://doc.trolltech.com/qq/qq21-syntaxhighlighter.html
+Adding syntax highlighting to a QTextEdit involves subclassing
+QSyntaxHighlighter, reimplementing the highlightBlock() function, and
+instantiating the QSyntaxHighlighter subclass with the QTextEdit's
+underlying QTextDocument (returned by QTextEdit::document()) as the
+parent. 
+
 V0.0.1 
 ./git-reader filename
 and git-reader will open it for you, no highlighting yet
