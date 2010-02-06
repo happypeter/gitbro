@@ -31,7 +31,7 @@ void Reader::openFile(const QString &path)
 
     if (fileName.isNull())
         fileName = QFileDialog::getOpenFileName(this,
-						tr("Open File"), "", "C++ Files (*.cpp *.h)");
+						tr("Open File"), "", "Patch Files (*.diff *.patch)");
 
     if (!fileName.isEmpty()) 
       {

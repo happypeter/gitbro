@@ -1,11 +1,12 @@
 #include <QtGui>
 #include "highlighter.h"
+
 Highlighter::Highlighter(QTextDocument *parent)
   : QSyntaxHighlighter(parent)
 {
   HighlightingRule rule;
 
-  singleLineCommentFormat.setBackground(Qt::green);
+  singleLineCommentFormat.setBackground(QColor("#99CC66"));
   rule.pattern = QRegExp("//[^\n]*");
   rule.format = singleLineCommentFormat;
   highlightingRules.append(rule);
