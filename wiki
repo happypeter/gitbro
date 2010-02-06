@@ -1,3 +1,5 @@
+[gitorious]
+git push git@gitorious.org:git-reader/git-reader.git
 
 [regexp]
 http://www.regular-expressions.info/reference.html
