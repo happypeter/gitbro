@@ -1,3 +1,5 @@
+http://www.gitcasts.com/ great videos here
+
 I want to have
 engine.py   gitbro-patch
 in one file, and name this file gitbro-onefile, it just generate all
