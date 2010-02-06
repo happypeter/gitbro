@@ -26,8 +26,8 @@ private:
       QTextCharFormat format;
     };
     QVector<HighlightingRule> highlightingRules;
-   QTextCharFormat singleLineCommentFormat;
-
+   QTextCharFormat addFormat;
+   QTextCharFormat minusFormat;
 };
 #endif
 //QTextEdit *editor = new QTextEdit;
