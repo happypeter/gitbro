@@ -8,5 +8,11 @@ doc is usually closely related with the code changed in the same commit
 I will use markdown as the format, since I do not want to invoke muse mode every time, it is simple too slow
 using markdown format, you don't need to use any mode to assist you, since it is so easy.
 
-    hi 
-    this is a indentation block
+	hi 
+	this is a indentation block
+
+# this is a topic #
+stuff here
+
+	indent with two spaces won't work
+	indent with a tab
