@@ -16,4 +16,11 @@ out
 peter@cow:~/dev-gitbro/test-repo$ vim out
 peter@cow:~/dev-gitbro/test-repo$
 
-quit troublesome. 
+quit troublesome.
+
+### easy way ###
+actully you just need to do 
+	
+	git checkout sh1
+ 
+then you can get the older versions
