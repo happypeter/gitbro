@@ -1,0 +1,38 @@
+[gitorious]
+git push git@gitorious.org:git-reader/git-reader.git
+
+[regexp]
+http://www.regular-expressions.info/reference.html
+	\+ matches +
+but it ends with a error unknown escape sequence \+
+I want to know how to match '+'
+
+[gitk]
+gitk is not so ugly, today I changed its font, and it looks nice
+now. the problem is gitk try to display everything in one frame, make
+things kind of messy.
+github display is still more joyable to look at
+http://github.com/happypeter/git-reader/commit/c6ddabcabf3b8737779a16619a421fe4c2372db7
+I want all the diffs show up in popup windows. it will look quit confortable.
+[highlighting]
+http://doc.trolltech.com/qq/qq21-syntaxhighlighter.html
+Adding syntax highlighting to a QTextEdit involves subclassing
+QSyntaxHighlighter, reimplementing the highlightBlock() function, and
+instantiating the QSyntaxHighlighter subclass with the QTextEdit's
+underlying QTextDocument (returned by QTextEdit::document()) as the
+parent. 
+
+
+github is now down, so this warn me to have a mirror of my repo
+so I 
+peter@cow:~/reader$ git push git@gitorious.org:git-reader/git-reader.git master
+Counting objects: 130, done.
+Compressing objects: 100% (88/88), done.
+Writing objects: 100% (130/130), 214.90 KiB, done.
+Total 130 (delta 60), reused 86 (delta 37)
+To git@gitorious.org:git-reader/git-reader.git
+ * [new branch]      master -> master
+=> Syncing Gitorious... [OK]
+peter@cow:~/reader$ 
+
+
