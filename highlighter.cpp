@@ -5,7 +5,7 @@ Highlighter::Highlighter(QTextDocument *parent)
 {
   HighlightingRule rule;
 
-  singleLineCommentFormat.setForeground(Qt::red);
+  singleLineCommentFormat.setBackground(Qt::green);
   rule.pattern = QRegExp("//[^\n]*");
   rule.format = singleLineCommentFormat;
   highlightingRules.append(rule);
