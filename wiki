@@ -1,3 +1,9 @@
+[regexp]
+http://www.regular-expressions.info/reference.html
+	\+ matches +
+but it ends with a error unknown escape sequence \+
+I want to know how to match '+'
+
 [gitk]
 gitk is not so ugly, today I changed its font, and it looks nice
 now. the problem is gitk try to display everything in one frame, make
