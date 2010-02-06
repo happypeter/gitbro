@@ -34,7 +34,7 @@ void Reader::setupEditor()
        Constructs a QSyntaxHighlighter and installs it on parent. The
        specified QTextDocument also becomes the owner of the QSyntaxHighlighter.*/ 
     QFont font;
-    font.setFamily("Times");
+    font.setFamily("Lucica");
     font.setFixedPitch(true);
     font.setPointSize(15);
     editor->setFont(font);
