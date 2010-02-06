@@ -1,0 +1,27 @@
+[dir track]
+
+http://help.github.com/removing-sensitive-data/
+
+** track one dir history
+http://help.github.com/splitting-a-subpath-to-a-new-repo/
+
+<example>
+git clean -f # to avoid "dirty"
+peter@cow:~/x-github/hen$ git filter-branch  --subdirectory-filter youku/
+Rewrite 7edb766c7420249aa4301d9a2587e38714f566ef (2/2)
+Ref 'refs/heads/master' was rewritten
+peter@cow:~/x-github/hen$ ls
+</example>
+the thing is if you mv a file into a subdir, and you do above, you
+will lost all its histoy:-(
+
+But for gitbro, this is not a problem, I tested, after mving in to a subdir, you can still use git log --follow to track the file's full history, that means the current gitbro-patch still works, of course, we can only handle one file at a time.
+
+SO, if we can to track a dir, we just pass all its files to gitbro-patch and then we sort all the diffs by time, then we can creat another repo if we want to use gitk, and if we use our own program git-reader, we can directly read info from these diffs, and display all the history of the dir to users.
+
+we will abandon  
+
+git filter-branch  --subdirectory-filter
+
+can concentrate on gitbro-patch, this actually makes the issue more straightforward.
+http://www.gitcasts.com/ great videos here
