@@ -106,8 +106,8 @@ class application:
             self.filetext.tag_configure('highlight', background='yellow')
             start = pos + '+1c'   
             start = self.filetext.index(start)
-       '''the above code can not execute, though above code can search
-and highlight the matched string '''    
+            '''the above code can not execute, though above code can search
+            and highlight the matched string '''    
         self.filetext.tag_delete('highlight') 
         counter1 = counter1 +1
         
