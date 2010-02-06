@@ -4,6 +4,7 @@ now. the problem is gitk try to display everything in one frame, make
 things kind of messy.
 github display is still more joyable to look at
 http://github.com/happypeter/git-reader/commit/c6ddabcabf3b8737779a16619a421fe4c2372db7
+I want all the diffs show up in popup windows. it will look quit confortable.
 [highlighting]
 http://doc.trolltech.com/qq/qq21-syntaxhighlighter.html
 Adding syntax highlighting to a QTextEdit involves subclassing

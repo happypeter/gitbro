@@ -20,6 +20,22 @@ protected:
     //necessary by the rich text engine, i.e. on text blocks which
     // have changed.
 private:
+    struct HighlightingRule
+    {
+      QRegExp pattern;
+      QTextCharFormat format;
+    };
+    QVector<HighlightingRule> highlightingRules;
+
+    QRegExp commentStartExpression;
+    QRegExp commentEndExpression;
+
+    QTextCharFormat keywordFormat;
+    QTextCharFormat classFormat;
+    QTextCharFormat singleLineCommentFormat;
+    QTextCharFormat multiLineCommentFormat;
+    QTextCharFormat quotationFormat;
+    QTextCharFormat functionFormat;
 };
 #endif
 //QTextEdit *editor = new QTextEdit;
