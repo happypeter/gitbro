@@ -1,0 +1,19 @@
+Now I just want to oldest version of the file out
+
+commit ff39ed298a367cf971fc647beea6a6d4d8451ba3
+Author: peter <peter@cow.(none)>
+Date:   Thu Jan 21 21:39:33 2010 +0800
+
+    first commit
+peter@cow:~/dev-gitbro/test-repo$ git branch init_things ff39ed298a367cf971fc647beea6a6d4d8451ba3
+peter@cow:~/dev-gitbro/test-repo$ git branch
+  init_things
+* master
+peter@cow:~/dev-gitbro/test-repo$ git checkout init_things
+Switched to branch "init_things"
+peter@cow:~/dev-gitbro/test-repo$ ls
+out
+peter@cow:~/dev-gitbro/test-repo$ vim out
+peter@cow:~/dev-gitbro/test-repo$
+
+quit troublesome. 
