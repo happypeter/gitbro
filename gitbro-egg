@@ -25,7 +25,7 @@ echo $basename
 cd $dirname
 #now we are in the repo
 git branch
-git symbolic-ref HEAD refs/heads/new
+git symbolic-ref HEAD refs/heads/nonsensename  #if there is one file happens to be named new, then git log --fllow will be confused and fail, so we need to use a nonsense name here.
 git rm --cached  -r  *
 rm -rf *
 git commit --allow-empty -m "init on new branch, empty"
