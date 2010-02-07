@@ -1,0 +1,12 @@
+gitbro-patch README 
+
+gives three empty patchs, and only the last patch is not empty.
+this happens to all file that are remamed or moved to another dir 
+
+But
+
+	git log -p --follow  README
+
+still works, and the output is actully nice. easy to handle.
+
+Fix: so why not just use  "git log -p --follow  README" 
