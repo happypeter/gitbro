@@ -19,7 +19,7 @@ void Reader::setupEditor()
     QFont font;
     font.setFamily("Lucica");
     font.setFixedPitch(true);
-    font.setPointSize(15);
+    font.setPointSize(13);
     editor->setFont(font);
 
 }
