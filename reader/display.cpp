@@ -1,15 +1,11 @@
 #include <QLayout>
 #include <QLineEdit>
 #include <QString>
-#include <QStringList>
 #include <QPushButton>
 #include <iostream>
 #include "display.h"
 
 using namespace std;
-                                                                                
-QStringList strlist;
-QStringList ::Iterator it;
 
 DisplayWidget::DisplayWidget() :  QWidget()
 {
