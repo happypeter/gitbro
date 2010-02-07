@@ -43,6 +43,8 @@ filename.append(s);
 //cout<<filename.toAscii()<<endl;//failed
 cout<<qPrintable(filename)<<endl;
 cout<<"let me open a newer version of this file"<<endl;
-reader->openFile("/home/peter/file/v1"); //"~/file/v1" won't work
+QString path = "/home/peter/file/";
+path.append(filename);
+reader->openFile(path); //"~/file/v1" won't work
 cout<<"open file"<<endl;
 }
