@@ -7,13 +7,13 @@ basename=os.path.basename(name)
 dir=os.path.dirname(name)
 print "dir is:"
 print dir
-if dir is not None:
+if dir is not '':
     os.chdir(dir)
     print "chdir().."
 cwd=os.getcwd()
 print "cwd:"
 print cwd
-cmd="/home/peter/gitbro/engine.py "+basename
+cmd="git log -p --follow " + basename + ">~/" + basename + ".diff"
 os.system(cmd)
 
 print "done"
