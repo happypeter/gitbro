@@ -7,7 +7,7 @@ basename=os.path.basename(name)
 dir=os.path.dirname(name)
 print "dir is:"
 print dir
-if dir is None:
+if dir is not None:
     os.chdir(dir)
     print "chdir().."
 cwd=os.getcwd()
