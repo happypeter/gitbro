@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [git]
 try git-revert
 today I stupidly did a 
@@ -14,6 +15,8 @@ but the right way to revert a stupid commit is this:
 	git commit -a -C ORIG_HEAD
 	#then you get all the info in last commit you did.
 
+=======
+>>>>>>> a4de3ee... git reset test
 Now I want add some buttons and lineEdit, since .ui files are slower
 to load, so I won't use designer to do the layout.
 [gitorious]
