@@ -1,4 +1,5 @@
 [git]
+try git-revert
 today I stupidly did a 
 
 	git reset --hard last_commit
