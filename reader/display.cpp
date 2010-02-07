@@ -39,7 +39,10 @@ QString n = QVariant(i).toString();
 QString filename = "v";
 filename.append(n);
 cout<<qPrintable(filename)<<endl;
-QString path = "/home/peter/file/";
+QString path = "/home/peter/file/"; 
+//when I think about how to pass the path to this function, firstly I think we need to change the 
+//prototype into showNewer(Qstring &path)
+//but if I just want to use reader as a popup window, maybe we can just use a global variable for the path
 path.append(filename);//FIXME:it the file is not there, there is complete no warning
 reader->openFile(path); 
 }
