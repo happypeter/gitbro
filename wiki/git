@@ -13,4 +13,13 @@ but the right way to revert a stupid commit is this:
         git commit -a -C ORIG_HEAD
         #then you get all the info in last commit you did.
 
+## merge into gitbro is possiable
 
+git can actully merge two branches, when the share no differently files
+(thus no conflicts, )
+so there are two things I can do:
+
+1.	merge gitbro:website in to master(git merge website)
+2.	merge git-reader:master into gitbro:master(do a fetch and merge, or just a pull)
+
+I may not do this but it is really happy to know it can be done.
