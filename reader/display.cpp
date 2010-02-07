@@ -33,4 +33,6 @@ DisplayWidget::DisplayWidget() :  QWidget()
 void DisplayWidget::showNewer()
 {
 cout<<"let me open a newer version of this file"<<endl;
+reader->openFile("/home/peter/file/v1"); //"~/file/v1" won't work
+cout<<"open file"<<endl;
 }
