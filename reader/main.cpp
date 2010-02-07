@@ -1,6 +1,6 @@
 #include <QApplication>
 #include <iostream>
-#include "reader.h"
+#include "display.h"
 using namespace std;
 /*!
 @brief main of all
@@ -12,9 +12,9 @@ the des of main goes here
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    Reader reader;
-    reader.resize(640, 512);
-    reader.show();
+    DisplayWidget display;
+    display.resize(640, 512);
+    display.show();
     return app.exec();
 }
 
