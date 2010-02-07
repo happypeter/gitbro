@@ -1,4 +1,5 @@
 #include <QLayout>
+#include <QVariant>
 #include <QLineEdit>
 #include <QString>
 #include <QPushButton>
@@ -34,6 +35,13 @@ void DisplayWidget::showNewer()
 {
 static int i = 0; //I do not really like this, is there a better way?
 cout<<"i now is :"<<i++<<endl;
+QString s = QVariant(i).toString();
+cout<<s.toInt()<<endl;
+QString filename = "v";
+filename.append(s);
+//cout<<filename.toUtf8()<<endl; //failed
+//cout<<filename.toAscii()<<endl;//failed
+cout<<qPrintable(filename)<<endl;
 cout<<"let me open a newer version of this file"<<endl;
 reader->openFile("/home/peter/file/v1"); //"~/file/v1" won't work
 cout<<"open file"<<endl;
