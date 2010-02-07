@@ -34,17 +34,12 @@ DisplayWidget::DisplayWidget() :  QWidget()
 void DisplayWidget::showNewer()
 {
 static int i = 0; //I do not really like this, is there a better way?
-cout<<"i now is :"<<i++<<endl;
-QString s = QVariant(i).toString();
-cout<<s.toInt()<<endl;
+cout<<"Version number now is :"<<++i<<endl;
+QString n = QVariant(i).toString();
 QString filename = "v";
-filename.append(s);
-//cout<<filename.toUtf8()<<endl; //failed
-//cout<<filename.toAscii()<<endl;//failed
+filename.append(n);
 cout<<qPrintable(filename)<<endl;
-cout<<"let me open a newer version of this file"<<endl;
 QString path = "/home/peter/file/";
-path.append(filename);
-reader->openFile(path); //"~/file/v1" won't work
-cout<<"open file"<<endl;
+path.append(filename);//FIXME:it the file is not there, there is complete no warning
+reader->openFile(path); 
 }
