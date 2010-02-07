@@ -1,3 +1,5 @@
+Now I want add some buttons and lineEdit, since .ui files are slower
+to load, so I won't use designer to do the layout.
 [gitorious]
 git push git@gitorious.org:git-reader/git-reader.git
 
