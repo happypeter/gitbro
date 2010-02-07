@@ -32,6 +32,8 @@ DisplayWidget::DisplayWidget() :  QWidget()
 
 void DisplayWidget::showNewer()
 {
+static int i = 0; //I do not really like this, is there a better way?
+cout<<"i now is :"<<i++<<endl;
 cout<<"let me open a newer version of this file"<<endl;
 reader->openFile("/home/peter/file/v1"); //"~/file/v1" won't work
 cout<<"open file"<<endl;
