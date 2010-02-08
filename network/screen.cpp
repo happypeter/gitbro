@@ -57,11 +57,10 @@ void Screen::keyPressEvent(QKeyEvent *event)
 {
     switch (event->key()) {
     case Qt::Key_Up:
-        cout<<"up up.."<<endl;
-	repaint();//call paintEvent() again 
+	setVisible(TRUE);
 	break;
     case Qt::Key_Down:
-	scroll(20,20);
+	setHidden(TRUE);
         break;
     }
 }
