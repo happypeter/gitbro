@@ -13,7 +13,6 @@ Screen::Screen( QWidget *parent )
     : QFrame( parent )
 {
     QPainter painter(this);
-    painter.initFrom(this);
     drawCordinate(painter);
 }
 
@@ -30,7 +29,7 @@ void Screen::resizeEvent( QResizeEvent * /*event*/ )
 void Screen::drawCordinate(QPainter &painter)
 {
         painter.setPen(QPen(Qt::blue,1,Qt::SolidLine) );
-        painter.drawLine( 0,0,100,100);
+        painter.drawLine( 10,10,1000,1000);
 }
 
 

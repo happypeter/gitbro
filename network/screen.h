@@ -13,16 +13,14 @@ class Screen : public QFrame
     Q_OBJECT
     
 public:
-    Screen( QWidget *parent = 0 );
-   
+        Screen( QWidget *parent = 0 );
 protected:
-    void drawCordinate(QPainter &painter);
-     void paintEvent( QPaintEvent * );
-     void resizeEvent( QResizeEvent * );
+        void drawCordinate(QPainter &painter);
+        void paintEvent( QPaintEvent * );
+        void resizeEvent( QResizeEvent * );
 	
 private:  
-    QPixmap newPixmap,savePixmap,midPixmap;
-    QPainter painter;
+        QPainter painter;
 };
 
 
