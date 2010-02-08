@@ -39,9 +39,11 @@ void Screen::mousePressEvent(QMouseEvent *event)
  }
 
 void Screen::drawCordinate(QPainter &painter)
-{
+{	
+	static int i = 1;
+	i++;
         painter.setPen(QPen(Qt::blue,1,Qt::SolidLine) );
-        painter.drawLine( 10,10,100,100);
+        painter.drawLine( 10,10,20*i,20*i);
 	QFont sansFont("Helvetica [Cronyx]", 12);
         painter.setFont(sansFont);
         QRect rect(10,10,100,50);
@@ -56,6 +58,7 @@ void Screen::keyPressEvent(QKeyEvent *event)
     switch (event->key()) {
     case Qt::Key_Up:
         cout<<"up up.."<<endl;
+	repaint();//call paintEvent() again 
 	break;
     case Qt::Key_Down:
       //  centerNode->moveBy(0, 20);
