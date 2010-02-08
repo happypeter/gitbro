@@ -68,6 +68,7 @@ void Screen::mouseMoveEvent ( QMouseEvent * event )
 {	
  //this works, but very wiredly, you need to press the button and do a move
 // and the out put will then keep the same, no matter where the cursor is
+// the returned position is actually based on the whole monitor screen, not this widget
 	QPoint p = pos ();
 	cout<<p.x()<<"--"<<p.y()<<endl;
 }
