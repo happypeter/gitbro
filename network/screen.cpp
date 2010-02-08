@@ -30,7 +30,13 @@ void Screen::resizeEvent( QResizeEvent * /*event*/ )
 void Screen::drawCordinate(QPainter &painter)
 {
         painter.setPen(QPen(Qt::blue,1,Qt::SolidLine) );
-        painter.drawLine( 10,10,1000,1000);
+        painter.drawLine( 10,10,100,100);
+	QFont sansFont("Helvetica [Cronyx]", 12);
+        painter.setFont(sansFont);
+        QRect rect(10,10,60,120);
+        painter.drawText(rect, Qt::AlignCenter, tr("Qt by\nNokia"));
+	
+
 }
 
 
