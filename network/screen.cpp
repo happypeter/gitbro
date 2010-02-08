@@ -23,7 +23,12 @@ void Screen::paintEvent( QPaintEvent * /*event*/ )
 
 void Screen::resizeEvent( QResizeEvent * /*event*/ )
 {
- 
+
+        QRect rectNew(100,100,100,50);
+    painter.drawText(rectNew, Qt::AlignCenter, tr("xxx"));
+    painter.fillRect ( rectNew, Qt::gray);
+cout<<"resize............."<<endl;
+
 }
 
 
