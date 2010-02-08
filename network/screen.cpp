@@ -35,7 +35,7 @@ void Screen::drawCordinate(QPainter &painter)
         painter.setFont(sansFont);
         QRect rect(10,10,60,120);
         painter.drawText(rect, Qt::AlignCenter, tr("Qt by\nNokia"));
-	
+        painter.fillRect ( rect, QColor(255, 0, 0, 127));
 
 }
 
