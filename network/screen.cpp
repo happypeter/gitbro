@@ -12,13 +12,14 @@ using namespace std;
 Screen::Screen( QWidget *parent )
     : QFrame( parent )
 {
-    QPainter painter(this);
-    drawCordinate(painter);
 }
 
 void Screen::paintEvent( QPaintEvent * /*event*/ )
 {
+    QPainter painter(this);
+    drawCordinate(painter);
 }
+
 
 void Screen::resizeEvent( QResizeEvent * /*event*/ )
 {
