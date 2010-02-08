@@ -19,6 +19,8 @@ protected:
         void paintEvent( QPaintEvent * );
         void resizeEvent( QResizeEvent * );
         void mousePressEvent(QMouseEvent *);
+	void keyPressEvent(QKeyEvent *);
+
 private:  
         QPainter painter;
 };

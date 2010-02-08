@@ -51,6 +51,15 @@ void Screen::drawCordinate(QPainter &painter)
 }
 
 
-
-
+void Screen::keyPressEvent(QKeyEvent *event)
+{
+    switch (event->key()) {
+    case Qt::Key_Up:
+        cout<<"up up.."<<endl;
+	break;
+    case Qt::Key_Down:
+      //  centerNode->moveBy(0, 20);
+        break;
+    }
+}
 
