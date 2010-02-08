@@ -33,8 +33,8 @@ void Screen::drawCordinate(QPainter &painter)
         painter.drawLine( 10,10,100,100);
 	QFont sansFont("Helvetica [Cronyx]", 12);
         painter.setFont(sansFont);
-        QRect rect(10,10,60,120);
-        painter.drawText(rect, Qt::AlignCenter, tr("Qt by\nNokia"));
+        QRect rect(10,10,100,50);
+        painter.drawText(rect, Qt::AlignCenter, tr("peter.cpp"));
         painter.fillRect ( rect, QColor(255, 0, 0, 127));
 
 }
