@@ -7,8 +7,4 @@ nothing show up on the frame, and I see this
 	QPainter::begin: Widget painting can only begin as a result of a paintEvent
 	QPainter::setPen: Painter not active
 
-OK, now every time the window resized, the cout here will be called once more.
-but the painting in resized event won't be done. The reason it just like above:
-
-QPainter::begin: Widget painting can only begin as a result of a paintEvent
 
