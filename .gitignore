@@ -6,6 +6,8 @@ Makefile
 #the exe file
 git-reader
 reader
+network
+network.pro
 #editor
 *#*
 *~

@@ -1,6 +1,6 @@
 #include <QApplication>
 #include <iostream>
-#include "display.h"
+#include "screen.h"
 using namespace std;
 /*!
 @brief main of all
@@ -12,9 +12,9 @@ the des of main goes here
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    DisplayWidget display;
-    display.resize(640, 512);
-    display.show();
+    Screen screen;
+    screen.resize(640, 512);
+    screen.show();
     return app.exec();
 }
 
