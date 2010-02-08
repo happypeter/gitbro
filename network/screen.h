@@ -20,6 +20,8 @@ protected:
         void resizeEvent( QResizeEvent * );
         void mousePressEvent(QMouseEvent *);
 	void keyPressEvent(QKeyEvent *);
+	void mouseMoveEvent ( QMouseEvent * event );
+
 
 private:  
         QPainter painter;

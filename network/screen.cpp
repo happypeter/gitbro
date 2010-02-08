@@ -64,4 +64,10 @@ void Screen::keyPressEvent(QKeyEvent *event)
         break;
     }
 }
-
+void Screen::mouseMoveEvent ( QMouseEvent * event ) 
+{	
+ //this works, but very wiredly, you need to press the button and do a move
+// and the out put will then keep the same, no matter where the cursor is
+	QPoint p = pos ();
+	cout<<p.x()<<"--"<<p.y()<<endl;
+}
