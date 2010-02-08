@@ -1,4 +1,12 @@
 [git]
+## git reset --hard HEAD 
+
+I just did some really big and stupid modification to some files(these files need to be in index already), then I diecide to go back and throw away all the modification.
+	
+	git reset --hard HEAD
+
+works fine. but if you have new file that are not in index, you can not remove it by doing this.
+
 today I stupidly did a
 
         git reset --hard last_commit
