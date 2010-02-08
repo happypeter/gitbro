@@ -61,7 +61,7 @@ void Screen::keyPressEvent(QKeyEvent *event)
 	repaint();//call paintEvent() again 
 	break;
     case Qt::Key_Down:
-      //  centerNode->moveBy(0, 20);
+	scroll(20,20);
         break;
     }
 }
