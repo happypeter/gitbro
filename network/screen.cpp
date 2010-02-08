@@ -11,7 +11,7 @@
 using namespace std;
 
 Screen::Screen( QWidget *parent )
-    : QFrame( parent )
+    : QFrame( parent )//as a paint device, QFrame is somewhat limited, maybe QGraphicsView is better?
 {
 }
 
