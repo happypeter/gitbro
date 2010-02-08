@@ -18,7 +18,7 @@ protected:
         void drawCordinate(QPainter &painter);
         void paintEvent( QPaintEvent * );
         void resizeEvent( QResizeEvent * );
-	
+        void mousePressEvent(QMouseEvent *);
 private:  
         QPainter painter;
 };

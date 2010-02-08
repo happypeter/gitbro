@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <QEvent>
 #include <QSize>
+#include <QMouseEvent>
 #include <iostream>
 #include <QFont>
 #include <QPen>
@@ -27,7 +28,15 @@ void Screen::resizeEvent( QResizeEvent * /*event*/ )
     cout<<"resize............."<<endl;
 
 }
-
+void Screen::mousePressEvent(QMouseEvent *event)
+ {
+     if (event->button() == Qt::LeftButton) {
+        cout<<"left button..."<<endl;
+         // handle left mouse button here
+     } else {
+        ; //do nothing
+     }
+ }
 
 void Screen::drawCordinate(QPainter &painter)
 {
