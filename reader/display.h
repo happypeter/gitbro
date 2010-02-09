@@ -24,7 +24,7 @@ private:
     QPushButton *newerButton;
     QSpinBox *spinBox;
     Reader *reader;
-
+    void   paintEvent ( QPaintEvent * event );
 };
 
 #endif // DISPLAY_HPP

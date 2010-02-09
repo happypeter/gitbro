@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
     DisplayWidget display;
     display.filePath = absPath;
     display.resize(640, 512);
+    display.setWindowTitle("the name of the file, baseName(absPath)");
     display.show();
     return app.exec();
 }

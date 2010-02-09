@@ -1,3 +1,8 @@
+examples
+
+	http://zetcode.com/tutorials/qt4tutorial/widgets/
+
+
 [code style]
 indent with 4 spaces, according to all the moc_* files
 Now I want add some buttons and lineEdit, since .ui files are slower

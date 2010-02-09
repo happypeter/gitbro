@@ -18,7 +18,8 @@ DisplayWidget::DisplayWidget() :  QWidget()
     reader = new Reader;
     layout->addWidget( reader, 1, 0, 1, 3 );
     newerButton = new QPushButton;
-    newerButton->setText(tr("Newer"));
+    newerButton->setText(tr("Version"));
+    newerButton->setFlat(TRUE);
     spinBox = new QSpinBox;
     layout->addWidget( newerButton, 0, 1 );
     layout->addWidget( spinBox , 0, 2 );
@@ -26,8 +27,10 @@ DisplayWidget::DisplayWidget() :  QWidget()
     spinBox->setPrefix("v");
     connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));//strange the "int" here
 }
-
-
+void DisplayWidget::paintEvent ( QPaintEvent * event )
+{
+cout<<"paintEvent.."<<endl;
+}
 void DisplayWidget::showFile(int i)
 {
     QDir dir(filePath);
