@@ -41,10 +41,12 @@ void DisplayWidget::showNewer()
         QString fileName = filePath + "v";
         fileName.append(n);
         cout<<qPrintable(fileName)<<endl;
+        lineEdit->setText(fileName);
         reader->openFile(fileName);
     }
     else
     {//disable newerButton
         newerButton->setEnabled(FALSE);
+        lineEdit->setText("no more newer versions!!");
     }
 }
