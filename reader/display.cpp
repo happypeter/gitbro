@@ -19,34 +19,27 @@ DisplayWidget::DisplayWidget() :  QWidget()
     layout->addWidget( reader, 1, 0, 1, 3 );
     newerButton = new QPushButton;
     newerButton->setText(tr("Newer"));
-    olderButton = new QPushButton;
-    olderButton->setText( tr( "Older" ) );
+    spinBox = new QSpinBox;
     layout->addWidget( newerButton, 0, 1 );
-    layout->addWidget( olderButton , 0, 2 );
+    layout->addWidget( spinBox , 0, 2 );
     setLayout(layout);
-    connect( newerButton, SIGNAL( clicked () ), SLOT( showNewer() ) );
+    spinBox->setPrefix("v");
+    connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));//strange the "int" here
 }
 
 
-void DisplayWidget::showNewer()
+void DisplayWidget::showFile(int i)
 {
     QDir dir(filePath);
     QStringList fileList;
     fileList = dir.entryList();
-    static int i = 0; //I do not really like this, is there a better way?
-    cout<<"current Version number now is :"<<++i<<endl;
+    spinBox->setPrefix("v");
+    cout<<"------"<<fileList.size()<<endl;
+    spinBox->setRange(0,fileList.size()-2);
     QString n = QVariant(i).toString();
-    if(i <= fileList.size()-2)
-    {
-        QString fileName = filePath + "v";
-        fileName.append(n);
-        cout<<qPrintable(fileName)<<endl;
-        lineEdit->setText(fileName);
-        reader->openFile(fileName);
-    }
-    else
-    {//disable newerButton
-        newerButton->setEnabled(FALSE);
-        lineEdit->setText("no more newer versions!!");
-    }
+    QString fileName = filePath + "v";
+    fileName.append(n);
+    lineEdit->setText(fileName);
+    reader->openFile(fileName);
 }
+

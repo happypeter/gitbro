@@ -2,6 +2,7 @@
 #define DISPLAY_CPP
 
 #include <QWidget>
+#include <QSpinBox>
 #include "reader.h"
 
 class QLineEdit;
@@ -15,12 +16,13 @@ public:
     DisplayWidget();
     QString filePath;
 private slots:
-    void showNewer();
+    void showFile(int);
 
 private:
 
     QLineEdit *lineEdit;
-    QPushButton *newerButton, *olderButton;
+    QPushButton *newerButton;
+    QSpinBox *spinBox;
     Reader *reader;
 
 };
