@@ -8,7 +8,7 @@ Reader::Reader()
 }
 Reader::~Reader()
 {
-    cout<<"I am the destructor, bye"<<endl;
+    cout<<"~Reader(): bye"<<endl;
 }
 
 void Reader::setupEditor()
@@ -21,6 +21,7 @@ void Reader::setupEditor()
     font.setFixedPitch(true);
     font.setPointSize(13);
     editor->setFont(font);
+        editor->setReadOnly(TRUE);
 
 }
 
