@@ -38,9 +38,9 @@ void DisplayWidget::showNewer()
     cout<<qPrintable(filename)<<endl;
     cout<<qPrintable(filePath)<<endl;//now we have a path passed form main
     QDir dir(filePath);
-    QStringList file_list;
-    file_list = dir.entryList();
-    cout<<file_list.size()<<endl;//the number counts . and .. in
+    QStringList fileList;
+    fileList = dir.entryList();
+    cout<<fileList.size()<<endl;//the number counts . and .. in
     filePath.append(filename);
     reader->openFile(filePath);
 }
