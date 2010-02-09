@@ -21,7 +21,7 @@ void Reader::setupEditor()
     font.setFixedPitch(true);
     font.setPointSize(13);
     editor->setFont(font);
-        editor->setReadOnly(TRUE);
+    editor->setReadOnly(TRUE);
 
 }
 
