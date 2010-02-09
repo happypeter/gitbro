@@ -1,6 +1,5 @@
-
-[Qtcreator]
-** doc
+### Alt-G Alt-D show diff
+### doc
 move cursor to the class or object, and press F1, then you get the
 doc, nice
 ### inorder to compile qgit, I do:

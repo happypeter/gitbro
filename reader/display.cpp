@@ -34,13 +34,14 @@ DisplayWidget::DisplayWidget() :  QWidget()
 
 void DisplayWidget::showNewer()
 {
-static int i = 0; //I do not really like this, is there a better way?
+    static int i = 0; //I do not really like this, is there a better way?
 cout<<"Version number now is :"<<++i<<endl;
 QString n = QVariant(i).toString();
 QString filename = "v";
 filename.append(n);
 cout<<qPrintable(filename)<<endl;
 QString path = "/home/peter/file/"; 
+    cout<<qPrintable(filePath)<<endl;//now we have a path passed form main
 QDir dir(path);
 QStringList file_list;
 file_list = dir.entryList();

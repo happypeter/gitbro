@@ -13,6 +13,7 @@ class DisplayWidget : public QWidget
 
 public:                                                                                
     DisplayWidget();
+    QString filePath;
 private slots:
     void showNewer();
 
