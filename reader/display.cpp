@@ -40,12 +40,11 @@ QString n = QVariant(i).toString();
 QString filename = "v";
 filename.append(n);
 cout<<qPrintable(filename)<<endl;
-QString path = "/home/peter/file/"; 
     cout<<qPrintable(filePath)<<endl;//now we have a path passed form main
-QDir dir(path);
+QDir dir(filePath);
 QStringList file_list;
 file_list = dir.entryList();
 cout<<file_list.size()<<endl;//the number counts . and .. in
-path.append(filename);
-reader->openFile(path); 
+filePath.append(filename);
+reader->openFile(filePath);
 }
