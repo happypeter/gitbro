@@ -35,10 +35,9 @@ void Reader::openFile(const QString &path)
 
     if (!fileName.isEmpty()) 
     {
-          QFile file(fileName);
-	  if (file.open(QFile::ReadOnly | QFile::Text))
-              editor->setPlainText(file.readAll());
-              cout<<qPrintable(editor->toHtml());
+        QFile file(fileName);
+        if (file.open(QFile::ReadOnly | QFile::Text))
+            editor->setPlainText(file.readAll());
     }
 }
 

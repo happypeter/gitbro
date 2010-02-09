@@ -4,6 +4,7 @@
 #include <QString>
 #include <QPushButton>
 #include <iostream>
+#include <QDir>
 #include "display.h"
 
 using namespace std;
@@ -40,9 +41,10 @@ QString filename = "v";
 filename.append(n);
 cout<<qPrintable(filename)<<endl;
 QString path = "/home/peter/file/"; 
-//when I think about how to pass the path to this function, firstly I think we need to change the 
-//prototype into showNewer(Qstring &path)
-//but if I just want to use reader as a popup window, maybe we can just use a global variable for the path
-path.append(filename);//FIXME:it the file is not there, there is complete no warning
+QDir dir(path);
+QStringList file_list;
+file_list = dir.entryList();
+cout<<file_list.size()<<endl;//the number counts . and .. in
+path.append(filename);
 reader->openFile(path); 
 }
