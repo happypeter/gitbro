@@ -30,17 +30,20 @@ DisplayWidget::DisplayWidget() :  QWidget()
 
 void DisplayWidget::showNewer()
 {
-    static int i = 0; //I do not really like this, is there a better way?
-    cout<<"Version number now is :"<<++i<<endl;
-    QString n = QVariant(i).toString();
-    QString filename = "v";
-    filename.append(n);
-    cout<<qPrintable(filename)<<endl;
-    cout<<qPrintable(filePath)<<endl;//now we have a path passed form main
     QDir dir(filePath);
     QStringList fileList;
     fileList = dir.entryList();
-    cout<<fileList.size()<<endl;//the number counts . and .. in
-    filePath.append(filename);
-    reader->openFile(filePath);
+    static int i = 0; //I do not really like this, is there a better way?
+    cout<<"current Version number now is :"<<++i<<endl;
+    QString n = QVariant(i).toString();
+    if(i <= fileList.size()-2)
+    {
+        QString fileName = filePath + "v";
+        fileName.append(n);
+        cout<<qPrintable(fileName)<<endl;
+        reader->openFile(fileName);
+    }
+    else
+    {//disable newerButton
+    }
 }
