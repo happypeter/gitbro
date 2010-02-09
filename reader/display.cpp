@@ -45,5 +45,6 @@ void DisplayWidget::showNewer()
     }
     else
     {//disable newerButton
+        newerButton->setEnabled(FALSE);
     }
 }
