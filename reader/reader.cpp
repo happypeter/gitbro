@@ -22,7 +22,6 @@ void Reader::setupEditor()
     font.setPointSize(13);
     editor->setFont(font);
     editor->setReadOnly(TRUE);
-
 }
 
 //cp form /home/peter/qtsdk-2010.01/qt/examples/richtext/syntaxhighlighter
@@ -35,11 +34,12 @@ void Reader::openFile(const QString &path)
 						tr("Open File"), "", "Patch Files (*.diff *.patch)");
 
     if (!fileName.isEmpty()) 
-      {
+    {
           QFile file(fileName);
 	  if (file.open(QFile::ReadOnly | QFile::Text))
-	      editor->setPlainText(file.readAll());
-      }
+              editor->setPlainText(file.readAll());
+              cout<<qPrintable(editor->toHtml());
+    }
 }
 
 
