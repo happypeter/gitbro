@@ -15,7 +15,7 @@ class DisplayWidget : public QWidget
 public:                                                                                
     DisplayWidget();
     QString filePath;
-private slots:
+public slots:
     void showFile(int);
 
 private:

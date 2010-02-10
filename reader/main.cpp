@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     DisplayWidget display;
     display.filePath = absPath;
+    display.showFile(3);
     display.resize(640, 512);
     display.setWindowTitle("the name of the file, baseName(absPath)");
     display.show();

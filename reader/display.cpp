@@ -25,8 +25,6 @@ DisplayWidget::DisplayWidget() :  QWidget()
     layout->addWidget( spinBox , 0, 2 );
     setLayout(layout);
     spinBox->setPrefix("v");
-    showFile(3);//FIXME: the filePath here is empty
-    //this is easy to undestand, since the filePath is not pass before the object is created
     connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));//strange the "int" here
 }
 void DisplayWidget::paintEvent ( QPaintEvent * event )
