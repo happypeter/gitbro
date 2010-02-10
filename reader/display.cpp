@@ -33,11 +33,6 @@ void DisplayWidget::paintEvent ( QPaintEvent * event )
 }
 void DisplayWidget::showFile(int i)
 {
-    QDir dir(filePath);
-    QStringList fileList;
-    fileList = dir.entryList();
-    cout<<"------"<<fileList.size()<<endl;
-    spinBox->setRange(0,fileList.size()-2);
     QString n = QVariant(i).toString();
     QString fileName = filePath + "v";
     fileName.append(n);
@@ -50,13 +45,14 @@ void DisplayWidget::showInitFile()
     QDir dir(filePath);
     QStringList fileList;
     fileList = dir.entryList();
-    cout<<"showInitFile"<<fileList.size()<<endl;
-    QString n = QVariant(fileList.size()-2).toString();
+    int totalVersion = fileList.size()-2;
+    QString n = QVariant(totalVersion).toString();
     QString fileName = filePath + "v";
     fileName.append(n);
     lineEdit->setText(fileName);
     reader->openFile(fileName);
-    spinBox->setValue(fileList.size()-2);
+    spinBox->setValue(totalVersion);
+    spinBox->setRange(0,totalVersion);
     connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));//strange the "int" here
 }
 
