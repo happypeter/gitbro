@@ -47,3 +47,17 @@ void DisplayWidget::showFile(int i)
     reader->openFile(fileName);
 }
 
+void DisplayWidget::showInitFile()
+{
+    QDir dir(filePath);
+    QStringList fileList;
+    fileList = dir.entryList();
+    cout<<"showInitFile"<<fileList.size()<<endl;
+    QString n = QVariant(fileList.size()-2).toString();
+    QString fileName = filePath + "v";
+    fileName.append(n);
+    lineEdit->setText(fileName);
+    reader->openFile(fileName);
+}
+
+
