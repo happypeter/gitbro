@@ -21,11 +21,10 @@ DisplayWidget::DisplayWidget() :  QWidget()
     newerButton->setText(tr("Version"));
     newerButton->setFlat(TRUE);
     spinBox = new QSpinBox;
+    spinBox->setPrefix("v");
     layout->addWidget( newerButton, 0, 1 );
     layout->addWidget( spinBox , 0, 2 );
     setLayout(layout);
-    spinBox->setPrefix("v");
-    connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));//strange the "int" here
 }
 void DisplayWidget::paintEvent ( QPaintEvent * event )
 {
@@ -37,7 +36,6 @@ void DisplayWidget::showFile(int i)
     QDir dir(filePath);
     QStringList fileList;
     fileList = dir.entryList();
-    spinBox->setPrefix("v");
     cout<<"------"<<fileList.size()<<endl;
     spinBox->setRange(0,fileList.size()-2);
     QString n = QVariant(i).toString();
@@ -58,6 +56,8 @@ void DisplayWidget::showInitFile()
     fileName.append(n);
     lineEdit->setText(fileName);
     reader->openFile(fileName);
+    spinBox->setValue(fileList.size()-2);
+    connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));//strange the "int" here
 }
 
 
