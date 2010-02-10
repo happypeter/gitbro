@@ -29,7 +29,8 @@ DisplayWidget::DisplayWidget() :  QWidget()
 }
 void DisplayWidget::paintEvent ( QPaintEvent * event )
 {
-cout<<"paintEvent.."<<endl;
+//cout<<"paintEvent.."<<endl;//there are repaint() all the time, why? FIXME
+//repaint() can be called by many reason, I think this is natrual
 }
 void DisplayWidget::showFile(int i)
 {
