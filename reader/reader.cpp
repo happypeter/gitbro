@@ -1,6 +1,6 @@
 #include "reader.h"
 #include <QtGui>
-
+//#define NDEBUG
 Reader::Reader()
 {
     setupEditor();
@@ -13,7 +13,9 @@ Reader::~Reader()
 
 void Reader::setupEditor()
 {
-    cout<<"setup editor"<<endl;
+#ifndef NDEBUG
+    cout<<__FILE__<<":"<<__LINE__<<" setup editor"<<endl;
+#endif
     editor = new QTextEdit;
     highlighter = new Highlighter(editor->document());
     QFont font;
