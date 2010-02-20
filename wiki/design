@@ -40,3 +40,16 @@ maybe want to open several neighbor nodes, since they are very likely
 connected in some way), then you will get a pop up window, will the
 current version of this file, with the diff with his parent displayed
 as well in the same page, it is just the github style.
+
+[class FileHistroy]
+
+I do not want git-annotate(1) here
+
+I want sth like
+
+FileHistry fh = new fileHistroy("peter.cpp")
+
+then I want fh.commit_msg(), fh.author()
+
+then I want to pass the return value to gui:lineEdit field or sth
+
