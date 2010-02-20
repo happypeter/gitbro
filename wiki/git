@@ -1,3 +1,5 @@
+[one file trace]
+git-annotate(1) and git-blame
 [git]
 ## git reset --hard HEAD 
 
