@@ -51,5 +51,8 @@ FileHistry fh = new fileHistroy("peter.cpp")
 
 then I want fh.commit_msg(), fh.author()
 
+I think I can save everything into a QVector, the iterator number will be the same as the files
+revision number, then we can find all the other stuff of this revision
+
 then I want to pass the return value to gui:lineEdit field or sth
 
