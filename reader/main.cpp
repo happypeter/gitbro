@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     display.showInitFile();
     display.resize(640, 512);
     display.setWindowTitle("the name of the file, baseName(absPath)");
+    display.setGeometry(100,100,1300,700);
     display.show();
     return app.exec();
 }
