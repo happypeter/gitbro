@@ -1,3 +1,5 @@
+the nice thing to have qt-creator installed is that, when you navigate to a .ui file and double click it, it will be opened with qtdesigner
+
 ### Alt-G Alt-D show diff
 ### doc
 move cursor to the class or object, and press F1, then you get the
@@ -37,6 +39,6 @@ done perfectly
 ### debugger
 it just use gdb
 
-### shotcut
+### shortcut
 
-right click in a opened souce file, and you will get very useful shortcuts
+right click in a opened source file, and you will get very useful shortcuts
