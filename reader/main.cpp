@@ -11,10 +11,10 @@ the des of main goes here
 */
 int main(int argc, char *argv[])
 {
-//    QString absPath = "/home/peter/file/";//use argv[1] insteasd
+//   QString absPath = "/home/peter/file/";//use argv[1] insteasd
     QApplication app(argc, argv);
     DisplayWidget display;
- //   display.filePath = absPath;
+//   display.filePath = absPath;
     display.showInitFile();
     display.resize(640, 512);
     display.setWindowTitle("the name of the file, baseName(absPath)");

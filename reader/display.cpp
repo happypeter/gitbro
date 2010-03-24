@@ -17,13 +17,13 @@ DisplayWidget::DisplayWidget() :  QWidget()
     layout->addWidget( lineEdit, 0, 0 );
     reader = new Reader;
     cout<<qPrintable(reader->fileName)<<"+++"<<endl;
-   //now we have the fileName, next step we need to pass it to git cmd 
-   //to get all its patches
+    //now we have the fileName, next step we need to pass it to git cmd 
+    //to get all its patches
     QFileInfo fileInfo(reader->fileName);
     cout<<qPrintable(fileInfo.absolutePath())<<"   abs--path"<<endl;
-   //then I can pass the abs-path to QProcess::setWorkingDirectory ( const QString & dir )
-   //inorder to excuted git cmd
-   //here we use QProcess rather than system(command), since it is more interactive
+    //then I can pass the abs-path to QProcess::setWorkingDirectory ( const QString & dir )
+    //inorder to excuted git cmd
+    //here we use QProcess rather than system(command), since it is more interactive
     layout->addWidget( reader, 1, 0, 1, 3 );
     newerButton = new QPushButton;
     newerButton->setText(tr("Version"));

@@ -29,7 +29,7 @@ void Reader::setupEditor()
 //cp form /home/peter/qtsdk-2010.01/qt/examples/richtext/syntaxhighlighter
 void Reader::openFile()
 {
-        fileName = QFileDialog::getOpenFileName(this,
+    fileName = QFileDialog::getOpenFileName(this,
 						tr("Open File"), "", "All Files(*)");
 }
 
