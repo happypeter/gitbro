@@ -16,6 +16,9 @@ DisplayWidget::DisplayWidget() :  QWidget()
     lineEdit->setReadOnly( TRUE );
     layout->addWidget( lineEdit, 0, 0 );
     reader = new Reader;
+    cout<<qPrintable(reader->fileName)<<"+++"<<endl;
+   //now we have the fileName, next step we need to pass it to git cmd 
+   //to get all its patches
     layout->addWidget( reader, 1, 0, 1, 3 );
     newerButton = new QPushButton;
     newerButton->setText(tr("Version"));
@@ -37,7 +40,7 @@ void DisplayWidget::showFile(int i)
     QString fileName = filePath + "v";
     fileName.append(n);
     lineEdit->setText(fileName);
-    reader->openFile(fileName);
+//    reader->openFile(fileName);
 }
 
 void DisplayWidget::showInitFile()
@@ -50,7 +53,7 @@ void DisplayWidget::showInitFile()
     QString fileName = filePath + "v";
     fileName.append(n);
     lineEdit->setText(fileName);
-    reader->openFile(fileName);
+//    reader->openFile(fileName);
     spinBox->setValue(totalVersion);
     spinBox->setRange(0,totalVersion);
     connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));//strange the "int" here

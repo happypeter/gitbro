@@ -14,7 +14,8 @@ class Reader:public QMainWindow
 public:
     Reader();
     ~Reader();
-    void openFile(const QString&);
+    void openFile();
+    QString fileName;
 private:
     void setupEditor();
     QTextEdit *editor;
