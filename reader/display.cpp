@@ -30,9 +30,14 @@ DisplayWidget::DisplayWidget() :  QWidget()
     cmd.setWorkingDirectory(fileInfo.absolutePath()); 
     cmd.start("git", QStringList()<<"log");
     if (!cmd.waitForFinished())
+    {
         qDebug() << " failed:" << cmd.errorString();
+    }
     else
+    {
         qDebug() << " output:" << cmd.readAll();
+        cout<<cmd.exitCode()<<"--exitCode "<<endl;//exitCode: 0 when in repo; 1 when not in a repo
+    }
     layout->addWidget( reader, 1, 0, 1, 3 );
     newerButton = new QPushButton;
     newerButton->setText(tr("Version"));

@@ -1,3 +1,10 @@
+[work flow]
+one thing I've been doing is to commit first and then view my patch for this commit with gitk
+this is really stupid, if I made some mistake I need to "git reset ..." to reverse.
+the right way shall be:
+1. do the modification
+2. git diff
+3. git commit 
 [one file trace]
 git-annotate(1) and git-blame
 [git]
