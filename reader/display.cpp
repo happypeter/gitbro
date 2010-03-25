@@ -33,10 +33,13 @@ DisplayWidget::DisplayWidget() :  QWidget()
     {
         qDebug() << " failed:" << cmd.errorString();
     }
+    else if (cmd.exitCode())
+    {
+        cout<<cmd.exitCode()<<"--exitCode "<<endl;//exitCode: 0 when in repo; 1 when not in a repo
+    }
     else
     {
         qDebug() << " output:" << cmd.readAll();
-        cout<<cmd.exitCode()<<"--exitCode "<<endl;//exitCode: 0 when in repo; 1 when not in a repo
     }
     layout->addWidget( reader, 1, 0, 1, 3 );
     newerButton = new QPushButton;
