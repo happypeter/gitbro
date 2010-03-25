@@ -1,10 +1,12 @@
 #include <QLayout>
+#include <QDebug>
 #include <QVariant>
 #include <QLineEdit>
 #include <QString>
 #include <QPushButton>
 #include <iostream>
 #include <QDir>
+#include <QProcess>
 #include "display.h"
 
 using namespace std;
@@ -24,6 +26,13 @@ DisplayWidget::DisplayWidget() :  QWidget()
     //then I can pass the abs-path to QProcess::setWorkingDirectory ( const QString & dir )
     //inorder to excuted git cmd
     //here we use QProcess rather than system(command), since it is more interactive
+    QProcess cmd;
+    cmd.setWorkingDirectory(fileInfo.absolutePath()); 
+    cmd.start("git", QStringList()<<"log");
+    if (!cmd.waitForFinished())
+        qDebug() << " failed:" << cmd.errorString();
+    else
+        qDebug() << " output:" << cmd.readAll();
     layout->addWidget( reader, 1, 0, 1, 3 );
     newerButton = new QPushButton;
     newerButton->setText(tr("Version"));
