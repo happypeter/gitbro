@@ -1,3 +1,4 @@
+#include <QMessageBox>
 #include <QLayout>
 #include <QDebug>
 #include <QVariant>
@@ -35,6 +36,7 @@ DisplayWidget::DisplayWidget() :  QWidget()
     }
     else if (cmd.exitCode())
     {
+        QMessageBox::warning(this,"git","not in a git repo");
         cout<<cmd.exitCode()<<"--exitCode "<<endl;//exitCode: 0 when in repo; 1 when not in a repo
     }
     else
