@@ -12,15 +12,15 @@ class DisplayWidget : public QWidget
 {
     Q_OBJECT
 
-public:                                                                                
+public:                                                                       
     DisplayWidget();
     void showInitFile();
     QString filePath;
+
 public slots:
     void showFile(int);
 
 private:
-
     QLineEdit *lineEdit;
     QPushButton *newerButton;
     QSpinBox *spinBox;
