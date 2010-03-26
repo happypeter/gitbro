@@ -11,11 +11,13 @@ using namespace std;
 class Reader:public QMainWindow
 {
     Q_OBJECT
+
 public:
     Reader();
     ~Reader();
     void openFile();
     QString fileName;
+
 private:
     void setupEditor();
     QTextEdit *editor;
