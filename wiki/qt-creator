@@ -32,7 +32,7 @@ all works:-) ./reader runs.
 ### qmake
 try to build reader, but qmake is not installed,
 
-peter@cow:~/qtsdk-2010.01/qt/bin$ sudo cp -rf qmake /usr/bin/
+	peter@cow:~/qtsdk-2010.01/qt/bin$ sudo cp -rf qmake /usr/bin/
 
 done perfectly
 
