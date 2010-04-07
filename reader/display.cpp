@@ -73,13 +73,12 @@ cout<<"hi I am GIT"<<qPrintable(fileName)<<endl;
     {
         qDebug() << " failed:" << cmd.errorString();
     }
-    else if (cmd.exitCode())
-    {
+    else if (cmd.exitCode() == 128)
+    {//128 is returned when you run git command outside a repo
     //git status return 1, when it is sucessfully done
     //while `git log` returns 0 to indicate it is done
     //so this means, we can not use exitCode this way to check if we are in a repo or not
         QMessageBox::warning(this,"git","not in a git repo");
-        cout<<cmd.exitCode()<<"--exitCode "<<endl;//exitCode: 0 when in repo; 128 when not in a repo
     }
     else
     {
