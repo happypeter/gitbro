@@ -78,5 +78,9 @@ void DisplayWidget::startGit(QString fileName)
     {
         qDebug() << " output:" << cmd.readAll();
         //processOutput();
+        //the output here are simply all the patches of the specified file
+        //Rather then store those info onto harddisks wasting time read and write files
+        //things will go much faster if we just store all the data into a container
+        //like QStringList or QVector, and porvide each patch on demand
     }
 }
