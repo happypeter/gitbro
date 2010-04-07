@@ -64,11 +64,11 @@ void DisplayWidget::startGit(QString fileName)
 {
 cout<<"hi I am GIT"<<qPrintable(fileName)<<endl;
 
-    QFileInfo fileInfo(reader->fileName);
+    QFileInfo fileInfo(fileName);
     cout<<qPrintable(fileInfo.absolutePath())<<"in GIT()"<<endl;
     QProcess cmd;
     cmd.setWorkingDirectory(fileInfo.absolutePath()); 
-    cmd.start("git", QStringList()<<"status");
+    cmd.start("git", QStringList()<<"log"<<"-p"<<"--follow"<<fileName);
     if (!cmd.waitForFinished())
     {
         qDebug() << " failed:" << cmd.errorString();
@@ -77,11 +77,11 @@ cout<<"hi I am GIT"<<qPrintable(fileName)<<endl;
     {//128 is returned when you run git command outside a repo
     //git status return 1, when it is sucessfully done
     //while `git log` returns 0 to indicate it is done
-    //so this means, we can not use exitCode this way to check if we are in a repo or not
         QMessageBox::warning(this,"git","not in a git repo");
     }
     else
     {
         qDebug() << " output:" << cmd.readAll();
+        //processOutput();
     }
 }
