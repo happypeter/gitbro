@@ -41,7 +41,6 @@ void DisplayWidget::showFile(int i)
     QString fileName = filePath + "v";
     fileName.append(n);
     lineEdit->setText(fileName);
-//    reader->openFile(fileName);
 }
 
 void DisplayWidget::showInitFile()
@@ -54,18 +53,14 @@ void DisplayWidget::showInitFile()
     QString fileName = filePath + "v";
     fileName.append(n);
     lineEdit->setText(fileName);
-//    reader->openFile(fileName);
     spinBox->setValue(totalVersion);
     spinBox->setRange(0,totalVersion);
-    connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));//strange the "int" here
+    connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));
 }
 
 void DisplayWidget::startGit(QString fileName)
 {
-cout<<"hi I am GIT"<<qPrintable(fileName)<<endl;
-
     QFileInfo fileInfo(fileName);
-    cout<<qPrintable(fileInfo.absolutePath())<<"in GIT()"<<endl;
     QProcess cmd;
     cmd.setWorkingDirectory(fileInfo.absolutePath()); 
     cmd.start("git", QStringList()<<"log"<<"-p"<<"--follow"<<fileName);
