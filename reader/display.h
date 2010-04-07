@@ -14,6 +14,7 @@ class DisplayWidget : public QWidget
 
 public:                                                                       
     DisplayWidget();
+    void startGit(QString);
     void showInitFile();
     QString filePath;
 
