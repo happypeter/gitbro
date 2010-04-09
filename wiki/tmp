@@ -1,3 +1,8 @@
+## tmp rebasing test
+all the former 5 or 7 commits are for the sake of testing rebase, we can see
+if we do not use rebase properly, we get very ugly gitk output, rather than 
+nice and simply fast-forward merging, as it should be.
+
 ## doc
 I may use doxygen or Qdoc for documentation in the  future
 ## qgit is really inspiring:

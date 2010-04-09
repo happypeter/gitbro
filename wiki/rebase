@@ -54,5 +54,5 @@ we run gitk
 	
 	peter@cow:~/git-reader/wiki$ gitk
 
-and we can now see the branch named my-feather, it is nice, since we do not care
+and now we can not see the branch named my-feather, it is nice, since we do not care
 that branch made for the sake of tmp editing.
