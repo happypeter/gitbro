@@ -56,3 +56,9 @@ we run gitk
 
 and now we can not see the branch named my-feather, it is nice, since we do not care
 that branch made for the sake of tmp editing.
+
+## CONCLUSION:
+all the former 5 or 7 commits are for the sake of testing rebase, we can see
+if we do not use rebase properly, we get very ugly gitk output, rather than
+nice and simple fast-forward merging, as it should.
+
