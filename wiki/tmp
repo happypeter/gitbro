@@ -11,7 +11,7 @@ examples
 ## [coding style](http://qt.gitorious.org/qt/pages/QtCodingStyle)
 
 1.	indent with 4 spaces
-
+2.	
 
 Now I want add some buttons and lineEdit, since .ui files are slower
 to load, so I won't use designer to do the layout.
