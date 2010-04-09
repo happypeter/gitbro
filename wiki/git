@@ -1,4 +1,5 @@
 [work flow]
+## Normal Editing
 one thing I've been doing is to commit first and then view my patch for this commit with gitk
 this is really stupid, if I made some mistake I need to "git reset ..." to reverse.
 the right way shall be:
