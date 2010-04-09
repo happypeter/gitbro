@@ -8,7 +8,7 @@ the right way shall be:
 	2. git diff
 	3. git commit 
 ## branching and merging
-
+the normal work flow:
 [one file trace]
 git-annotate(1) and git-blame
 [git]
