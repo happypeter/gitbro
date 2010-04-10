@@ -1,0 +1,3 @@
+peter@cow:~$ git config --global core.editor vim
+peter@cow:~$ vim .gitconfig 
+
