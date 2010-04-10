@@ -16,3 +16,5 @@ network.pro
 moc_*
 qrc_*
 *.o
+#markdown test
+*.html
