@@ -1,3 +1,12 @@
+## cat-file
+	peter@cow:~/git-reader/.git/objects/7b$ git cat-file -t a59809e0fc878fa70679ce4fbf909bc79e0fd1
+	fatal: Not a valid object name a59809e0fc878fa70679ce4fbf909bc79e0fd1
+so we need to add the dir name to get the sha
+	peter@cow:~/git-reader/.git/objects/7b$ git cat-file -t 7ba59809e0fc
+tree
+	peter@cow:~/git-reader/.git/objects/7b$ git cat-file tree  7ba59809e0fc
+
+
 [work flow]
 ## Normal Editing
 one thing I've been doing is to commit first and then view my patch for this commit with gitk
