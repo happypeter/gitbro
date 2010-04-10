@@ -1,3 +1,6 @@
-peter@cow:~$ git config --global core.editor vim
-peter@cow:~$ vim .gitconfig 
+	
+	peter@cow:~$ git config --global core.editor vim
+	peter@cow:~$ vim .gitconfig 
+
+	peter@cow:~/git-reader/wiki$ git config color.ui true
 
