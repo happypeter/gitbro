@@ -4,3 +4,4 @@
 
 	peter@cow:~/git-reader/wiki$ git config color.ui true
 
+better to use --global to write things into ~/.gitconfig
