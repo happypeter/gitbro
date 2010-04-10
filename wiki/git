@@ -1,3 +1,12 @@
+## pack file
+	
+	peter@cow:~/git-reader$ du -sh
+	5.4M	.
+	peter@cow:~/git-reader$ git gc
+	Total 719 (delta 394), reused 132 (delta 62)
+	peter@cow:~/git-reader$ du -sh
+	2.2M	.
+
 ## cat-file
 	peter@cow:~/git-reader/.git/objects/7b$ git cat-file -t a59809e0fc878fa70679ce4fbf909bc79e0fd1
 	fatal: Not a valid object name a59809e0fc878fa70679ce4fbf909bc79e0fd1
