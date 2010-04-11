@@ -1,0 +1,15 @@
+this is my current work flow to develop a new feature
+
+	git branch -b feather-x
+	git checkout feather-x
+
+and now I will do many changes on branch `feather-x`, I may do 10 commits, 
+out of which, 7 are quit ugly and only 3 really clear and logical. 
+
+But I want all the commits, since I may want rewind at any point, but eventally
+when I checkout my master branch, and try to merge, how can I get rid of the 7
+dirty commits?
+
+	git cherry-pick <commit>
+
+is what I need 
