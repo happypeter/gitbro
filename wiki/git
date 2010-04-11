@@ -3,7 +3,7 @@ git support several protocals:
 ssh, http(s), git, rsync, ...
 but only ssh support push, you will fail if you try to push through others.
 ## online resources
-
+http://gitready.com/
 http://whygitisbetterthanx.com
 
 ## pack file
