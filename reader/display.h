@@ -17,6 +17,7 @@ public:
     void startGit(QString);
     void showInitFile();
     QString filePath;
+    bool isFileInRepo(QString);
 
 public slots:
     void showFile(int);
