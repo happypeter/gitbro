@@ -1,4 +1,29 @@
-on ubuntu, vi == vim
+## buffer
+
+1.	`:ls` to list out all bufffers
+2.	`:buffer 1` to go to buffer NO.1
+
+## find usage
+move cursor to the word, do `[I`
+## compile-run-debug
+use `:make` not `:!make`
+## tag 
+http://www.moolenaar.net/habits.html
+
+	creating a tags file is the first thing I do when browsing a program.
+##incsearch
+
+	peter@cow:~$ cat .vimrc 
+	set incsearch
+
+## more form http://www.moolenaar.net/habits.html
+
+1.	`gd`---- find declaration of a virable, works for QT variable as well
+2.	`%`---- find curly braces pair 
+3.	`* + cw + n + .`---- powerful substitution command
+4.	`qa + ... + q + @a`---- recording
+
+## on ubuntu, vi == vim
 
 ## for Markdown
-3>> to indent the following 3 lines
+`3>>` to indent the following 3 lines
