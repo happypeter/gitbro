@@ -1,3 +1,11 @@
+## move a text block to another file
+
+1.	move cursor to the beginning of this block and press `v`
+2.	`j` to move upwards, or `k` the other way
+3.	`d` to kill the selected block
+4.	open another buffer `:badd newFileName`
+5.	do `p`	
+
 ## buffer
 
 1.	`:ls` to list out all bufffers
