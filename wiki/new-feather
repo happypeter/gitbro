@@ -13,3 +13,9 @@ dirty commits?
 	git cherry-pick <commit>
 
 is what I need 
+
+	git checkout feather-x
+	git rebase -i master
+
+then we squash some of the local commits we do not like, then do the rebase.
+now we can go back to master, and do a simple `merge feather-x`, it is done.
