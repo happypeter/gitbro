@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QSpinBox>
 #include "reader.h"
+#include "git.h"
 
 class QLineEdit;
 class QPushButton;
@@ -23,6 +24,7 @@ public slots:
     void showFile(int);
 
 private:
+    Git *git;
     QLineEdit *lineEdit;
     QPushButton *newerButton;
     QSpinBox *spinBox;

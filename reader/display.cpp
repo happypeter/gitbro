@@ -7,7 +7,6 @@
 #include <QPushButton>
 #include <iostream>
 #include <QDir>
-#include <QProcess>
 #include "display.h"
 
 using namespace std;
@@ -19,11 +18,11 @@ DisplayWidget::DisplayWidget() :  QWidget()
     lineEdit->setReadOnly( TRUE );
     layout->addWidget( lineEdit, 0, 0 );
     reader = new Reader;
-    if(!isFileInRepo(reader->fileName))
+    if(!git->isFileInRepo(reader->fileName))
     {
          QMessageBox::warning(this,"git","not in a git repo");
     }
-    startGit(reader->fileName);
+    git->startGit(reader->fileName);
     layout->addWidget( reader, 1, 0, 1, 3 );
     newerButton = new QPushButton;
     newerButton->setText(tr("Version"));
@@ -61,44 +60,4 @@ void DisplayWidget::showInitFile()
     spinBox->setRange(0,totalVersion);
     connect( spinBox, SIGNAL( valueChanged(int) ),SLOT( showFile(int) ));
 }
-bool DisplayWidget::isFileInRepo(QString fileName)
-{
-    QFileInfo fileInfo(fileName);
-    QProcess cmd;
-    cmd.setWorkingDirectory(fileInfo.absolutePath());
-    //'git rev-parse --is-inside-work-tree', inspired by qgit/src/git_stratup.cpp
-    cmd.start("git", QStringList()<<"rev-parse"<<"--is-inside-work-tree");
-    if (!cmd.waitForFinished())
-    {
-        qDebug() << " failed:" << cmd.errorString();
-    }
-    QByteArray ba;
-    ba = cmd.readAllStandardOutput();
-    ba = ba.trimmed();   //remove the trailing '\n'
-    QString s(ba);       //easy to convert QByteArray->QString
-    if(s == "true")
-        return true;
-    else
-        return false;
 
-}
-void DisplayWidget::startGit(QString fileName)
-{
-    QFileInfo fileInfo(fileName);
-    QProcess cmd;
-    cmd.setWorkingDirectory(fileInfo.absolutePath()); 
-    cmd.start("git", QStringList()<<"log"<<"-p"<<"--follow"<<fileName);
-    if (!cmd.waitForFinished())
-    {
-        qDebug() << " failed:" << cmd.errorString();
-    }
-    else
-    {
-        qDebug() << " output:" << cmd.readAll();
-        //processOutput();
-        //the output here are simply all the patches of the specified file
-        //Rather then store those info onto harddisks wasting time read and write files
-        //things will go much faster if we just store all the data into a container
-        //like QStringList or QVector, and porvide each patch on demand
-    }
-}
