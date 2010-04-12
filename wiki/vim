@@ -30,6 +30,7 @@ http://www.moolenaar.net/habits.html
 2.	`%`---- find curly braces pair 
 3.	`* + cw + n + .`---- powerful substitution command
 4.	`qa + ... + q + @a`---- recording
+5.	`C+n` ---- auto-complete a complex word that has prototype in file or `#include`s
 
 ## on ubuntu, vi == vim
 
