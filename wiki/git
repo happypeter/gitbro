@@ -1,3 +1,8 @@
+## tig
+easy installaiton in ubuntu
+
+	apt-get install tig
+
 ## protocals
 git support several protocals:
 ssh, http(s), git, rsync, ...
