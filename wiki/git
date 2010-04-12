@@ -1,7 +1,14 @@
 ## tig
-easy installaiton in ubuntu
+### easy installaiton in ubuntu
 
 	apt-get install tig
+
+### functions
+
+	tig filename
+
+will give all the commits related to the file specified
+### cherry-pick
 
 ## protocals
 git support several protocals:
