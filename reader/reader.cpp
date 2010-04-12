@@ -1,6 +1,6 @@
 #include "reader.h"
 #include <QtGui>
-//#define NDEBUG
+#define NDEBUG
 Reader::Reader()
 {
     setupEditor();
