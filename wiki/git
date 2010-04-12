@@ -1,3 +1,6 @@
+## strange!
+today I add a file named git.cpp, however `git status` can not track it.
+it takes me quite a bit time to realize it is because I wrote my `.gitignore` stupidly
 ## protocals
 git support several protocals:
 ssh, http(s), git, rsync, ...
