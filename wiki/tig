@@ -10,4 +10,7 @@
 will give all the commits related to the file specified
 ### cherry-pick
 
-
+1.	do stuff on branch `dev`
+2.	do `checkout master`&&`tig --all`
+3.	`C` to cherry pick the commit under cursor
+4.	in case of `Conflicts`, carefully follow the instruction given, and use -c <commit>.
