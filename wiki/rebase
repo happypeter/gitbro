@@ -1,3 +1,4 @@
+## rebase -i
 so at the very beginning, we only have one branch named master	
 
 	peter@cow:~/x-github/git-reader$ git branch 
