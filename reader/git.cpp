@@ -4,6 +4,11 @@
 #include "git.h"
 using namespace std;
 
+Git::Git()
+{
+//nothing to do now
+}
+
 bool Git::isFileInRepo(QString fileName)
 {
     QFileInfo fileInfo(fileName);
