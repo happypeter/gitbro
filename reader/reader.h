@@ -15,7 +15,7 @@ class Reader:public QMainWindow
 public:
     Reader();
     ~Reader();
-    void openFile();
+    void openFile(const QString&);
     QString fileName;
 
 private:

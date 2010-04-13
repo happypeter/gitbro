@@ -1,21 +1,19 @@
 #include "reader.h"
 #include <QtGui>
-#define NDEBUG
+
 Reader::Reader()
 {
     setupEditor();
     setCentralWidget(editor);
-    openFile();
 }
 Reader::~Reader()
 {
     cout<<"~Reader(): bye"<<endl;
 }
+
 void Reader::setupEditor()
 {
-#ifndef NDEBUG
-    cout<<__FILE__<<":"<<__LINE__<<" setup editor"<<endl;
-#endif
+    cout<<"setup editor"<<endl;
     editor = new QTextEdit;
     highlighter = new Highlighter(editor->document());
     QFont font;
@@ -27,10 +25,20 @@ void Reader::setupEditor()
 }
 
 //cp form /home/peter/qtsdk-2010.01/qt/examples/richtext/syntaxhighlighter
-void Reader::openFile()
+void Reader::openFile(const QString &path)
 {
-    fileName = QFileDialog::getOpenFileName(this,
-						tr("Open File"), "", "All Files(*)");
+    QString fileName = path;
+
+    if (fileName.isNull())
+        fileName = QFileDialog::getOpenFileName(this,
+						tr("Open File"), "", "Patch Files (*.diff *.patch)");
+
+    if (!fileName.isEmpty()) 
+    {
+        QFile file(fileName);
+        if (file.open(QFile::ReadOnly | QFile::Text))
+            editor->setPlainText(file.readAll());
+    }
 }
 
 

@@ -44,6 +44,7 @@ void DisplayWidget::showFile(int i)
     QString fileName = filePath + "v";
     fileName.append(n);
     lineEdit->setText(fileName);
+    reader->openFile(fileName);
 }
 
 void DisplayWidget::showInitFile()
@@ -55,6 +56,7 @@ void DisplayWidget::showInitFile()
     QString n = QVariant(totalVersion).toString();
     QString fileName = filePath + "v";
     fileName.append(n);
+    cout<<"fileName---"<<qPrintable(fileName)<<endl;
     lineEdit->setText(fileName);
     spinBox->setValue(totalVersion);
     spinBox->setRange(0,totalVersion);
