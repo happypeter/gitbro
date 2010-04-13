@@ -1,3 +1,9 @@
+## function folding
+
+1.	use `z+f+%` to fold all the functions in a big file
+2.	then `z+x` only eXtract the one you want to view, others will be folded again
+3.	it is nice.
+
 ## move a text block to another file
 
 1.	move cursor to the beginning of this block and press `v`
