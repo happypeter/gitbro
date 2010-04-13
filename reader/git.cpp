@@ -54,8 +54,13 @@ void Git::startGit()
         QRegExp rx("commit [0-e]");
         QStringList stringList;
         stringList = string.split(rx);
+        int v = 0;
         for(int i=0; i<stringList.size(); i++)
-            cout<<stringList.size()<<endl;
+        {
+            v++;
+            cout<<"Patch------------- NO."<<v<<endl;
+            cout<<stringList.at(i).toLocal8Bit().constData()<<endl;
+        }
         //processOutput();
 
 /*in order to cut the `s` into a StringList I think we need this:
