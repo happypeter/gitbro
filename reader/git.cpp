@@ -52,11 +52,16 @@ void Git::startGit()
         ba = cmd.readAllStandardOutput();
         ba = ba.trimmed();   //remove the trailing '\n'
         QString string(ba);       //easy to convert QByteArray->QString
-      //  cout<<"s---"<<qPrintable(s)<<endl;        
+        outPutString = string;
+  }
+}
+
+void Git::generatePatches()
+{
         QRegExp rx("commit [0-e]");
         // rx here means 'commit+SAPCE+onlyOneHexNumber', it is not perfect
         QStringList stringList;
-        stringList = string.split(rx);
+        stringList = outPutString.split(rx);
         int v = 0;
         cmd.setWorkingDirectory(OUTPUT_DIR);
         cmd.start("mkdir", QStringList()<<"ppp");
@@ -76,12 +81,6 @@ void Git::startGit()
             cout<<"Patch------------- NO."<<v<<endl;
             cout<<stringList.at(i).toLocal8Bit().constData()<<endl;
         }
-        //processOutput();
+ 
 
-/*in order to cut the `s` into a StringList I think we need this:
-
-  	QStringList 	split ( const QRegExp & rx, SplitBehavior behavior = KeepEmptyParts ) const
-
-*/
-    }
 }
