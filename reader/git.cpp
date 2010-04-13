@@ -36,6 +36,7 @@ bool Git::isFileInRepo()
 void Git::startGit()
 {
     QFileInfo fileInfo(fileName);
+    cout<<"startGit---"<<qPrintable(fileName)<<endl;
     QProcess cmd;
     cmd.setWorkingDirectory(fileInfo.absolutePath()); 
     cmd.start("git", QStringList()<<"log"<<"-p"<<"--follow"<<fileName);
@@ -49,6 +50,7 @@ void Git::startGit()
         ba = cmd.readAllStandardOutput();
         ba = ba.trimmed();   //remove the trailing '\n'
         QString s(ba);       //easy to convert QByteArray->QString
+        cout<<"s---"<<qPrintable(s)<<endl;
         
         //processOutput();
         //the output here are simply all the patches of the specified file
