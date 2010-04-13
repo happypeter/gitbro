@@ -49,8 +49,13 @@ void Git::startGit()
         QByteArray ba;
         ba = cmd.readAllStandardOutput();
         ba = ba.trimmed();   //remove the trailing '\n'
-        QString s(ba);       //easy to convert QByteArray->QString
+        QString string(ba);       //easy to convert QByteArray->QString
       //  cout<<"s---"<<qPrintable(s)<<endl;        
+        QRegExp rx("commit [0-e]");
+        QStringList stringList;
+        stringList = string.split(rx);
+        for(int i=0; i<stringList.size(); i++)
+            cout<<stringList.size()<<endl;
         //processOutput();
 
 /*in order to cut the `s` into a StringList I think we need this:
