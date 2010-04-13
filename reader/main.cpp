@@ -20,7 +20,12 @@ To generate all these files will be slow, I am going to change it in the future.
 */
     QApplication app(argc, argv);
     Git *git = new Git();
-    git->fileName = "tmp";
+    git->fileName = "/tmp";//the file name shall be given by a QFileDialog or sth
+    if(!git->isFileInRepo())
+    {
+        cout<<"file not in repo"<<endl;
+        return -1;
+    }
     DisplayWidget display;
     display.filePath = absPath;
     display.showInitFile();

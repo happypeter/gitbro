@@ -9,7 +9,7 @@ class Git : public QWidget
 
 public:                                                                       
     Git();
-    bool isFileInRepo(QString);
+    bool isFileInRepo();
     void startGit(QString);
     QString fileName;
 public slots:

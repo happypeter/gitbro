@@ -11,11 +11,12 @@ Git::Git()
 /*
 we can use this function to detect if we start git-reader in a repo or not
 */
-bool Git::isFileInRepo(QString fileName)
+bool Git::isFileInRepo()
 {
     QFileInfo fileInfo(fileName);
     QProcess cmd;
     cmd.setWorkingDirectory(fileInfo.absolutePath());
+    cout<<"absolutePath"<<qPrintable(fileInfo.absolutePath())<<endl;
     //'git rev-parse --is-inside-work-tree', inspired by qgit/src/git_stratup.cpp
     cmd.start("git", QStringList()<<"rev-parse"<<"--is-inside-work-tree");
     if (!cmd.waitForFinished())
