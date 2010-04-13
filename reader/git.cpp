@@ -50,12 +50,14 @@ void Git::startGit()
         ba = cmd.readAllStandardOutput();
         ba = ba.trimmed();   //remove the trailing '\n'
         QString s(ba);       //easy to convert QByteArray->QString
-      //  cout<<"s---"<<qPrintable(s)<<endl;
-        
+      //  cout<<"s---"<<qPrintable(s)<<endl;        
         //processOutput();
-        //the output here are simply all the patches of the specified file
-        //Rather then store those info onto harddisks wasting time read and write files
-        //things will go much faster if we just store all the data into a container
-        //like QStringList or QVector, and porvide each patch on demand
+
+/*in order to cut the `s` into a StringList I think we need this:
+
+  	QStringList 	split ( const QRegExp & rx, SplitBehavior behavior = KeepEmptyParts ) const
+
+while the regExp here shall be 'commit+SAPCE+someHexNumber'
+*/
     }
 }
