@@ -3,6 +3,7 @@
 #include <iostream>
 #include <QFileInfo>
 #include "git.h"
+#include "common.h"
 using namespace std;
 
 Git::Git()
@@ -57,8 +58,8 @@ void Git::startGit()
         QStringList stringList;
         stringList = string.split(rx);
         int v = 0;
-        cmd.setWorkingDirectory("/home/peter/out-of-git/");
-        cmd.start("mkdir", QStringList()<<"peter");
+        cmd.setWorkingDirectory(OUTPUT_DIR);
+        cmd.start("mkdir", QStringList()<<"ppp");
         if (!cmd.waitForFinished())
         {
             cout<<"failed"<<endl;
