@@ -1,3 +1,4 @@
+#include <QVariant>
 #include <QProcess>
 #include <iostream>
 #include <QFileInfo>
@@ -59,6 +60,11 @@ void Git::startGit()
         for(int i=0; i<stringList.size(); i++)
         {
             v++;
+            QString patchName("p");
+            QVariant variant(v);
+            QString ver = variant.toString(); 
+            patchName.append(ver).append(".diff");
+            cout<<qPrintable(patchName)<<endl;
             cout<<"Patch------------- NO."<<v<<endl;
             cout<<stringList.at(i).toLocal8Bit().constData()<<endl;
         }
