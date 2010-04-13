@@ -57,6 +57,13 @@ void Git::startGit()
         QStringList stringList;
         stringList = string.split(rx);
         int v = 0;
+        cmd.setWorkingDirectory("/home/peter/out-of-git/");
+        cmd.start("mkdir", QStringList()<<"peter");
+        if (!cmd.waitForFinished())
+        {
+            cout<<"failed"<<endl;
+        }
+
         for(int i=0; i<stringList.size(); i++)
         {
             v++;
