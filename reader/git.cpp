@@ -52,6 +52,7 @@ void Git::startGit()
         QString string(ba);       //easy to convert QByteArray->QString
       //  cout<<"s---"<<qPrintable(s)<<endl;        
         QRegExp rx("commit [0-e]");
+        // rx here means 'commit+SAPCE+onlyOneHexNumber', it is not perfect
         QStringList stringList;
         stringList = string.split(rx);
         int v = 0;
@@ -67,7 +68,6 @@ void Git::startGit()
 
   	QStringList 	split ( const QRegExp & rx, SplitBehavior behavior = KeepEmptyParts ) const
 
-while the regExp here shall be 'commit+SAPCE+someHexNumber'
 */
     }
 }
