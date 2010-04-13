@@ -50,37 +50,36 @@ void Git::startGit()
     {
         QByteArray ba;
         ba = cmd.readAllStandardOutput();
-        ba = ba.trimmed();   //remove the trailing '\n'
-        QString string(ba);       //easy to convert QByteArray->QString
+        ba = ba.trimmed();  
+        QString string(ba);
         outPutString = string;
-  }
+    }
 }
 
 void Git::generatePatches()
 {
-        QRegExp rx("commit [0-e]");
-        // rx here means 'commit+SAPCE+onlyOneHexNumber', it is not perfect
-        QStringList stringList;
-        stringList = outPutString.split(rx);
-        int v = 0;
-        cmd.setWorkingDirectory(OUTPUT_DIR);
-        cmd.start("mkdir", QStringList()<<"ppp");
-        if (!cmd.waitForFinished())
-        {
-            cout<<"failed"<<endl;
-        }
+    QRegExp rx("commit [0-e]");
+    // rx here means 'commit+SAPCE+onlyOneHexNumber', it is not perfect
+    QStringList stringList;
+    stringList = outPutString.split(rx);
+    int v = 0;
+    for(int i=0; i<stringList.size(); i++)
+    {
+        v++;
+        QString patchName("p");
+        QVariant variant(v);
+        QString ver = variant.toString(); 
+        patchName.append(ver).append(".diff");
+        cout<<qPrintable(patchName)<<endl;
+        cout<<"Patch------------- NO."<<v<<endl;
+        cout<<stringList.at(i).toLocal8Bit().constData()<<endl;
+    }
+}
 
-        for(int i=0; i<stringList.size(); i++)
-        {
-            v++;
-            QString patchName("p");
-            QVariant variant(v);
-            QString ver = variant.toString(); 
-            patchName.append(ver).append(".diff");
-            cout<<qPrintable(patchName)<<endl;
-            cout<<"Patch------------- NO."<<v<<endl;
-            cout<<stringList.at(i).toLocal8Bit().constData()<<endl;
-        }
- 
+void Git::generateRevisions()
+{
+//apply to the patches in OUTPUT_DIR, to produce v1, v2...
+QProcess genRev;
+//genRev.start()
 
 }

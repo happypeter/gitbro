@@ -12,6 +12,7 @@ public:
     bool isFileInRepo();
     void startGit();
     void generatePatches();
+    void generateRevisions();
     QString fileName;
 public slots:
 
