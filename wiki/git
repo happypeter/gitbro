@@ -27,20 +27,6 @@ tree
 	peter@cow:~/git-reader/.git/objects/7b$ git cat-file tree  7ba59809e0fc
 
 
-[work flow]
-## Normal Editing
-one thing I've been doing is to commit first and then view my patch for this commit with gitk
-this is really stupid, if I made some mistake I need to "git reset ..." to reverse.
-the right way shall be:
-
-	1. do the modification
-	2. git diff
-	3. git commit 
-## branching and merging
-the normal work flow:
-[one file trace]
-git-annotate(1) and git-blame
-[git]
 ## git reset --hard HEAD 
 
 I just did some really big and stupid modification to some files(these files need to be in index already), then I diecide to go back and throw away all the modification.
