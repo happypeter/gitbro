@@ -4,7 +4,6 @@
 #include <QWidget>
 #include <QSpinBox>
 #include "reader.h"
-#include "git.h"
 
 class QLineEdit;
 class QPushButton;
@@ -15,16 +14,13 @@ class DisplayWidget : public QWidget
 
 public:                                                                       
     DisplayWidget();
-    void startGit(QString);
     void showInitFile();
     QString filePath;
-    bool isFileInRepo(QString);
 
 public slots:
     void showFile(int);
 
 private:
-    Git *git;
     QLineEdit *lineEdit;
     QPushButton *newerButton;
     QSpinBox *spinBox;

@@ -18,11 +18,6 @@ DisplayWidget::DisplayWidget()
     lineEdit->setReadOnly( TRUE );
     layout->addWidget( lineEdit, 0, 0 );
     reader = new Reader;
-    if(!git->isFileInRepo(reader->fileName))
-    {
-        QMessageBox::warning(this,"git","not in a git repo");
-    }
-    git->startGit(reader->fileName);
     layout->addWidget( reader, 1, 0, 1, 3 );
     newerButton = new QPushButton;
     newerButton->setText(tr("Version"));

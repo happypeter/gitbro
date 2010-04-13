@@ -11,11 +11,10 @@ public:
     Git();
     bool isFileInRepo(QString);
     void startGit(QString);
-
+    QString fileName;
 public slots:
 
 private:
-
 };
 
 #endif // GIT_H

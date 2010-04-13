@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <iostream>
 #include "display.h"
+#include "git.h"
 using namespace std;
 /*!
 @brief main of all
@@ -18,6 +19,8 @@ with names like v0, v1 ....
 To generate all these files will be slow, I am going to change it in the future.
 */
     QApplication app(argc, argv);
+    Git *git = new Git();
+    git->fileName = "tmp";
     DisplayWidget display;
     display.filePath = absPath;
     display.showInitFile();
