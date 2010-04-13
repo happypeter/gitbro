@@ -8,7 +8,9 @@ Git::Git()
 {
 //nothing to do now
 }
-
+/*
+we can use this function to detect if we start git-reader in a repo or not
+*/
 bool Git::isFileInRepo(QString fileName)
 {
     QFileInfo fileInfo(fileName);

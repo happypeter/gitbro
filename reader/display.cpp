@@ -11,7 +11,7 @@
 
 using namespace std;
 
-DisplayWidget::DisplayWidget() :  QWidget()
+DisplayWidget::DisplayWidget() 
 {
     QGridLayout *layout = new QGridLayout;
     lineEdit = new QLineEdit;
