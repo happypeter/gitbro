@@ -56,7 +56,7 @@ void DisplayWidget::showInitFile()
     QString n = QVariant(totalVersion).toString();
     QString fileName = filePath + "v";
     fileName.append(n);
-    cout<<"fileName---"<<qPrintable(fileName)<<endl;
+    reader->openFile(fileName);
     lineEdit->setText(fileName);
     spinBox->setValue(totalVersion);
     spinBox->setRange(0,totalVersion);
