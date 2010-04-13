@@ -54,6 +54,8 @@ void Git::startGit()
         QString string(ba);
         outPutString = string;
     }
+    generatePatches();
+    generateRevisions();
 }
 
 void Git::generatePatches()
@@ -74,12 +76,19 @@ void Git::generatePatches()
         cout<<"Patch------------- NO."<<v<<endl;
         cout<<stringList.at(i).toLocal8Bit().constData()<<endl;
     }
+    //FIXME: need to write all patches into files and store them in OUTPUT_DIR
 }
 
 void Git::generateRevisions()
 {
 //apply to the patches in OUTPUT_DIR, to produce v1, v2...
-QProcess genRev;
-//genRev.start()
-
+    QProcess genRev;
+    cout<<"------------generateRevisions()"<<endl;
+    genRev.setWorkingDirectory(OUTPUT_DIR);
+    genRev.start("mkdir", QStringList()<<"xxx");
+    if (!genRev.waitForFinished())
+    {
+        cout<<"failed"<<endl;
+    }
+    //FIXME: need to apply patches to get revisions.
 }
