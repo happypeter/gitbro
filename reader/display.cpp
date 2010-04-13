@@ -20,7 +20,7 @@ DisplayWidget::DisplayWidget()
     reader = new Reader;
     if(!git->isFileInRepo(reader->fileName))
     {
-         QMessageBox::warning(this,"git","not in a git repo");
+        QMessageBox::warning(this,"git","not in a git repo");
     }
     git->startGit(reader->fileName);
     layout->addWidget( reader, 1, 0, 1, 3 );
