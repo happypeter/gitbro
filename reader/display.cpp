@@ -36,6 +36,7 @@ void DisplayWidget::paintEvent ( QPaintEvent * event )
 void DisplayWidget::showFile(int i)
 {
     QString n = QVariant(i).toString();
+    cout<<"showFile---i---"<<i<<endl;
     QString fileName = filePath + "v";
     fileName.append(n);
     lineEdit->setText(fileName);
@@ -45,6 +46,7 @@ void DisplayWidget::showFile(int i)
 void DisplayWidget::showInitFile()
 {
     QDir dir(filePath);
+    cout<<"showInitFile---"<<qPrintable(filePath)<<endl;
     QStringList fileList;
     fileList = dir.entryList();
     int totalVersion = fileList.size()-2;
