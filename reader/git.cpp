@@ -33,7 +33,7 @@ bool Git::isFileInRepo()
         return false;
 
 }
-void Git::startGit(QString fileName)
+void Git::startGit()
 {
     QFileInfo fileInfo(fileName);
     QProcess cmd;
