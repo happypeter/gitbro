@@ -1,17 +1,18 @@
-[dir track]
+## dir track
 
 http://help.github.com/removing-sensitive-data/
 
-** track one dir history
+## track one dir history
+
 http://help.github.com/splitting-a-subpath-to-a-new-repo/
 
-<example>
-git clean -f # to avoid "dirty"
-peter@cow:~/x-github/hen$ git filter-branch  --subdirectory-filter youku/
-Rewrite 7edb766c7420249aa4301d9a2587e38714f566ef (2/2)
-Ref 'refs/heads/master' was rewritten
-peter@cow:~/x-github/hen$ ls
-</example>
+
+	git clean -f # to avoid "dirty"
+	peter@cow:~/x-github/hen$ git filter-branch  --subdirectory-filter youku/
+	Rewrite 7edb766c7420249aa4301d9a2587e38714f566ef (2/2)
+	Ref 'refs/heads/master' was rewritten
+	peter@cow:~/x-github/hen$ ls
+
 the thing is if you mv a file into a subdir, and you do above, you
 will lost all its histoy:-(
 
@@ -21,9 +22,9 @@ SO, if we can to track a dir, we just pass all its files to gitbro-patch and the
 
 we will abandon  
 
-git filter-branch  --subdirectory-filter
+	git filter-branch  --subdirectory-filter
 
 can concentrate on gitbro-patch, this actually makes the issue more straightforward.
 
- git log -p --follow gui/  >gui.diff
+	git log -p --follow gui/  >gui.diff
 

@@ -1,4 +1,4 @@
-I want to have
+## I want to have
 engine.py   gitbro-patch
 in one file, and name this file gitbro-onefile, it just generate all
 the  patches for a single file, just as what gitbro-patch already can
@@ -16,8 +16,8 @@ If possible, I think I will port code into plain bash script.
 When this is mature, I can use this to generate a repository with more
 than one file(randomly selected by user who think these files are
 related in some way)
---
-Big idea,
+
+## Big idea
 
 When I think about how to display the output of gitbro, I first want a
 simply html brower for the job. 
