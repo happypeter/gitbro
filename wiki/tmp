@@ -1,3 +1,11 @@
+## website
+luckily I find: we still have our branch `website`
+`git br` can not show it, but `tig --all` will.
+and we can actually use 
+
+	git check -b website <the_latest_commit_on_branch_website>
+
+to get it back
 ###
 since I do millions of googling every day, so I need the search box just a shortcut away
 not matter where I am.
