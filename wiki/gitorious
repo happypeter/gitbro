@@ -11,3 +11,13 @@ now I run
 
 to push my stuff to gitorious sever as a backup of the github repo
 
+## website branch
+
+I need to explicitly do:
+
+	git push gitorious website
+
+to push stuff, other wise this branch is ignored, quite cumbersome.
+but this is natural, if you do not push website explicitly. It is just considered your local test branch,
+and thus ingnored as it should be.
+
