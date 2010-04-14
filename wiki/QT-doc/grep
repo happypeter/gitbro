@@ -11,3 +11,15 @@ you need to use `` to embrace the regex to use it, e.g
 	peter@cow:~/te$ grep '\<qt\>' * 
 
 will match "qt" as a separated word in all the files in the current dir
+
+I think my serach issue can be solved by `ignore case`:
+
+	peter@cow:~/te$ man grep|grep ignore -n
+	52:       -i, --ignore-case
+	peter@cow:~/te$ grep -i '\<qt\>' *
+	qt:qt
+	qt:Qt
+	qt:QT
+	peter@cow:~/te$ 
+
+
