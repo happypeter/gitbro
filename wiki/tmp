@@ -1,3 +1,10 @@
+## merge git-reader
+OK. now it is done. 200 commits git-reader is merged into a 100 commits gitbro
+
+	git remote add git-reader ../git-reader
+	git pull git-reader
+
+that is all I've done
 ## website
 luckily I find: we still have our branch `website`
 `git br` can not show it, but `tig --all` will.
