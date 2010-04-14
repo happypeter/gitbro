@@ -21,3 +21,13 @@ to push stuff, other wise this branch is ignored, quite cumbersome.
 but this is natural, if you do not push website explicitly. It is just considered your local test branch,
 and thus ingnored as it should be.
 
+and after the push, I see at http://gitorious.org/gitbro/gitbro
+	
+	* Branches: master
+
+turns into 
+
+	* Branches: master website
+
+after a page refresh. That means there is no setup for creating a remote branch.
+all you need is to create it locally, and push it.
