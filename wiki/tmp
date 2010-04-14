@@ -1,3 +1,12 @@
+###
+since I do millions of googling every day, so I need the search box just a shortcut away
+not matter where I am.
+
+firefox can not do this obviously.
+
+so I installed google-desktop http://ubuntu-tutorials.com/2007/09/03/how-to-install-google-desktop-on-ubuntu/
+
+now `gg` will do what I want.
 ##gnome-terminal --full-screen
 and I need to write it to system startup script
 
