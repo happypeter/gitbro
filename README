@@ -2,3 +2,4 @@ git-reader is a git front-end gui tool, written in Qt.
 
 
 wiki/---is the place for documantation, reference, bug report, and any thing other than code itself
+reader/   is where the source code hide.
