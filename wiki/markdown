@@ -1,0 +1,11 @@
+here we show the markdown syntax I actully use:
+
+1.	use bash command style `git log`
+2.	the file named `hello.c`
+
+the ref:
+
+	this is a code snippet
+	#include <stdio.h>
+
+end of file

@@ -1,0 +1,65 @@
+## rebase -i
+so at the very beginning, we only have one branch named master	
+
+	peter@cow:~/x-github/git-reader$ git branch 
+	* master
+
+since we need to do big changes, so we need another branch named my-feather
+ 
+	peter@cow:~/x-github/git-reader$ git branch my-feather
+	peter@cow:~/x-github/git-reader$ git checkout my-feather 
+	Switched to branch "my-feather"
+
+now we do some modifacation on this branch, then we go back to master branch
+
+	peter@cow:~/x-github/git-reader/wiki$ git checkout master 
+	Switched to branch "master"
+
+it is very common that, the upstreams has accpected new commits, during we do 
+our own modification, so we want to make sure everything is uptodate
+
+	peter@cow:~/x-github/git-reader/wiki$ git pull
+
+then we go back to my-feather, and do the rebasing
+
+	peter@cow:~/x-github/git-reader/wiki$ git checkout my-feather 
+	Switched to branch "my-feather"
+	peter@cow:~/x-github/git-reader/wiki$ git rebase master 
+	First, rewinding head to replay your work on top of it...
+	Applying: edit on branch my-feather
+
+now we go back to master, do merging
+
+	peter@cow:~/x-github/git-reader/wiki$ git checkout master 
+	Switched to branch "master"
+	peter@cow:~/x-github/git-reader/wiki$ git merge my-feather 
+
+
+	peter@cow:~/x-github/git-reader/wiki$ git push
+
+now we can clone a new repo, or go to a exsiting repo and do a `git pull`
+
+	peter@cow:~/git-reader/wiki$ git pull
+	remote: Counting objects: 7, done.
+	remote: Compressing objects: 100% (4/4), done.
+	remote: Total 4 (delta 3), reused 0 (delta 0)
+	Unpacking objects: 100% (4/4), done.
+	From git@github.com:happypeter/git-reader
+	   c7d3ee7..9767e8e  master     -> origin/master
+	Updating c7d3ee7..9767e8e
+	Fast forward
+	 wiki/git |    2 +-
+	 1 files changed, 1 insertions(+), 1 deletions(-)
+
+we run gitk
+	
+	peter@cow:~/git-reader/wiki$ gitk
+
+and now we can not see the branch named my-feather, it is nice, since we do not care
+that branch made for the sake of tmp editing.
+
+## CONCLUSION:
+all the former 5 or 7 commits are for the sake of testing rebase, we can see
+if we do not use rebase properly, we get very ugly gitk output, rather than
+nice and simple fast-forward merging, as it should.
+

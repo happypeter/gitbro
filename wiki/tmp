@@ -1,0 +1,56 @@
+###
+since I do millions of googling every day, so I need the search box just a shortcut away
+not matter where I am.
+
+firefox can not do this obviously.
+
+so I installed google-desktop http://ubuntu-tutorials.com/2007/09/03/how-to-install-google-desktop-on-ubuntu/
+
+now `gg` will do what I want.
+##gnome-terminal --full-screen
+and I need to write it to system startup script
+
+1.	tried /etc/rc2.d/  --failed
+2.	end up making this with gui->system->preference->startup applications
+
+## doc
+I may use doxygen or Qdoc for documentation in the  future
+## qgit is really inspiring:
+[qgit](http://sourceforge.net/project/screenshots.php?group_id=139897&ssid=33933)
+qgit has one file tracing functions, and a lot more
+examples
+
+	http://zetcode.com/tutorials/qt4tutorial/widgets/
+
+
+## [coding style](http://qt.gitorious.org/qt/pages/QtCodingStyle)
+
+1.	indent with 4 spaces
+2.	
+
+Now I want add some buttons and lineEdit, since .ui files are slower
+to load, so I won't use designer to do the layout.
+[gitorious]
+git push git@gitorious.org:git-reader/git-reader.git
+
+## [regexp](http://www.regular-expressions.info/reference.html)
+	\+ matches +
+but it ends with a error unknown escape sequence \+
+I want to know how to match '+'
+
+[gitk]
+gitk is not so ugly, today I changed its font, and it looks nice
+now. the problem is gitk try to display everything in one frame, make
+things kind of messy.
+github display is still more joyable to look at
+http://github.com/happypeter/git-reader/commit/c6ddabcabf3b8737779a16619a421fe4c2372db7
+I want all the diffs show up in popup windows. it will look quit confortable.
+##[highlighting](http://doc.trolltech.com/qq/qq21-syntaxhighlighter.html)
+
+Adding syntax highlighting to a QTextEdit involves subclassing
+QSyntaxHighlighter, reimplementing the highlightBlock() function, and
+instantiating the QSyntaxHighlighter subclass with the QTextEdit's
+underlying QTextDocument (returned by QTextEdit::document()) as the
+parent. 
+
+

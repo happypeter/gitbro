@@ -1,0 +1,42 @@
+this is my current work flow to develop a new feature
+
+	git branch -b feather-x
+	git checkout feather-x
+
+and now I will do many changes on branch `feather-x`, I may do 10 commits, 
+out of which, 7 are quit ugly and only 3 really clear and logical. 
+
+But I want all the commits, since I may want rewind at any point, but eventally
+when I checkout my master branch, and try to merge, how can I get rid of the 7
+dirty commits?
+
+	git checkout feather-x
+	git rebase -i master
+
+then we squash some of the local commits we do not like, then do the rebase.
+now we can go back to master, and do a simple `merge feather-x`, it is done.
+this even works when `master` has zero new commits. Now I see no point to use cherry-pick.
+
+## cherry-pick problem
+
+	git cherry-pick <commit>
+ 
+will have problem when you add new files. Say:
+
+1.	you have two commits
+
+	commit1 add file1 
+	commit2 add file2
+
+2.	now you go back to `master` and do a 
+
+	git cherry-pick commit2
+
+then you will lose file1. Bad, Bad!
+3.	but if you do a `rebase` on your development branch
+
+	git rebase -i master
+
+squash the dirty commits, and then go back to master do a `merge`
+you will have two file both, in only one commit 
+

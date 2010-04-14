@@ -1,0 +1,13 @@
+for the sake of backup
+
+	peter@cow:~/git-reader/wiki$ git remote add gitorious git@gitorious.org:git-reader/git-reader.git
+	peter@cow:~/git-reader/wiki$ git branch -r
+	  gitorious/master
+	  origin/HEAD
+	  origin/master
+now I run 
+
+	git push gitorious
+
+to push my stuff to gitorious sever as a backup of the github repo
+

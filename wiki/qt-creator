@@ -1,0 +1,44 @@
+the nice thing to have qt-creator installed is that, when you navigate to a .ui file and double click it, it will be opened with qtdesigner
+
+### Alt-G Alt-D show diff
+### doc
+move cursor to the class or object, and press F1, then you get the
+doc, nice
+### inorder to compile qgit, I do:
+
+	peter@cow:~/Desktop/qgit$ sudo apt-get install x11proto-xext-dev
+
+then it is done! Miracle, all the header files uic moc ... are all in
+the creator dir, but the Makefile found them all. GOod.
+
+### syntax highlighting example:
+
+	/home/peter/qtsdk-2010.01/qt/examples/richtext/syntaxhighlighter
+
+### go without Qtcreator
+run ldd reader then I see qt libs are not found, so I
+
+	peter@cow:~/qtsdk-2010.01/lib$ sudo cp libQtGui.so.4* /usr/lib/
+	Display all 1444 possibilities? (y or n)
+	peter@cow:~/qtsdk-2010.01/lib$ sudo cp libQtGui.so.4* /usr/lib/
+	[sudo] password for peter: 
+	peter@cow:~/qtsdk-2010.01/lib$ sudo cp libQtC /usr/lib/
+	libQtCLucene.so.4      libQtCLucene.so.4.6.1  libQtCore.so.4
+	libQtCore.so.4.6.1
+	peter@cow:~/qtsdk-2010.01/lib$ sudo cp libQtCore.so.4* /usr/lib/
+
+all works:-) ./reader runs.
+
+### qmake
+try to build reader, but qmake is not installed,
+
+	peter@cow:~/qtsdk-2010.01/qt/bin$ sudo cp -rf qmake /usr/bin/
+
+done perfectly
+
+### debugger
+it just use gdb
+
+### shortcut
+
+right click in a opened source file, and you will get very useful shortcuts

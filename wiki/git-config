@@ -1,0 +1,27 @@
+## command 	
+
+	peter@cow:~$ git config --global core.editor vim
+	peter@cow:~$ vim .gitconfig 
+
+	peter@cow:~/git-reader/wiki$ git config color.ui true
+
+better to use --global to write things into ~/.gitconfig
+
+my current ~/.gitconfig
+
+	[user]
+		name = Peter Wang
+		email = happypeter1983@gmail.com
+	[core]
+		editor = vim
+	[alias]
+		ci = commit -a -v
+		co = checkout
+		st = status
+		br = branch
+		throw = reset --hard HEAD
+	[color]
+		ui = true
+
+	[commit]
+		template = ./.commit-template

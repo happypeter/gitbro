@@ -1,0 +1,25 @@
+since the `serach.py` can only do exact match now, that means:
+
+if I see a class named `QStringList` in a .cpp file
+I need to manually change `QStringList` into `qstringlist` before I can use it as a key word to search.
+this is obviously unaccatable. 
+
+the solution is to use Regex with the command `grep`
+
+you need to use `` to embrace the regex to use it, e.g
+
+	peter@cow:~/te$ grep '\<qt\>' * 
+
+will match "qt" as a separated word in all the files in the current dir
+
+I think my serach issue can be solved by `ignore case`:
+
+	peter@cow:~/te$ man grep|grep ignore -n
+	52:       -i, --ignore-case
+	peter@cow:~/te$ grep -i '\<qt\>' *
+	qt:qt
+	qt:Qt
+	qt:QT
+	peter@cow:~/te$ 
+
+
