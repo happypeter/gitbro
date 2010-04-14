@@ -24,7 +24,6 @@ we will abandon
 git filter-branch  --subdirectory-filter
 
 can concentrate on gitbro-patch, this actually makes the issue more straightforward.
-http://www.gitcasts.com/ great videos here
 
  git log -p --follow gui/  >gui.diff
 
