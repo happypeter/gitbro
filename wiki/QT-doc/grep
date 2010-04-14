@@ -5,3 +5,9 @@ I need to manually change `QStringList` into `qstringlist` before I can use it a
 this is obviously unaccatable. 
 
 the solution is to use Regex with the command `grep`
+
+you need to use `` to embrace the regex to use it, e.g
+
+	peter@cow:~/te$ grep '\<qt\>' * 
+
+will match "qt" as a separated word in all the files in the current dir
