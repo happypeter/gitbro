@@ -1,3 +1,8 @@
+##gnome-terminal --full-screen
+and I need to write it to system startup script
+
+1.	tried /etc/rc2.d/  --failed
+2.	end up making this with gui->system->preference->startup applications
 
 ## doc
 I may use doxygen or Qdoc for documentation in the  future
