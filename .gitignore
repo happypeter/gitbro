@@ -22,3 +22,5 @@ qrc_*
 *.o
 #markdown test
 *.html
+#but we need the index.html
+!index.html

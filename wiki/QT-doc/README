@@ -28,3 +28,14 @@ Qt docs(this seems to be no so many pics luckily)
 
 1.	put all pages in /home/peter/qt-doc
 2.	write a bash to invoke lynx to open the page I want.
+
+But since I am not familiar with lynx, so I would try the firefox way first
+## install in www_root
+
+first we need a cig script `search.py` 
+
+	root@cow:/usr/lib/cgi-bin# ls
+	search.py
+	root@cow:/usr/lib/cgi-bin# chmod +x search.py 
+
+and we need a 'index.html` in `/var/www/`
