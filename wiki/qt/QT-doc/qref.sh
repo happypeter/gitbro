@@ -42,7 +42,10 @@ lynx $name
 ###############################################
 #
 #and next time I see tons of  in my driver.c
-#I can use :%s///gc to remove them 
-#not i know it is just Enter in its visual form 
+#I can use :%s///gc to remove them all
+#now I know it is just Enter in its visual form 
+#but the prolem most happens when you create a file
+#in Windows and open it in linux. Since I do not use Windows now
+#so this won't happen very often
 ###############################################
 
