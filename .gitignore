@@ -1,4 +1,6 @@
+gui
 *moc*
+.*.swp
 *.pro*
 Makefile
 *.o
