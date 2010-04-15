@@ -19,3 +19,11 @@ lynx $name
 #  sth like "QStr", I will reply you with shit
 #
 #################################################
+
+###########   TODO #############################
+#
+# It will be nice, if I can pass the name under
+# the cursor with a shortcut in Vim
+# maybe I need to write a vim script?
+#
+################################################

@@ -41,3 +41,8 @@ first we need a cig script `search.py`
 and we need a 'index.html` in `/var/www/`
 
 ## the TUI way is done by "qref.sh"
+
+Now I understand why many people like tui tools
+that is simplely if you basicly use cmd line for your work
+esspically for people like me who love a fullscreen terminal
+the overhead to turn to GUI is huge
