@@ -36,6 +36,13 @@ lynx $name
 # ^V - insert next character even if it is a editing character. 
 # this is not very simple, but finally I have my vim works like Qtcreator with
 # class doc just one click away!!
+# 
 ################################################
 
+###############################################
+#
+#and next time I see tons of  in my driver.c
+#I can use :%s///gc to remove them 
+#not i know it is just Enter in its visual form 
+###############################################
 
