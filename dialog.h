@@ -7,7 +7,7 @@ class DialogForm : public QDialog
 public:
     DialogForm();
 
-//private slots:
+private slots:
     void say_hello();
 
 private:
