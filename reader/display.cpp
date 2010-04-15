@@ -12,6 +12,10 @@
 using namespace std;
 
 DisplayWidget::DisplayWidget() 
+//back in 558481f9, the above line is 
+//DisplayWidget::DisplayWidget() :  QWidget()
+//I changed it since the base class defualt constructor will 
+//be called no matter you have ": QWidget" here or not
 {
     QGridLayout *layout = new QGridLayout;
     lineEdit = new QLineEdit;
