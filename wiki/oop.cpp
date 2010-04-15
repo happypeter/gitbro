@@ -5,8 +5,8 @@ using namespace std;
 
 class mother
 {
-    public:
 
+public:
     mother(){cout<<"mother: default constructor!"<<endl;}
     mother(int a) {cout<<"mother: constructor with int "<<a<<endl;}
 
@@ -14,8 +14,8 @@ class mother
 
 class daughter : public mother
 {
-    public:
 
+public:
     daughter():mother(1)
     {
         cout<<"daughter: default contructor"<<endl;

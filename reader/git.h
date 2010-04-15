@@ -14,6 +14,7 @@ public:
     void generatePatches();
     void generateRevisions();
     QString fileName;
+
 public slots:
 
 private:
