@@ -1,3 +1,7 @@
+## indent
+
+`set autoindent` is nice
+
 ## function folding
 
 1.	use `z+f+%` to fold all the functions in a big file
