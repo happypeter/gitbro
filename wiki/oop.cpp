@@ -16,7 +16,10 @@ class daughter : public mother
 {
     public:
 
-    daughter(){cout<<"daughter: default contructor"<<endl;}
+    daughter():mother(1)
+    {
+        cout<<"daughter: default contructor"<<endl;
+    }
 
 };
 
@@ -28,6 +31,6 @@ daughter lily;
 }
 //OUTPUT:
 //peter@cow:~/gitbro/wiki$ ./a.out 
-//mother: default constructor!
+//mother: constructor with int 1
 //daughter: default contructor
 
