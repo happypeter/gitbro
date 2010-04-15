@@ -9,7 +9,7 @@ echo $name
 
 lynx $name
 
-#put me in $PATH and use me this way
+#put me in $PATH and use me this way (named qref.sh->qref)
 #peter@cow:~$ qref QString 
 
 #####            BUG          ####################
@@ -28,4 +28,14 @@ lynx $name
 #
 # mv the cursor to "QString"
 #":!qref <cword>" will take you to the doc page
+# so I finally have this in my .vimrc
+# map <F12> :!qref <cword>
+# "" is not two characters but one, it is produced by Ctr+v+Enter in Insert Mode
+# If I do not use it, I have to type a Enter after I press <F12>
+# REF: http://hea-www.harvard.edu/~fine/Tech/vi.html
+# ^V - insert next character even if it is a editing character. 
+# this is not very simple, but finally I have my vim works like Qtcreator with
+# class doc just one click away!!
 ################################################
+
+
