@@ -26,4 +26,6 @@ lynx $name
 # the cursor with a shortcut in Vim
 # maybe I need to write a vim script?
 #
+# mv the cursor to "QString"
+#":!qref <cword>" will take you to the doc page
 ################################################
