@@ -39,3 +39,5 @@ first we need a cig script `search.py`
 	root@cow:/usr/lib/cgi-bin# chmod +x search.py 
 
 and we need a 'index.html` in `/var/www/`
+
+## the TUI way is done by "qref.sh"
