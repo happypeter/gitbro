@@ -1,6 +1,8 @@
 ## indent
 
-`set autoindent` is nice
+
+`set autoindent` is nice, and I added it to my .vimrc
+`set noautoindent` is needed, when paste stuff
 
 ## function folding
 
