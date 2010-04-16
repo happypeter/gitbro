@@ -33,7 +33,12 @@ http://lists.trolltech.com/qt-interest/2003-12/msg00849.html
 	> 
 	> QMyWidget::QMyWidget(...):QMainWindow(...)
 	> {
-	>     QPushButton * button=new QPushButton(this);
+	>     QPushButton * button=new QPushButton(this);//what if I ommit `this`?
+	                                                //A: my test shows me that the button won't be deleted when you 
+							//close QMyWidget
+							//but strange thing to me is that, qt won't call the destructor
+							//of QMyWidget until you delete QPushButton, this is wired
+							//so the conclution shall be NEVER FORGET to setParent for Qwidget
 	>     connect(...);
 	> }
 	> 
