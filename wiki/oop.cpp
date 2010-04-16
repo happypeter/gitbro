@@ -22,3 +22,26 @@ http://en.wikipedia.org/wiki/Delete_(C%2B%2B)
 	A call to delete must be made for every call to new to avoid a memory leak.
 
 so the above two links convined me that I will be better off if I can use delete for all newed items, it is just safer.
+
+YET, luckily qt make life easier by 
+
+http://lists.trolltech.com/qt-interest/2003-12/msg00849.html
+
+	> I've often seen in QT examples that the QObjects are created
+	> dynamically, but i've never seen their destruction.
+	> like this:
+	> 
+	> QMyWidget::QMyWidget(...):QMainWindow(...)
+	> {
+	>     QPushButton * button=new QPushButton(this);
+	>     connect(...);
+	> }
+	> 
+	> Is Qt delete they automatically? or is it cleaner to delete they in a
+	> destructor function?
+
+	QObjects automatically delete their children, it's one of the first things
+	you can read in the tutorials or basic docs.
+
+	See doc/html/objecttrees.html
+
