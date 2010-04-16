@@ -2,7 +2,7 @@
 #include <QPushButton>
 QMyWidget::QMyWidget()
 {
-    QPushButton * button=new QPushButton(this);
+    QPushButton * button=new QPushButton();
 }
 
 
