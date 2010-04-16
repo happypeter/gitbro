@@ -3,6 +3,7 @@
 QMyWidget::QMyWidget()
 {
     QPushButton * button=new QPushButton();
+    button->show();
 }
 
 
