@@ -1,4 +1,7 @@
 #include <QMainWindow>
+#include <iostream>
+
+using namespace std;
 
 class QMyWidget: public QMainWindow
 {
@@ -6,5 +9,6 @@ class QMyWidget: public QMainWindow
 
 public:
     QMyWidget();
+    ~QMyWidget(){cout<<"QMainWindow~() is called"<<endl;};
 
 };
