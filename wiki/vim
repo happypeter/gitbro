@@ -1,5 +1,8 @@
-## indent
+##vi Complete Key Binding List
 
+http://hea-www.harvard.edu/~fine/Tech/vi.html
+
+## indent
 
 `set autoindent` is nice, and I added it to my .vimrc
 `set noautoindent` is needed, when paste stuff
