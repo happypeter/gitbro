@@ -24,6 +24,7 @@ http://hea-www.harvard.edu/~fine/Tech/vi.html
 3.	`d` to kill the selected block(or `y` to copy)
 4.	`vnew filename` to open a new window
 5.	`^Wv` to do the same but no filename for the new buffer
+6.	 I can `ma` to set mark and `d'a` to kill
 ## buffer
 
 1.	`:ls` to list out all bufffers
