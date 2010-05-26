@@ -1,3 +1,10 @@
+## tag
+` man gitglossary |grep tag` shows me:
+
+	Tags (not tag objects) are stored in $GIT_DIR/refs/tags/
+
+things like this won't be pushed to remote, so if I lost my local clone, and run `git clone` again
+I will lose all my tags(and I actully did!)
 ## strange!
 today I add a file named git.cpp, however `git status` can not track it.
 it takes me quite a bit time to realize it is because I wrote my `.gitignore` stupidly
