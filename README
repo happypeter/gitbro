@@ -1,5 +1,3 @@
-git-reader is a git front-end gui tool, written in Qt.
+Gitbro is a git front-end gui tool, written in Qt, bash, python, etc.
 
 
-wiki/---is the place for documantation, reference, bug report, and any thing other than code itself
-reader/   is where the source code hide.

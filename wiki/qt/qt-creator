@@ -4,7 +4,7 @@ the nice thing to have qt-creator installed is that, when you navigate to a .ui 
 ### doc
 move cursor to the class or object, and press F1, then you get the
 doc, nice
-### inorder to compile qgit, I do:
+### in order to compile qgit, I do:
 
 	peter@cow:~/Desktop/qgit$ sudo apt-get install x11proto-xext-dev
 
