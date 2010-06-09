@@ -8,6 +8,11 @@
 	tig filename
 
 will give all the commits related to the file specified
+
+use 
+	tig --follow fileName
+
+to handle renamed files
 ### cherry-pick
 
 1.	do stuff on branch `dev`
