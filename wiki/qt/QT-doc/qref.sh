@@ -30,6 +30,8 @@ lynx $name
 #":!qref <cword>" will take you to the doc page
 # so I finally have this in my .vimrc
 # map <F12> :!qref <cword>
+# use <ENTER> rater than  helps a lot on readablity and also eliminate the
+# danger of ``->`^M` convertion when you try to do copy and paste
 # "" is not two characters but one, it is produced by Ctr+v+Enter in Insert Mode
 # If I do not use it, I have to type a Enter after I press <F12>
 # REF: http://hea-www.harvard.edu/~fine/Tech/vi.html
