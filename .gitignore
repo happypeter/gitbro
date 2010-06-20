@@ -28,3 +28,6 @@ qrc_*
 *.html
 #but we need the index.html
 !index.html
+##cscope
+cscope.files
+cscope.out
