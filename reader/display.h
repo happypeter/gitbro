@@ -1,5 +1,5 @@
-#ifndef DISPLAY_CPP
-#define DISPLAY_CPP
+#ifndef DISPLAY_H
+#define DISPLAY_H 
 
 #include <QWidget>
 #include <QSpinBox>
@@ -28,4 +28,4 @@ private:
     void   paintEvent ( QPaintEvent * event );
 };
 
-#endif // DISPLAY_HPP
+#endif // DISPLAY_H
