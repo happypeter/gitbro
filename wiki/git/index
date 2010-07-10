@@ -25,10 +25,5 @@
 	peter@cow:~/git-reader/.git$ git cat-file -t 425cb3108fd7ba47532a893ee55dfd13c0f70808
 	blob
 	peter@cow:~/git-reader/.git$ git cat-file blob 425cb3108fd7ba47532a893ee55dfd13c0f70808
-	on ubuntu, vi == vim
-
-	## for Markdown
-	3>> to indent the following 3 lines
-	peter@cow:~/git-reader/.git$ 
 
 Now we understand what is a index, a blob, and how to check info out of them
