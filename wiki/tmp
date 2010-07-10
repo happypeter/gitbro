@@ -1,10 +1,3 @@
-## merge git-reader
-OK. now it is done. 200 commits git-reader is merged into a 100 commits gitbro
-
-	git remote add git-reader ../git-reader
-	git pull git-reader
-
-that is all I've done
 ## website
 luckily I find: we still have our branch `website`
 `git br` can not show it, but `tig --all` will.
@@ -13,20 +6,6 @@ and we can actually use
 	git check -b website <the_latest_commit_on_branch_website>
 
 to get it back
-###
-since I do millions of googling every day, so I need the search box just a shortcut away
-not matter where I am.
-
-firefox can not do this obviously.
-
-so I installed google-desktop http://ubuntu-tutorials.com/2007/09/03/how-to-install-google-desktop-on-ubuntu/
-
-now `gg` will do what I want.
-##gnome-terminal --full-screen
-and I need to write it to system startup script
-
-1.	tried /etc/rc2.d/  --failed
-2.	end up making this with gui->system->preference->startup applications
 
 ## doc
 I may use doxygen or Qdoc for documentation in the  future
@@ -37,10 +16,6 @@ examples
 
 	http://zetcode.com/tutorials/qt4tutorial/widgets/
 
-
-
-Now I want add some buttons and lineEdit, since .ui files are slower
-to load, so I won't use designer to do the layout.
 [gitorious]
 git push git@gitorious.org:git-reader/git-reader.git
 
@@ -49,13 +24,6 @@ git push git@gitorious.org:git-reader/git-reader.git
 but it ends with a error unknown escape sequence \+
 I want to know how to match '+'
 
-[gitk]
-gitk is not so ugly, today I changed its font, and it looks nice
-now. the problem is gitk try to display everything in one frame, make
-things kind of messy.
-github display is still more joyable to look at
-http://github.com/happypeter/git-reader/commit/c6ddabcabf3b8737779a16619a421fe4c2372db7
-I want all the diffs show up in popup windows. it will look quit confortable.
 ##[highlighting](http://doc.trolltech.com/qq/qq21-syntaxhighlighter.html)
 
 Adding syntax highlighting to a QTextEdit involves subclassing
