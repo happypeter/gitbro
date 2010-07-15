@@ -1,7 +1,8 @@
 #!/bin/bash          
 
-# I suppose you have all the qt-doc pages in /var/www
-cd /var/www
+# suppose you have all the qt-doc pages in QT_DOC_PATH
+QT_DOC_PATH="$HOME/.vim/doc.trolltech.com/4.6/" #adjust to your own case
+cd $QT_DOC_PATH
 kw=$1".html" #concating two string is easy
 name=$(ls|grep -i $kw) #no space is allowed between "name" and "="
 echo --------
