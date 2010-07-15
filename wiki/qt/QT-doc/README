@@ -4,7 +4,7 @@ I find checking qt class reference doc is very cumbersome for me now,
 every time I go to www.google.com and type `4.6 qwidget` and wait for a long time
 till the page shows up. Bad, bad!!!
 
-and I do not like the way qtcreator doing this.
+BTW. I do not like the way qtcreator does this.
 
 #SOLUTION:
 
@@ -12,17 +12,11 @@ so first I download all the pages
 
 	wget -r http://doc.trolltech.com/4.6/
 
-it takes ages to finish though.
-
-now one possiable way to do it is to install it in my local www_root
-and write a google-like(simplely) search engine for pages lookup.
-just the way I do happypeter.users.sf.net
-
 ## TUI is perfered
 
 but thinking of my gitk->tig switch no long before. I think maybe I can do my work 
 more efficiently with lynx rather than firefox, if there are not so many pngs in the 
-Qt docs(this seems to be no so many pics luckily)
+Qt docs(this seems to be true)
 
 ### so I can 
 
