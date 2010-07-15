@@ -13,30 +13,4 @@ so first I download all the pages
 	wget -r http://doc.trolltech.com/4.6/
 
 ## TUI is perfered
-
-but thinking of my gitk->tig switch no long before. I think maybe I can do my work 
-more efficiently with lynx rather than firefox, if there are not so many pngs in the 
-Qt docs(this seems to be true)
-
-### so I can 
-
-1.	put all pages in /home/peter/qt-doc
-2.	write a bash to invoke lynx to open the page I want.
-
-But since I am not familiar with lynx, so I would try the firefox way first
-## install in www_root
-
-first we need a cig script `search.py` 
-
-	root@cow:/usr/lib/cgi-bin# ls
-	search.py
-	root@cow:/usr/lib/cgi-bin# chmod +x search.py 
-
-and we need a 'index.html` in `/var/www/`
-
-## the TUI way is done by "qref.sh"
-
-Now I understand why many people like tui tools
-that is simplely if you basicly use cmd line for your work
-esspically for people like me who love a fullscreen terminal
-the overhead to turn to GUI is huge
+done by "qref"
