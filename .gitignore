@@ -31,3 +31,5 @@ qrc_*
 ##cscope
 cscope.files
 cscope.out
+#doxygen
+Doxyfile
