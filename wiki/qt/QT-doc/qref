@@ -9,13 +9,6 @@ echo --------
 echo $name
 
 lynx $name
-#####            BUG          ####################
-#
-#  you have to give me the full name of the class
-#  I do not care about the case, but if you give me
-#  sth like "QStr", I will reply you with shit
-#
-#################################################
 
 ###########   vim setting #############################
 #
