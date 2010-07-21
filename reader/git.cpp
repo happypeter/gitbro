@@ -6,12 +6,19 @@
 #include "common.h"
 using namespace std;
 
+/** 
+* @brief maybe I can use the constructor to check if git is available on the
+* system or not
+*/
 Git::Git()
 {
 //nothing to do now
 }
-/*
+/** 
+* @brief  
 we can use this function to detect if we start git-reader in a repo or not
+* 
+* @return 
 */
 bool Git::isFileInRepo()
 {
