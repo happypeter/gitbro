@@ -1,3 +1,8 @@
+## print a authors of this repo
+
+    peter@peter-laptop:~/gitbro$ git log --format='%aN <%aE>' | awk
+    '{arr[$0]++} END{for (i in arr){print arr[i], i;}}' | sort -rn | cut -d\  -f2-
+
 ## website
 luckily I find: we still have our branch `website`
 `git br` can not show it, but `tig --all` will.
