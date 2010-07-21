@@ -62,6 +62,10 @@ void Git::startGit()
         outPutString = string;
     }
     generatePatches();
+    // if we do things this way, what's  the point of using Qt, it is not OOP
+    // anymore, why not just write bash script to do the job here, and then
+    // use Qt to implement a nice looking gui as front-end to the script,
+    // Clearer design, less coding
     generateRevisions();
 }
 
