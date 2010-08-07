@@ -1,3 +1,22 @@
+#######################################
+#
+#           git-clean
+#
+######################################
+#
+# when I am done with some test in my repo
+# there willa always be some junk files left in my repo
+# that's why I need this .gitignore file to record these
+# file avoiding commit them by accident 
+# However this make it hard to find them, since they are no longer visual to
+# "git st". If I want to find them, use
+#       
+#       git clean -x -n
+#
+# "-n" means dry run, since I do need some of the file listed here
+# like my *tags* file and cscope file
+
+
 ## doxygen output dir shall not be commited to repo
 doxygen-out
 ## ctag files
