@@ -1,6 +1,5 @@
-
-
-
+## tools
+I need tools to convert all the posts into html, then add css/header&footer to all pages, export all the htmls and css/gitbro.css to a external dir, and then rsync the dir to gitbro.sf.net
 
 ##  creat a shell before you use ssh or rsync
 
