@@ -1,3 +1,12 @@
+## one of the basic 
+
+I need to mv a file to another repo, so I need:
+    
+1.  get all the history of this file and push it into another repo
+2.  delete this file(and its history in this repo),http://help.github.com/removing-sensitive-data/  
+
+
+
 ## I want to have
 engine.py   gitbro-patch
 in one file, and name this file gitbro-onefile, it just generate all
