@@ -1,0 +1,9 @@
+
+
+
+
+##  creat a shell before you use ssh or rsync
+
+    ssh -t happypeter,gitbro@shell.sourceforge.net create
+
+    rsync -r --delete website-gitbro  happypeter,gitbro@shell.sourceforge.net:/home/groups/g/gi/gitbro/htdocs/
