@@ -10,7 +10,7 @@ mkdir $OUTPUT_DIR
 cd $POST_DIR
 for file in `ls .`
 do
-    markdown $file>$file".html" 
+    markdown --html4tags $file>$file".html" 
     ## we should not have file prefix for posts
     ## other wise we need to use filebasename here
 
