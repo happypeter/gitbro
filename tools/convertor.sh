@@ -6,6 +6,7 @@ echo $POST_DIR
 OUTPUT_DIR=$HOME/gitbro-output
 HEADER=$REPO_DIR/css/header.html
 FOOTER=$REPO_DIR/css/footer.html
+rm -rf $OUTPUT_DIR
 mkdir $OUTPUT_DIR
 cd $POST_DIR
 echo
