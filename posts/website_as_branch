@@ -1,12 +1,11 @@
- I am trying to port this website as a branch of my project Gitbro
- I want this:
+ISSUE: now I have a repo *website-gitbro/*, I want to port it into my project Gitbro's main repo
+as a branch named *website*
 
-    Gitbro:website
 
-But I forgot how I did these several months ago, so I went to gitcasts.com to see the podcast named 
+##  Creat a empty branch--the podcast way 
+I went to gitcasts.com to see the podcast named 
 *git-empty-branch* again. 
 
-##  the podcast way 
 the command that Scott used was: 
 
     git-symbolic-ref HEAD refs/heads/website
@@ -37,4 +36,16 @@ all the following works correctly:
     peter@peter-laptop:~/gitbro$ git commit --allow-empty "init commit empty branch"
 
 So, I am done with the branch Creation.
+
+## merge *website-gitbro* in
+
+first I did was:
+
+    peter@peter-laptop:~/gitbro$ git checkout website 
+    Switched to branch 'website'
+    peter@peter-laptop:~/gitbro$ git remote add web ../website-gitbro/
+    peter@peter-laptop:~/gitbro$ git pull web master
+
+things are done, but not nicely, since we now had a merge commit, obviously we need a rebase.
+but it seems I can not do a rebase since the two branch has no common Ancestor, can you?
 
