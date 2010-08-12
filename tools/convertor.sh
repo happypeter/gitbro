@@ -29,7 +29,7 @@ for file in `ls .`
 do
     markdown --html4tags $file>$file".tmp" 
     ## we should not have file prefix for posts
-    ## other wise we need to use filebasename here
+    ## otherwise we need to use basename here
     cat $HEADER $file".tmp" $FOOTER >$file".html"    
     rm *.tmp
     mv *.html $OUTPUT_DIR
