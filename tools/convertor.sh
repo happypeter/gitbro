@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-################################
+#################################
 #
 #    Variables
 #    
@@ -11,7 +11,7 @@ OUTPUT_DIR=$HOME/ooo
 HEADER=$REPO_DIR/css/header.html
 FOOTER=$REPO_DIR/css/footer.html
 
-################################
+#################################
 #
 #    Update rudely
 #    
@@ -19,7 +19,7 @@ FOOTER=$REPO_DIR/css/footer.html
 rm -rf $OUTPUT_DIR
 mkdir $OUTPUT_DIR
 
-################################
+#################################
 #
 #    start Converting
 #    
@@ -27,12 +27,12 @@ mkdir $OUTPUT_DIR
 cd $POST_DIR
 for file in `ls .`
 do
-    markdown --html4tags $file>$file".html" 
+    markdown --html4tags $file>$file".tmp" 
     ## we should not have file prefix for posts
     ## other wise we need to use filebasename here
-
+    cat $HEADER $file".tmp" $FOOTER >$file".html"    
+    rm *.tmp
     mv *.html $OUTPUT_DIR
 done
 
-## then we can use `cat` to add header&footer to the output htmls
 
