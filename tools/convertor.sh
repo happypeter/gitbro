@@ -8,6 +8,7 @@
 REPO_DIR=$HOME/website-gitbro
 POST_DIR=$REPO_DIR/posts
 OUTPUT_DIR=$HOME/ooo
+INDEX=$REPO_DIR/index.html
 HEADER=$REPO_DIR/css/header.html
 FOOTER=$REPO_DIR/css/footer.html
 
@@ -36,3 +37,15 @@ do
 done
 
 
+#################################
+#
+#    final structuring
+#    
+#################################
+cd $OUTPUT_DIR
+cp $INDEX .
+
+    ## creat a shell before you use ssh or rsync
+    #ssh -t happypeter,gitbro@shell.sourceforge.net create
+
+    #rsync -r --delete $OUTPUT_DIR  happypeter,gitbro@shell.sourceforge.net:/home/groups/g/gi/gitbro/htdocs/
