@@ -1,12 +1,16 @@
-#!/bin/bash
+#!/bin/bash -x
 
-POSTDIR=../posts/
-OUTPUTDIR=$HOME/gitbro-output
-mkdir $OUTPUTDIR
-cd $POSTDIR
+REPO_DIR=$HOME/website-gitbro
+POST_DIR=$REPO_DIR/posts
+echo $POST_DIR
+OUTPUT_DIR=$HOME/gitbro-output
+HEADER=$REPO_DIR/css/header.html
+FOOTER=$REPO_DIR/css/footer.html
+mkdir $OUTPUT_DIR
+cd $POST_DIR
 echo
 echo 1-------
-echo $POSTDIR
+echo $POST_DIR
 pwd
 echo 1^^^^^^^
 echo
@@ -19,7 +23,8 @@ do
     echo 2^^^^^^^^
     echo
     markdown $file>$file".html"
-    mv *.html $OUTPUTDIR
+    mv *.html $OUTPUT_DIR
 done
 
 ## then we can use `cat` to add header&footer to the output htmls
+
