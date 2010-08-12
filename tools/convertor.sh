@@ -5,7 +5,7 @@
 #    Variables
 #    
 #################################
-REPO_DIR=$HOME/website-gitbro
+REPO_DIR=$HOME/gitbro ## only when gitbro has a checkout on website branch
 POST_DIR=$REPO_DIR/posts
 OUTPUT_DIR=$HOME/ooo
 INDEX=$REPO_DIR/index.html
