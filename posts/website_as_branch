@@ -1,0 +1,40 @@
+ I am trying to port this website as a branch of my project Gitbro
+ I want this:
+
+    Gitbro:website
+
+But I forgot how I did these several months ago, so I went to gitcasts.com to see the podcast named 
+*git-empty-branch* again. 
+
+##  the podcast way 
+the command that Scott used was: 
+
+    git-symbolic-ref HEAD refs/heads/website
+
+but my test looks like this(on my ubuntu 10.04 ):
+
+    Releas-:ptop:~/gitbro$ git-symbolic-ref HEAD refs/heads/website
+    git-symbolic-ref: command not found
+
+this worked, but did not turn out to be expected:
+
+    peter@peter-laptop:~/gitbro$ git symbolic-ref HEAD refs/heads/website
+    peter@peter-laptop:~/gitbro$ git branch
+      master 
+
+Note: the above git branch output is strange, there is no "*" preceeding the branch
+I think that's why I get this error:
+
+    peter@peter-laptop:~/gitbro$ git checkout -b website
+    fatal: You are on a branch yet to be born
+    peter@peter-laptop:~/gitbro$ ls .git/refs/heads/
+    master
+
+all the following works correctly:
+
+    peter@peter-laptop:~/gitbro$ git rm --cached -r .
+    peter@peter-laptop:~/gitbro$ rm -rf *
+    peter@peter-laptop:~/gitbro$ git commit --allow-empty "init commit empty branch"
+
+So, I am done with the branch Creation.
+
