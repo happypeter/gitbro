@@ -74,3 +74,19 @@ push the local repo(without the branch *website*) to the server
 
 this is simplely done by git push =git push= =origin website=
 
+## how to clone the whole repo from server (both branches included)
+
+checked git-clone manpage, but got no direct answer, and what I did was:
+
+1.  clone each branch separately
+
+        git clone git@github.com:happypeter/gitbro.git ## this will clone only the master
+        git clone git@github.com:happypeter/gitbro.git -b website website
+
+2.  then do a push:
+
+        cd website/
+        git remote add ma ../gitbro
+        git push  ma ## suprising is that you do not need to specify the branch name 
+
+3.  done
