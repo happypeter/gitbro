@@ -55,7 +55,9 @@ but it seems I can not do a rebase since the two branch has no common Ancestor, 
     To git@github.com:happypeter/gitbro.git
      ! [rejected]        website -> website (non-fast-forward)
 
-the story was that I did this several month ago, so that means I created a remote *website* branch, later I found I did not like it, So I deleted it. Now I see, it is obvious that I only did it locally, this is proved by doing this:
+the story was that I did this several month ago, so that means I created a
+remote *website* branch, later I found I did not like it, So I deleted it. Now
+I see, it is obvious that I only did it locally, this is proved by doing this:
 
     git clone git@github.com:happypeter/gitbro.git --branch website
 
@@ -67,4 +69,8 @@ and I successfully clone the gitbro, and it has only one branch:
 
 but I hated all the old stuff, how can I delete it on remote site?
 
-Now the only way I know is to delete the whole git repo on the server, and push the local repo(without the branch *website*) to the server
+Now the only way I know is to delete the whole git repo on the server, and
+push the local repo(without the branch *website*) to the server
+
+this is simplely done by git push =git push= =origin website=
+
