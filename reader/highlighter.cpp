@@ -1,6 +1,11 @@
 #include <QtGui>
 #include "highlighter.h"
 
+/** 
+* @brief I just copied it from Qt Example
+* 
+* @param parent set Qt object tree hierarchy for GC
+*/
 Highlighter::Highlighter(QTextDocument *parent)
   : QSyntaxHighlighter(parent)
 {
