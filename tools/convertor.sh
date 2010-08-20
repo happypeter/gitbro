@@ -11,7 +11,7 @@ OUTPUT_DIR=$HOME/ooo
 INDEX=$REPO_DIR/index.html
 HEADER=$REPO_DIR/css/header.html
 FOOTER=$REPO_DIR/css/footer.html
-
+CSS=$REPO_DIR/css/gitbro.css
 #################################
 #
 #    Update rudely
@@ -44,6 +44,7 @@ done
 #################################
 cd $OUTPUT_DIR
 cp $INDEX .
+cp $CSS .
 
     ## creat a shell before you use ssh or rsync
     #ssh -t happypeter,gitbro@shell.sourceforge.net create
