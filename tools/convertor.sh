@@ -26,8 +26,8 @@ mkdir $OUTPUT_DIR
 #    
 #################################
 cd $POST_DIR
-stat * -c %y" "%n|sort -r|awk -F" " '{print "<h2>"$1" ""<a href="$4".html"">"$4"</a>""</h2>"}'>all_post.html
-
+stat * -c %y" "%n|sort -r|awk -F" " '{print "<h2>"$1" ""<a href="$4".html"">"$4"</a>""</h2>"}'>all_posts.html
+mv all_posts.html $OUTPUT_DIR
 #################################
 #
 #    start Converting
