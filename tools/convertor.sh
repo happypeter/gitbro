@@ -27,6 +27,11 @@ mkdir $OUTPUT_DIR
 #################################
 cd $POST_DIR
 stat * -c %y" "%n|sort -r|awk -F" " '{print $1" "$4}'>all_posts.html
+# now I need sth like this:
+#
+# <h2> 2010-08-21 <a href="website_as_branch.html">website_as_branch</a></h2>
+#
+# I am use sed for the job
 
 #################################
 #
