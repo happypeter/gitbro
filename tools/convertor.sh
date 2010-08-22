@@ -22,6 +22,15 @@ mkdir $OUTPUT_DIR
 
 #################################
 #
+#    generate all_posts.html
+#    
+#################################
+#peter@peter-laptop:~/ttt$ stat * -c %y" "%n|sort -r|awk -F" " '{print $1" "$4}'
+#2010-08-22 222.html
+#2010-08-22 111.html
+
+#################################
+#
 #    start Converting
 #    
 #################################
