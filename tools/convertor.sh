@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash 
 
 #################################
 #
@@ -27,6 +27,7 @@ mkdir $OUTPUT_DIR
 #################################
 cd $POST_DIR
 stat * -c %y" "%n|sort -r|awk -F" " '{print "<h3>"$1" ""<a href="$4".html"">"$4"</a>""</h3>"}'>all_posts.html.tmp
+cat all_posts.html.tmp
 echo "<br /><br /><h1 style="text-align:center">All Posts</h2><br />">pageTitle.tmp
 cat $HEADER pageTitle.tmp all_posts.html.tmp > all_posts.html
 rm *.tmp
