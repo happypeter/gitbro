@@ -26,8 +26,9 @@ mkdir $OUTPUT_DIR
 #    
 #################################
 cd $POST_DIR
-stat * -c %y" "%n|sort -r|awk -F" " '{print "<h2>"$1" ""<a href="$4".html"">"$4"</a>""</h1>"}'>all_posts.html.tmp
-cat $HEADER all_posts.html.tmp > all_posts.html
+stat * -c %y" "%n|sort -r|awk -F" " '{print "<h3>"$1" ""<a href="$4".html"">"$4"</a>""</h3>"}'>all_posts.html.tmp
+echo "<br /><br /><center><h1>All Posts</h2></center><br />">pageTitle.tmp
+cat $HEADER pageTitle.tmp all_posts.html.tmp > all_posts.html
 rm *.tmp
 mv all_posts.html $OUTPUT_DIR
 #################################
