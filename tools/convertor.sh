@@ -54,7 +54,16 @@ cd $OUTPUT_DIR
 cp $INDEX .
 cp $CSS .
 
-    ## creat a shell before you use ssh or rsync
-    #ssh -t happypeter,gitbro@shell.sourceforge.net create
 
-    #rsync -r --delete $OUTPUT_DIR  happypeter,gitbro@shell.sourceforge.net:/home/groups/g/gi/gitbro/htdocs/
+#################################
+#
+#    rsync to sf.net
+#    
+#################################
+echo """
+creat a shell before you use ssh or rsync
+
+    ssh -t happypeter,gitbro@shell.sourceforge.net create
+
+    rsync -r --delete .  happypeter,gitbro@shell.sourceforge.net:/home/groups/g/gi/gitbro/htdocs/
+"""
