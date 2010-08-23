@@ -27,7 +27,7 @@ mkdir $OUTPUT_DIR
 #################################
 cd $POST_DIR
 stat * -c %y" "%n|sort -r|awk -F" " '{print "<h3>"$1" ""<a href="$4".html"">"$4"</a>""</h3>"}'>all_posts.html.tmp
-echo "<br /><br /><center><h1>All Posts</h2></center><br />">pageTitle.tmp
+echo "<br /><br /><h1 style="text-align:center">All Posts</h2><br />">pageTitle.tmp
 cat $HEADER pageTitle.tmp all_posts.html.tmp > all_posts.html
 rm *.tmp
 mv all_posts.html $OUTPUT_DIR
@@ -42,7 +42,7 @@ do
     markdown --html4tags $file>$file".tmp" 
     ## we should not have file prefix for posts
     ## otherwise we need to use basename here
-    echo "<br /><br /><center><h1>$file</h2></center><br />"|sed -e 's/_/\ /g'>pageTitle.tmp
+    echo "<br /><br /><h1 style="text-align:center">$file</h2><br />"|sed -e 's/_/\ /g'>pageTitle.tmp
     cat $HEADER pageTitle.tmp $file".tmp" $FOOTER >$file".html"    
     rm *.tmp
     mv *.html $OUTPUT_DIR
