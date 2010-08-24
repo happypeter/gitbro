@@ -90,3 +90,30 @@ checked git-clone manpage, but got no direct answer, and what I did was:
         git push  ma ## suprising is that you do not need to specify the branch name 
 
 3.  done
+
+### nicer way
+
+1.  clone the `master` branch, simply run:
+
+         git clone git@github.com:happypeter/gitbro.git
+
+2.  show all the branches:
+
+        peter@vostro:~/gitbro$ git branch -a
+          master
+        * origin/website
+          remotes/origin/HEAD -> origin/master
+          remotes/origin/master
+          remotes/origin/website
+
+3.  create your local branch
+
+        peter@vostro:~/gitbro$ git checkout -b website remotes/origin/website
+        Branch website set up to track remote branch website from origin.
+        Switched to a new branch 'website'
+        peter@vostro:~/gitbro$ git br
+          master
+        * website
+        peter@vostro:~/gitbro$ 
+
+4.  done.
