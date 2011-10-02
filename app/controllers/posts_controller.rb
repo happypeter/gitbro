@@ -16,7 +16,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.xml
   def show
-    @post = Post.find(params[:id])
+    @wiki = Gollum::Wiki.new("/home/peter/ll/")
+    @page =  @wiki.page(params[:page_name])
 
     respond_to do |format|
       format.html # show.html.erb

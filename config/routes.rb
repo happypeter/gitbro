@@ -1,6 +1,5 @@
 GritTest::Application.routes.draw do
-  resources :posts
-
+  match 'posts/:page_name'  => 'posts#show'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
