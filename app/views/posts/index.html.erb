@@ -1,3 +1,5 @@
 <h1>Listing pages</h1>
 
-<%= @tree.contents.first.name %>
+<% @wiki.pages.each do |page| %>
+    <%= page.name %>
+<%end%>
