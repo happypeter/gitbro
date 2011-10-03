@@ -56,6 +56,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mustache (0.99.4)
+    mysql2 (0.2.11)
     nokogiri (1.4.5)
     polyglot (0.3.2)
     posix-spawn (0.3.6)
@@ -98,5 +99,6 @@ PLATFORMS
 DEPENDENCIES
   gollum
   grit
+  mysql2 (< 0.3)
   rails (= 3.0.7)
   sqlite3
