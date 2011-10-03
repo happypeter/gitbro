@@ -1,0 +1,6 @@
+<h1>Listing pages</h1>
+
+<% @wiki.pages.each do |page| %>
+  <a href="/posts/<%=page.name%>">  <%= page.name %> </a>
+  <br \>
+<%end%>
