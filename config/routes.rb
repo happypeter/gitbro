@@ -1,7 +1,25 @@
 Gitbro::Application.routes.draw do
-  get "users/new"
-
   match 'posts/:page_name'  => 'posts#show'
+  get "log_in" => "sessions#new", :as => "log_in"  # if you use "peters/new" rather than "peters#new", error: peters uninitilized
+  # post "log_in" => "peter#new", :as => "log_in"  
+  # if you use POST to sent '/login', you need the above line, otherwise you
+  # get a strange error: No route matches "/log_in"
+  get "log_out" => "sessions#destroy", :as => "log_out"  
+
+  get "sign_up" => "users#new", :as => "sign_up"  
+  get "posts" => "posts#index" #peter added this foolishly
+  root :to => "posts#index"  
+  
+  get ':name' => 'posts#index', :as => 'user_posts'
+  # because this line all my restful defualts won't work any more, how to fix?
+  # from now on every thing after 3000/xxx will be params[:name]
+  # so never put this before the above several lines
+
+  resources :users do
+    resources :posts
+  end
+
+  resources :sessions
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
