@@ -1,6 +1,8 @@
 Gitbro::Application.routes.draw do
+  get 'new_page' => 'posts#new'
+  put 'posts/create' => 'posts#create'
   get 'posts/:page_name'  => 'posts#show'
-  put 'posts/:page_name'  => 'posts#update'
+  put 'posts/:page_name/update'  => 'posts#update'
   match 'posts/:page_name/edit'  => 'posts#edit'
   get "log_in" => "sessions#new", :as => "log_in"  # if you use "peters/new" rather than "peters#new", error: peters uninitilized
   # post "log_in" => "peter#new", :as => "log_in"  

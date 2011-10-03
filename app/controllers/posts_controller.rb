@@ -28,8 +28,6 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.xml
   def new
-    @post = Post.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @post }
@@ -45,16 +43,17 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.xml
   def create
-    @post = Post.new(params[:post])
+    
+    @commit = { :message => 'commit message',
+               :name => 'Tom Preston-Werner',
+               :email => 'tom@github.com' }
+    @wiki = Gollum::Wiki.new("/home/peter/ll/")
+    @page = @wiki.page(params[:post][:title])
+    @wiki.write_page(params[:post][:title], :markdown, params[:post][:content], @commit)
 
     respond_to do |format|
-      if @post.save
-        format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
-        format.xml  { render :xml => @post, :status => :created, :location => @post }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
-      end
+        format.html { redirect_to(root_url, :notice => 'successfully updated.') }
+        format.xml  { head :ok }
     end
   end
 

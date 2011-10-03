@@ -1,5 +1,24 @@
-<h1>New post</h1>
+<h1>New Page</h1>
 
-<%= render 'form' %>
+<form accept-charset="UTF-8" action="/posts/create" class="edit_post" id="edit_post_95" method="post">
+	
+	<div style="margin:0;padding:0;display:inline">
+		<input name="utf8" type="hidden" value="&#x2713;" />
+		<input name="_method" type="hidden" value="put" />
+		<input name="authenticity_token" type="hidden" value="/3ShtrkSEylOLnW8I30Gc92u/oQfKCMSNixU300/QJk=" />
+	</div>
 
-<%= link_to 'Back', posts_path %>
+    <div class="field">
+      <label for="post_title">Page Name</label><br />
+      <input id="post_title" name="post[title]" size="30" type="text" value="New Page" />
+    </div>
+
+    <div class="field">
+      <label for="post_content">Content</label><br />
+      <textarea cols="40" id="post_content" name="post[content]" rows="20"></textarea>
+    </div>
+    
+    <div class="actions">
+      <input id="post_submit" name="commit" type="submit" value="Update Post" />
+    </div>
+</form>
