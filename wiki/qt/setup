@@ -1,6 +1,0 @@
-## installation
-
-ubuntu debs:
-libqt4-dev qt4-qmake ...
-and all their dependencies brought me all the libs headers and qmake and
-everything, no extra setting is required.
