@@ -38,7 +38,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @post = Post.find(params[:id])
+    @wiki = Gollum::Wiki.new("/home/peter/ll/")
+    @page =  @wiki.page(params[:page_name])
   end
 
   # POST /posts
