@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-GritTest::Application.load_tasks
+Gitbro::Application.load_tasks
