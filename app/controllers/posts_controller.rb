@@ -61,7 +61,13 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.xml
   def update
-
+    @commit = { :message => 'commit message',
+               :name => 'Tom Preston-Werner',
+               :email => 'tom@github.com' }
+               
+    @wiki = Gollum::Wiki.new("/home/peter/ll/")
+    @page = @wiki.page(params[:page_name])
+    @wiki.update_page(@page,@page.name, @page.format, params[:post][:content], @commit)
     respond_to do |format|
         format.html { redirect_to(root_url, :notice => 'successfully updated.') }
         format.xml  { head :ok }
