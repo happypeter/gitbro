@@ -1,6 +1,6 @@
 Gitbro::Application.routes.draw do
   get 'new_page' => 'posts#new'
-  get 'posts/create' => 'posts#create'
+  match 'posts/create' => 'posts#create'
   get 'posts/:page_name'  => 'posts#show'
   match 'posts/:page_name/update'  => 'posts#update'
   get 'posts/:page_name/edit'  => 'posts#edit'

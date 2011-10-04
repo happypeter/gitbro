@@ -50,8 +50,8 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
 
-    @page = @wiki.page(params[:post][:title])
-    @wiki.write_page(params[:post][:title], :markdown, params[:page_content], @commit)
+    @page = @wiki.page(params[:page_title])
+    @wiki.write_page(params[:page_title], :markdown, params[:page_content], @commit)
     respond_to do |format|
         format.html { redirect_to(root_url, :notice => 'successfully updated.') }
         format.xml  { head :ok }
