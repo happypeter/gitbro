@@ -9,7 +9,8 @@ class PostsController < ApplicationController
     @commit = { :message => 'no message',
                :name => 'No Name',
                :email => 'noname@example.com' }
-      @commit[:name] = current_user.name if current_user
+    @commit[:name] = current_user.name if current_user
+    @commit[:email] = current_user.email if current_user
   
   end
   # GET /posts
@@ -49,8 +50,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.xml
   def create
-
     @page = @wiki.page(params[:page_title])
+    @commit[:message] = params[:commit_msg]
     @wiki.write_page(params[:page_title], :markdown, params[:page_content], @commit)
     respond_to do |format|
         format.html { redirect_to(root_url, :notice => 'successfully updated.') }

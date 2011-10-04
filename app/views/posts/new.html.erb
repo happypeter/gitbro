@@ -5,7 +5,10 @@
 
 <%= form_tag({:controller => "posts", :action => "create"})  do%>
 	<%= text_field_tag :page_title, "page title" %>  
+	<br />
 	<%= text_area_tag(:page_content,"",:size => "24x6") %>
+	<br />
+	<%= text_field_tag :commit_msg, "commit_msg" %>  
 	<br />
 	<%= submit_tag value="Create Page"%>
 <% end %>
