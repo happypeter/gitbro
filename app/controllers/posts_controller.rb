@@ -1,6 +1,14 @@
 class PostsController < ApplicationController
   
   before_filter :init
+  before_filter :check_perm, :only => [ :edit, :update, :destroy ]
+
+  def check_perm
+    if current_user == nil
+      flash[:notice] = "Sorry, plz login first"
+      redirect_to root_url
+    end
+  end
   
   def init
     require 'gollum'

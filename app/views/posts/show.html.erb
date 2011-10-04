@@ -1,7 +1,10 @@
 
-<br />
-username:  <%=@commit[:name]%>
-<br />
+Page name: <b><%=@page.name%></b>
 
 <%= raw @page.formatted_data %>
+
+<% if current_user %>  
 <a href="<%=@page.name%>/edit"> Edit </a>
+<% else %>
+ <%= link_to "Log in", log_in_path %>  to Edit
+<% end %>

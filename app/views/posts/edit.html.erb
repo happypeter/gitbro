@@ -1,4 +1,4 @@
-<h1>Editing <%=@page.name%></h1>
+<i>Editing</i> <b><%=@page.name%></b>
 
 <%= form_tag({:controller => "posts", :action => "update"})  do%>
 	<%= text_area_tag(:page_content, @page.raw_data, :size => "24x6") %>

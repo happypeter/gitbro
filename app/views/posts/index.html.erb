@@ -6,6 +6,8 @@
 <%end%>
 
 <br />
-<%=@commit[:name]%>
-<br />
+<% if current_user %>  
 <b><a href="/new_page">New Page</a></b>
+<% else %>
+ <%= link_to "Log in", log_in_path %>  to create new page
+<% end %>
