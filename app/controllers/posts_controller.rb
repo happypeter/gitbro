@@ -51,7 +51,7 @@ class PostsController < ApplicationController
   def create
 
     @page = @wiki.page(params[:post][:title])
-    @wiki.write_page(params[:post][:title], :markdown, params[:post][:content], @commit)
+    @wiki.write_page(params[:post][:title], :markdown, params[:page_content], @commit)
     respond_to do |format|
         format.html { redirect_to(root_url, :notice => 'successfully updated.') }
         format.xml  { head :ok }
@@ -62,7 +62,7 @@ class PostsController < ApplicationController
   # PUT /posts/1.xml
   def update
     @page = @wiki.page(params[:page_name])
-    @wiki.update_page(@page,@page.name, @page.format, params[:post][:content], @commit)
+    @wiki.update_page(@page,@page.name, @page.format, params[:page_content], @commit)
     respond_to do |format|
         format.html { redirect_to(root_url, :notice => 'successfully updated.') }
         format.xml  { head :ok }
